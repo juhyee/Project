@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <!-- meta, title, link, script, style 순으로 정렬 -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/technology.css">
+  <link rel="stylesheet" href="./fonts/font.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.6/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <!-- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2a4fb7723234cf9cd4227306526ff667"></script> -->
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+  <title>INTEGRITICS</title>
+</head>
+
+<body>
+  <div id="wrap">
+
+    <header id="header">
+      <div class="header_inner common_inner">
+        <h1 class="logo"><a href="./"><span class="blind">INTEGRITICS</span></a></h1>
+
+        <div id="gnb">
+          <ul class="menu">
+            <li><a href="./">홈으로</a></li>
+            <li><a href="./aboutUs.html">회사소개</a></li>
+            <li><a href="./technology.html">제품소개</a></li>
+            <li><a href="./information.html">요금안내</a></li>
+            <li><a href="./contactUs.html">문의하기</a></li>
+          </ul>
+        </div>
+        <a class="sitemap_btn"><span class="hamburger"></span></a>
+      </div>
+    </header>
+
+    <div id="mo_gnb">
+      <div class="mo_menu">
+        <h1 class="mo_logo"><a href="/"></a></h1>
+        <a class="close_btn"><span class="close"></span></a>
+        <ul class="mo_list">
+          <li><a href="./">홈으로</a></li>
+          <li><a href="./aboutUs.html">회사소개</a></li>
+          <li><a href="./technology.html" class="sub_list">제품소개</a>
+            <ul>
+              <li><a href="./technology.html">Microbe Vestige</a></li>
+              <li><a href="#" onclick="alert('서비스 준비 중입니다.')">GMP Office</a></li>
+              <li><a href="#" onclick="alert('서비스 준비 중입니다.')">Consulting</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="./information.html">요금안내</a>
+          </li>
+          <li><a href="./contactUs.html">문의하기</a></li>
+        </ul>
+      </div>
+    </div>
+    <main id="content">
+      <div class="top_title">
+        <h3>제품소개</h3>
+        <ul class="sub_list">
+          <li><a href="#" class="on">Microbe Vestige</a></li>
+          <li><a href="#" onclick="alert('서비스 준비 중입니다.')">GMP Office</a></li>
+          <li><a href="#" onclick="alert('서비스 준비 중입니다.')">Consulting</a></li>
+        </ul>
+      </div>
+
+      <div class="section sec01">
+        <div class="section_inner">
+          <div class="text_box">
+            <h3 class="title" data-aos="fade-up" data-aos-delay="300">Data<br>
+              손쉽게 관리하기</h3>
+            <p class="desc" data-aos="fade-up" data-aos-delay="300">모든 미생물 시험은 시험에 따른 데이터 관리가 필요합니다.<br>
+              Microbe Vestige는 데이터관리를 위한 편의성을 제공합니다. <br>
+              저장된 데이터는 고유의 Data Integrity 시스템으로 관리되고 <br class="br_mo">Inspection에도 <br class="br_pc">
+              유리하게 관리할 수 있습니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section sec02">
+        <div class="section_inner">
+          <div class="img_area">
+            <img src="./img/technology/tab01_sec02_item.png" alt="" data-aos="fade-right">
+          </div>
+          <div class="text_area">
+            <div class="text_box">
+              <h3 class="title" data-aos="fade-up">팀 협업을<br>
+                위한 권한 관리</h3>
+              <p class="sub-title" data-aos="fade-up" data-aos-delay="300">강력한 사용자 관리 기능</p>
+
+              <p class="desc" data-aos="fade-up" data-aos-delay="600">팀 업무를 위해 사용자 권한을 나눠서 관리하세요. <br class="br_mo">관리자,
+                담당자,<br class="br_pc">참관자별로 업무 권한을 추가할 수 있습니다.<br><br>
+
+                Microbe Vestige의 사용자 관리는 FDA 21 CFR Part 11에<br class="br_mo"> 따라 Audit Trail<br class="br_pc">
+                기능을 구현하고 계정의 History를 <br class="br_mo">백업할 수 있는 기능을 제공합니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section sec03">
+        <div class="section_inner">
+          <div class="text_area">
+            <div class="text_box">
+              <h3 class="title" data-aos="fade-up">간편한<br>Digital Data Integrity</h3>
+              <p class="desc" data-aos="fade-up" data-aos-delay="600">
+                사진을 찍는 것만으로 미생물 DI를 완성할 수 있습니다.<br>
+                생성된 사진에는 시험 날짜와 연구자 ID가 Meta data로<br class="br_mo"> 입력됩니다.<br><br>
+                모바일 Camera 또는 PC와 연결된 Camera로 Check 된<br class="br_mo"> CFU를 한 번 더<br class="br_pc">
+                데이터화할 수 있고, 하나의 사진은 <br class="br_mo">Raw Data로 관리할 수 있습니다.</p>
+            </div>
+          </div>
+          <div class="img_area">
+            <img src="./img/technology/tab01_sec03_item.png" alt="" data-aos="fade-left">
+          </div>
+        </div>
+      </div>
+      <div class="section sec04">
+        <div class="section_inner">
+          <div class="img_area">
+            <img src="./img/technology/tab01_sec04_item.png" alt="" data-aos="fade-right">
+          </div>
+          <div class="text_area">
+            <div class="text_box">
+              <h3 class="title" data-aos="fade-up">편리한<br>Data 관리</h3>
+              <p class="sub-title" data-aos="fade-up" data-aos-delay="300">효율적인 폴더 기능</p>
+              <p class="desc" data-aos="fade-up" data-aos-delay="600">
+                사용자의 권한에 따라 지정된 폴더에서 모든 작업을 <br class="br_mo">진행할 수 있습니다.<br class="br_pc">
+                매번 사진을 정리할 필요 없이, <br class="br_mo">미리 설정된 프로젝트 폴더에서 Raw Data를<br class="br_pc">
+                저장하세요.<br><br>
+                향후 추가되는 기능에서 프로젝트별 경향성도 확인할 수 있습니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section sec05">
+        <div class="section_inner">
+          <div class="text_area">
+            <div class="text_box">
+              <h3 class="title" data-aos="fade-up">손쉬운<br> 레포트 작성</h3>
+              <p class="desc" data-aos="fade-up" data-aos-delay="600">
+                지정된 문서양식으로 한 번에 사진 Data를<br>
+                불러올 수 있습니다.<br><br>
+                간편화된 보고서 작성 기능으로 문서작성 시간을 줄이고, <br class="br_mo">연구에<br class="br_pc">
+                집중할 수 있습니다.
+              </p>
+            </div>
+          </div>
+          <div class="img_area">
+            <img src="./img/technology/tab01_sec05_item.png" alt="" data-aos="fade-left">
+          </div>
+        </div>
+      </div>
+      <div class="section sec06">
+        <div class="section_inner">
+          <div class="text_box">
+            <h3 class="title" data-aos="fade-up" data-aos-delay="300">최소한의<br> 시간으로 최적의 레포팅</h3>
+            <p class="desc" data-aos="fade-up" data-aos-delay="300">Microbe Vestige의 전자문서시스템은 회사의 기존양식<br class="br_mo">
+              그대로 원하는 데이터를 <br class="br_pc">그대로 불러 올 수 있는 업무공간입니다.<br class="br_mo"> 작성된 문서를 Reviewer에 전송할 수 있고, <br class="br_pc">
+              양식이 수정되면 간편하게 작성하거나 등록할 수 있습니다.<br><br>
+              작성된 모든 Report는 Back up 공간에서 언제든지 불러올<br class="br_mo"> 수 있습니다.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="section sec07">
+        <div class="section_inner">
+          <div class="img_area">
+            <img src="./img/technology/tab01_sec07_item.png" alt="" data-aos="fade-right">
+          </div>
+          <div class="text_area">
+            <div class="text_box">
+              <h3 class="title" data-aos="fade-up">최적화된 <br> 문서양식</h3>
+              <p class="sub-title" data-aos="fade-up" data-aos-delay="300">사내 양식 적용 기능</p>
+              <p class="desc" data-aos="fade-up" data-aos-delay="600">
+                문서작성 업무를 위해, 간편하게 사내 양식을 <br class="br_mo">적용할 수 있습니다.<br class="br_pc">
+                문서가 개정되면 관리자가 <br class="br_mo">언제든지 편하게 등록하면 됩니다.<br><br>
+
+                별도 양식이 필요하면 제공된 기능에서 필요한 양식을 <br class="br_mo">만들 수 있습니다.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="section sec08">
+        <!-- 추후에 추가 예정 -->
+        <!-- <div class="section_inner">
+          <div class="text_area">
+            <div class="text_box">
+              <h3 class="title" data-aos="fade-up">Meta Data<br>
+                백업관리</h3>
+              <p class="sub-title" data-aos="fade-up" data-aos-delay="300">강력한 사용자 관리 기능</p>
+              <p class="desc" data-aos="fade-up" data-aos-delay="600">팀 업무를 위해 사용자 권한을 나눠서 관리하세요. 관리자,<br class="br_mo">
+                담당자,<br class="br_pc">
+                참관자별로 업무권한을 추가할 수 있습니다.<br><br>
+
+                Microbe Vestige의 사용자 관리는 FDA 21 CFR Part 11에<br class="br_mo">따라 Audit Trail <br class="br_pc">
+                기능을 구현하고 계정의 History를 백업할<br class="br_mo">수 있는 기능을 제공합니다.</p>
+            </div>
+          </div>
+          <div class="img_area">
+            <img src="./img/technology/tab01_sec08_item.png" alt="" data-aos="fade-left">
+          </div>
+        </div> -->
+      </div>
+      <div class="section sec09">
+        <div class="section_inner">
+          <div class="text_box">
+            <h3 class="title" data-aos="fade-up" data-aos-delay="300">도입을 위한<br>
+              간편한 CSV 제공</h3>
+            <p class="desc" data-aos="fade-up" data-aos-delay="300">Microbe Vestige는 자체 기능으로 GMP 내에 등록하고<br
+                class="br_mo">
+              사용하기 위해<br class="br_pc">
+              반드시 필요한 Validation을 제공합니다. <br><br>
+
+              IQ부터 PQ까지 도입을 결정하는 순간 몇 번의 테스트와 정보입력으로 제대로 된 <br class="br_pc">
+              결과를 확인할 수 있습니다.</p>
+          </div>
+        </div>
+      </div>
+      <div class="section sec10">
+        <div class="section_inner">
+          <div class="img_area">
+            <img src="./img/technology/tab01_sec10_item.png" alt="" data-aos="fade-right">
+          </div>
+          <div class="text_area">
+            <div class="text_box">
+              <h3 class="title" data-aos="fade-up">꼭 필요한 <br>
+                밸리데이션</h3>
+              <!--<p class="sub-title" data-aos="fade-up" data-aos-delay="300">강력한 사용자 관리 기능</p>-->
+              <p class="desc" data-aos="fade-up" data-aos-delay="600">
+                SW를 도입하기 위한 최초의 Computerized System Validation을<br class="br_mo">제공합니다.<br class="br_pc">
+                현장의 요구규격에 맞춰진 최적화된 밸리데이션 기술을 지원받으세요.<br><br>
+
+                1년 후 재밸리데이션 기술 지원도 SW 내에서<br>
+                언제든지 신청할 수 있습니다.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section sec11">
+        <div class="section_inner">
+          <div class="text_area">
+            <div class="text_box">
+              <h3 class="title" data-aos="fade-up">IQ, OQ, PQ<br>한 번에</h3>
+              <p class="sub-title" data-aos="fade-up" data-aos-delay="300">강력한 사용자 관리 기능</p>
+              <p class="desc" data-aos="fade-up" data-aos-delay="600">
+                팀 업무를 위해 사용자 권한을 나눠서 관리하세요. <br class="br_mo">관리자, <br class="br_pc">
+                담당자, 참관자별로 업무 권한을 추가할 수 있습니다.<br><br>
+
+                Microbe Vestige의 사용자 관리는 FDA 21 CFR Part 11에 <br>
+                따라 Audit Trail 기능을 구현하고 계정의 History를 백업할 <br>
+                수 있는 기능을 제공합니다.
+              </p>
+            </div>
+          </div>
+          <div class="img_area">
+            <img src="./img/technology/tab01_sec11_item.png" alt="" data-aos="fade-left">
+          </div>
+        </div>
+      </div>
+      <section class="section section_banner">
+        <div class="section_inner common_inner">
+          <p class="banner_text">아직도 망설여지나요?<br>
+            우리의 서비스 체험은 무료 입니다.</p>
+          <a href="#무료체험하기" class="banner_btn contact">도입하기</a>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer">
+      <div class="footer_inner common_inner">
+        <h1 class="logo"><a href="#"><span class="blind">INTEGRITICS</span></a></h1>
+        <a href="#개인정보처리방침" class="privacy_btn">개인정보처리방침</a>
+        <div class="footer_info">
+          <ul>
+            <li>주식회사 인테그리틱스</li>
+          </ul>
+          <ul>
+            <li>서울 연구소 : 서울특별시 관악구 봉천로62길 5, 5층</li>
+            <li>대표이사 : 박 병진</li>
+          </ul>
+          <ul>
+            <li><a href="tel:0314013691">대표번호 : 031-401-3691</a></li>
+            <li><a href="tel:028893691">연구소 : 02-889-3691</a></li>
+          </ul>
+          <ul>
+            <li><a href="mailto:bjpark21@integritics.io">E-mail : bjpark21@integritics.io</a></li>
+            <li>본사 : 경기도 성남시 수정구 달래내로46 글로벌융합센터 A동 202호</li>
+          </ul>
+          <p class="copyright">&copy;COPYRIGHT 2023. INTEGRITICS, INC, All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="floating_btn">
+      <a href="#" class="contact">도입하기</a>
+    </div>
+
+    <!-- 도입하기 모달 팝업 -->
+    <div class="contact_modal modal">
+      <div class="modal_wrap">
+        <div class="modal_contents">
+          <form id="id-contact-submit" class="gform" method="POST" target="iframe_submit"
+            action="https://script.google.com/macros/s/AKfycbxQ1sjyMuNtjfQcmKXRmVUb4Bu-Ecyf55491tTU2JRHoQZW84PNBJcGFYg2gJ6m_hm6/exec">
+            <div class="modal_head">
+              <h3>Contact</h3>
+              <a class="close_btn"><span class="close"></span></a>
+            </div>
+            <div class="modal_body">
+              <div class="modal_item">
+                <label class="item_label" for="input_name">Name</label>
+                <input type="text" name="name" class="item_input" id="input_name">
+              </div>
+              <div class="modal_item">
+                <label class="item_label" for="input_company">Company</label>
+                <input type="text" name="company" class="item_input" id="input_company">
+              </div>
+              <div class="modal_item">
+                <label class="item_label" for="input_email">E-mail</label>
+                <input type="text" name="email" class="item_input" id="input_email">
+              </div>
+              <div class="modal_item">
+                <label class="item_label" for="input_phone">Phone</label>
+                <input type="text" name="phone" class="item_input" id="input_phone">
+              </div>
+              <div class="modal_item">
+                <label class="item_label" for="input_messege">Messege</label>
+                <textarea name="message" id="input_messege" class="item_input" cols="30" rows="10"></textarea>
+              </div>
+            </div>
+            <div class="modal_footer">
+              <button class="modal_btn" onclick="sendContact()">보내기</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="filter"></div>
+    </div>
+    <!-- 도입하기 모달 팝업 -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.6/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/contact.js"></script>
+</body>
+
+</html>
