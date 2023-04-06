@@ -1,0 +1,2565 @@
+@import "scss/common.scss";
+@import "styles/mixins/flex";
+
+//모달 창
+.modal {
+  z-index: 1060;
+  position: relative;
+  display: none;
+  z-index: 99999;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  &__wrap {
+    z-index: 99999;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2);
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+  }
+  &-head {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 78px;
+    padding: 0 20px;
+    border-bottom: 1px solid #ececec;
+    h3 {
+      font-size: 18px;
+      font-weight: $font-bold;
+      margin-bottom: 0;
+    }
+    &__button--close {
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      width: 28px;
+      height: 28px;
+      background: url("/assets/icons/modalHeadCloseIcon.svg") no-repeat center;
+      transform: translateY(-50%);
+    }
+  }
+  &__contents {
+    position: relative;
+    width: 289px;
+    padding: 40px 20px 30px;
+    text-align: center;
+    font-weight: 500;
+  }
+  &__button--close {
+    z-index: 3;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background: url("/assets/icons/modalCloseIcon.svg") 21px calc(100% - 21px)
+      no-repeat;
+    background-size: 14px;
+  }
+  &-body {
+    p {
+      font-size: 12px;
+      color: #333333;
+      line-height: 18px;
+
+      b {
+        color: #ff47b5;
+      }
+    }
+    .madal-body__notice {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 100%;
+      min-height: 50px;
+      margin: 16px auto 0;
+      padding: 0 12px 0 14px;
+      background: #f9f9f9;
+      border-radius: 14px;
+      color: #222;
+      text-align: left;
+      .notice--text {
+        position: relative;
+        padding-left: 7px;
+        font-size: 12px;
+        color: #666;
+        font-weight: 400;
+        line-height: 16px;
+        &::after {
+          content: "";
+          position: absolute;
+          top: 8px;
+          left: 0;
+          width: 2px;
+          height: 2px;
+          border-radius: 50%;
+          background-color: #bbbbbb;
+        }
+      }
+    }
+  }
+  &__buttons {
+    margin-top: 30px;
+    text-align: center;
+    .modal__button {
+      height: 37px;
+      width: 122px;
+      border-radius: 42px;
+      margin-right: 5px;
+      background-color: #242529;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 500;
+      &:hover {
+        background-color: #61626a;
+      }
+      &:active {
+        background-color: #000000;
+      }
+      &--cancle {
+        border: 1px solid #e6e5e5;
+        background-color: #f0f0f0;
+        color: #696868;
+        &:hover {
+          background-color: #e6e5e5;
+        }
+        &:active {
+          background-color: #f0f0f0;
+        }
+      }
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+  &-footer {
+    overflow: hidden;
+    padding: 30px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    .modal__button {
+      width: 159px;
+      height: 50px;
+      border-radius: 37px;
+      background-color: #242529;
+      color: #fff;
+      font-size: 14px;
+      font-weight: $font-medium;
+    }
+  }
+  .filter {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+  }
+  &.on {
+    display: block;
+  }
+}
+
+// 매니저 공개 모달 팝업 - common style -> layout.scss
+.manager-public_modal {
+  .modal__contents {
+    .modal-body {
+      p {
+        padding-top: 52px;
+        background: url("/assets/icons/managerPublicModal.svg") top center
+          no-repeat;
+        background-size: 42px;
+      }
+    }
+  }
+}
+
+// 매니저 비공개 모달 팝업 - common style -> layout.scss
+.manager-private_modal {
+  .modal__contents {
+    .modal-body {
+      p {
+        padding-top: 52px;
+        background: url("/assets/icons/managerPrivateModal.svg") top center
+          no-repeat;
+        background-size: 42px;
+      }
+    }
+  }
+}
+
+// 랜드 삭제 모달 팝업 - common style -> layout.scss
+.manager-delete_modal {
+  .modal__wrap {
+    // overflow: hidden;
+    border-radius: 20px;
+    .modal__contents {
+      padding: 0 0 20px;
+      width: 335px;
+      .modal-head {
+        display: block;
+        position: relative;
+        height: auto;
+        padding: 54px 0 24px;
+        border-radius: 20px 20px 0 0;
+        border-bottom: 0;
+        background: linear-gradient(
+          117.75deg,
+          #ffe924 -36.81%,
+          #ff4a4d 3.91%,
+          #b238ff 47.23%,
+          #3d81ff 79.54%,
+          #41ffd2 122.76%
+        );
+        color: #fff;
+        font-weight: $font-bold;
+        p {
+          display: block;
+          margin-bottom: 0;
+          font-size: 18px;
+          line-height: 1;
+          span {
+            display: inline-block;
+            width: 100%;
+            margin-top: 12px;
+            font-size: 14px;
+            font-weight: $font-medium;
+          }
+        }
+        .icon {
+          position: absolute;
+          top: -40px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+      .modal-body {
+        padding: 24px 24px 20px;
+        p {
+          padding-top: 0;
+          font-size: 15px;
+          line-height: 18px;
+          font-weight: 500;
+        }
+        input {
+          width: 100%;
+          height: 46px;
+          padding: 17px 16px;
+          border: 1px solid #eeeeee;
+          border-radius: 12px;
+          font-size: 12px;
+          &::placeholder {
+            color: #bbbbbb;
+          }
+          &:focus {
+            color: #333;
+            border: 1px solid #d0cecf;
+          }
+        }
+      }
+    }
+    .modal__buttons {
+      margin-top: 0;
+      .modal__button {
+        height: 44px;
+        width: 138px;
+        font-size: 13px;
+        &--delete {
+          background-color: rgba(36, 37, 41, 0.5);
+          &.on {
+            background-color: #242529;
+            &:hover {
+              background-color: #61626a;
+            }
+            &:active {
+              background-color: #000;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// 랜드 이력 모달 팝업 - common style -> layout.scss
+.manager-record_modal {
+  .modal__wrap {
+    overflow: hidden;
+    .modal__contents {
+      width: 810px;
+      padding: 0;
+      .modal-body {
+        overflow-x: auto;
+        position: relative;
+        height: 438px;
+        background-color: #f8fbfd;
+        &::-webkit-scrollbar {
+          width: 6px;
+          height: 4px;
+        }
+        &::-webkit-scrollbar-thumb {
+          height: 10%; /* 스크롤바의 길이 */
+          background: rgba(0, 0, 0, 0.25);
+          border-radius: 10px;
+        }
+        &::-webkit-scrollbar-track {
+          background: transparent; /*스크롤바 뒷 배경 색상*/
+        }
+        .manager-record__list {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          padding: 20px;
+          .manager-record__item {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 58px;
+            margin-bottom: 10px;
+            padding: 0 20px;
+            border-radius: 12px;
+            background: #ffffff;
+            line-height: 58px;
+            .manager-record__title {
+              overflow: hidden;
+              width: 395px;
+              font-size: 16px;
+              font-weight: bold;
+              text-align: left;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              span {
+                margin-left: 11px;
+                color: #696868;
+                font-size: 14px;
+                font-weight: $font-medium;
+              }
+            }
+            .manager-record__date {
+              position: relative;
+              padding-right: 28px;
+              font-size: 14px;
+              font-weight: $font-medium;
+              color: #696868;
+              span {
+                padding-left: 10px;
+              }
+              .label {
+                position: relative;
+                padding-right: 10px;
+                &::after {
+                  content: "";
+                  position: absolute;
+                  top: 50%;
+                  right: 0;
+                  width: 1px;
+                  height: 13px;
+                  background-color: rgba(0, 0, 0, 0.1);
+                  transform: translateY(-50%);
+                }
+              }
+              &::after {
+                content: "";
+                position: absolute;
+                right: 0;
+                top: 50%;
+                width: 18px;
+                height: 18px;
+                background: url("../../../assets/icons/recordLisIcon.svg")
+                  no-repeat center;
+                transform: translateY(-50%);
+              }
+            }
+            &.new {
+              .manager-record__title {
+                color: #ff47b5;
+                span {
+                  margin-left: 8px;
+                  color: #35afff;
+                }
+              }
+              .manager-record__date {
+                margin-left: auto;
+                color: $color-primary;
+                &::after {
+                  background: url("../../../assets/icons/recordLisActivetIcon.svg")
+                    no-repeat center;
+                }
+              }
+            }
+
+            .manager-record__button {
+              width: 83px;
+              height: 30px;
+              margin-left: auto;
+              border-radius: 15px;
+              background-color: #313247;
+              color: #fff;
+              font-size: 12px;
+              line-height: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// 랜드 템플릿으로 시작하기 모달 팝업 - common style -> layout.scss
+.manager-template_modal {
+  .modal__wrap {
+    overflow: hidden;
+    .modal__contents {
+      width: 820px;
+      padding: 0;
+      .modal-body {
+        overflow-x: auto;
+        position: relative;
+        height: 578px;
+        background-color: #f8fbfd;
+        &::-webkit-scrollbar {
+          width: 6px;
+          height: 4px;
+        }
+        &::-webkit-scrollbar-thumb {
+          height: 10%; /* 스크롤바의 길이 */
+          background: rgba(0, 0, 0, 0.25);
+          border-radius: 10px;
+        }
+        &::-webkit-scrollbar-track {
+          background: transparent; /*스크롤바 뒷 배경 색상*/
+        }
+        .manager-template__list {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          padding: 20px;
+          .manager-template__item {
+            position: relative;
+            float: left;
+            width: 140px;
+            height: 258px;
+            margin: 0 18px 30px 0;
+            cursor: pointer;
+            &:hover {
+              &::before {
+                content: "";
+                position: absolute;
+                width: 91px;
+                height: 120px;
+                left: 24px;
+                top: 84px;
+                background: #7747ff;
+                filter: blur(10px);
+                border-radius: 17px;
+              }
+              .template__thumbnail {
+                border-radius: 20px;
+                background-image: linear-gradient(#fff, #fff), $gradient-primary;
+                background-origin: border-box;
+                background-clip: content-box, border-box;
+              }
+            }
+            &:nth-child(5n) {
+              margin-right: 0;
+            }
+            .template__thumbnail {
+              position: relative;
+              overflow: hidden;
+              width: 140px;
+              height: 204px;
+              border: 2px solid transparent;
+              box-sizing: content-box;
+              > img {
+                width: 140px;
+                height: 204px;
+                min-width: 100%;
+                min-height: 100%;
+                object-fit: cover;
+              }
+              &.live {
+                &::after {
+                  content: "Live";
+                  position: absolute;
+                  top: 10px;
+                  left: 10px;
+                  height: 16px;
+                  padding: 0 6px;
+                  background: #ff471f;
+                  border: 1px solid rgba(0, 0, 0, 0.08);
+                  border-radius: 8px;
+                  color: #fff;
+                  font-size: 9px;
+                  font-weight: $font-bold;
+                  line-height: 13px;
+                }
+              }
+
+              &.update {
+                &::after {
+                  content: "Update";
+                  position: absolute;
+                  top: 10px;
+                  left: 10px;
+                  height: 16px;
+                  padding: 0 6px;
+                  background: #5c3cff;
+                  border: 1px solid rgba(0, 0, 0, 0.08);
+                  border-radius: 8px;
+                  color: #fff;
+                  font-size: 9px;
+                  font-weight: $font-bold;
+                  line-height: 13px;
+                }
+              }
+            }
+            .template__title {
+              overflow: hidden;
+              width: 123px;
+              margin-top: 12px;
+              padding-top: 0;
+              color: #222;
+              font-size: 14px;
+              font-weight: $font-medium;
+              text-align: left;
+              text-overflow: ellipsis;
+              display: -webkit-box;
+              -webkit-line-clamp: 2;
+              -webkit-box-orient: vertical;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//랜드 추가 보관함 구매하기 모달> 모달 팝업 - common style -> layout.scss
+.manager-locker_modal {
+  .modal__wrap {
+    overflow: hidden;
+    .modal__contents {
+      .modal-body {
+        p {
+          padding: 0;
+          font-size: 15px;
+          line-height: 20px;
+        }
+        .madal-body__notice {
+          .notice--label {
+            font-size: 13px;
+          }
+          .notice--amount {
+            position: relative;
+            padding-left: 26px;
+            font-size: 16px;
+            font-weight: $font-bold;
+            line-height: 1;
+            &::after {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 20px;
+              height: 20px;
+              background: url("../../../assets/icons/cashIcon.svg") no-repeat
+                center;
+            }
+          }
+        }
+      }
+      .modal__buttons {
+        .modal__button {
+          &:last-of-type {
+            background-color: #ff4a4d;
+          }
+        }
+      }
+    }
+  }
+}
+
+//결제 금액부족 모달 팝업 - common style -> layout.scss
+.payment-lack_modal {
+  .modal__wrap {
+    overflow: hidden;
+    .modal__contents {
+      .modal-body {
+        p {
+          padding: 0;
+          font-size: 15px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}
+
+//아이템 수 초과 모달 팝업 - common style -> layout.scss
+.item-over_modal {
+  .modal__wrap {
+    overflow: hidden;
+    .modal__contents {
+      width: 335px;
+      .modal-body {
+        p {
+          padding: 0;
+          font-size: 15px;
+          line-height: 20px;
+        }
+        .madal-body__notice {
+          width: 287px;
+          padding: 0 18px;
+        }
+      }
+    }
+  }
+}
+
+//아이템 수 초과 모달 팝업 - common style -> layout.scss
+.builder-save_modal {
+  .modal__wrap {
+    overflow: hidden;
+    .modal__contents {
+      .modal-body {
+        > b {
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 1;
+        }
+        p {
+          margin-top: 12px;
+          padding: 0;
+          font-size: 12px;
+          line-height: 1;
+        }
+        .madal-body__notice {
+          width: 249px;
+          padding: 0 18px;
+        }
+      }
+    }
+  }
+}
+
+//아이템 수 초과 모달 팝업 - common style -> layout.scss
+.builder-move_modal {
+  .modal__wrap {
+    overflow: hidden;
+    .modal__contents {
+      .modal-body {
+        > b {
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 1;
+        }
+        p {
+          margin-top: 12px;
+          padding: 0;
+          font-size: 12px;
+          line-height: 1;
+        }
+        .madal-body__notice {
+          width: 249px;
+          padding: 0 18px;
+        }
+      }
+    }
+  }
+}
+
+// 랜드 게시 모달 팝업 - common style -> layout.scss
+.land_post_modal {
+  .modal__wrap {
+    overflow: hidden;
+    .modal__contents {
+    }
+  }
+}
+
+// 아이템 속성 reset 모달 팝업 - common style -> layout.scss
+.land-reset_modal {
+  .modal__contents {
+    .modal-body {
+      p {
+        padding-top: 52px;
+        line-height: 15px;
+        background: url("/assets/icons/landResetModal.svg") top center no-repeat;
+        background-size: 42px;
+      }
+    }
+  }
+}
+
+// 아이템 속성 reset 모달 팝업 - common style -> layout.scss
+.land-exit_modal {
+  .modal__contents {
+    width: 289px;
+    padding: 40px 0 20px;
+    .modal-body {
+      p {
+        padding-top: 0;
+        font-size: 14px;
+        font-weight: $font-bold;
+        color: #0f111e;
+        span {
+          display: inline-block;
+          margin-top: 12px;
+          font-size: 12px;
+          font-weight: $font-medium;
+          line-height: 1;
+        }
+      }
+    }
+  }
+}
+
+// 아이템 속성 reset 모달 팝업 - common style -> layout.scss
+.land-error_modal {
+  .modal__contents {
+    .modal-body {
+      p {
+        padding-top: 52px;
+        line-height: 15px;
+        background: url("/assets/icons/landErrorModal.svg") top center no-repeat;
+        background-size: 42px;
+      }
+    }
+  }
+}
+
+// 랜드 관리 모달 팝업 - common style -> layout.scss
+.land-management_modal {
+  .modal__wrap {
+    margin-left: 106px;
+    .modal-aside {
+      z-index: 0;
+      position: absolute;
+      left: -212px;
+      top: 0;
+      width: 230px;
+      height: 100%;
+      background: #515860;
+      box-shadow: 0px -10px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 30px 0px 0px 50px;
+      &__title {
+        padding: 28px 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        color: #fff;
+        font-size: 22px;
+        font-weight: $font-bold;
+        line-height: 1;
+      }
+      &__menu {
+        padding: 20px;
+        .menu {
+          &__item {
+            position: relative;
+            width: 172px;
+            height: 46px;
+            margin-bottom: 10px;
+            border-radius: 60px;
+            background-color: rgba(0, 0, 0, 0);
+            color: #dedeec;
+            font-weight: $font-bold;
+            padding-left: 53px;
+            line-height: 46px;
+            cursor: pointer;
+            &::after {
+              content: "";
+              position: absolute;
+              top: 50%;
+              left: 27px;
+              width: 17px;
+              height: 18px;
+              transform: translateY(-50%);
+            }
+            &--land {
+              &::after {
+                background: url("/assets/icons/snbLandIcon.svg") center
+                  no-repeat;
+              }
+            }
+            &--mall {
+              &::after {
+                background: url("/assets/icons/snbMymallIcon.svg") center
+                  no-repeat;
+              }
+            }
+            &--town {
+              &::after {
+                background: url("/assets/icons/snbTownIcon.svg") center
+                  no-repeat;
+              }
+            }
+            &--plaza {
+              &::after {
+                background: url("/assets/icons/snbPlazaIcon.svg") center
+                  no-repeat;
+              }
+            }
+            &.on {
+              color: #fff;
+              background-color: $color-primary;
+              &.snb__item--land {
+                &::after {
+                  background: url("/assets/icons/snbLandActiveIcon.svg") center
+                    no-repeat;
+                }
+              }
+              &.snb__item--mall {
+                &::after {
+                  background: url("/assets/icons/snbMymallActiveIcon.svg")
+                    center no-repeat;
+                }
+              }
+              &.snb__item--town {
+                &::after {
+                  background: url("/assets/icons/snbTownActiveIcon.svg") center
+                    no-repeat;
+                }
+              }
+              &.snb__item--plaza {
+                &::after {
+                  background: url("/assets/icons/snbPlazaActiveIcon.svg") center
+                    no-repeat;
+                }
+              }
+              &:hover {
+                background-color: $color-primary;
+              }
+              &:active {
+                background-color: $color-primary;
+              }
+            }
+            &:hover {
+              background-color: rgba(0, 0, 0, 0.1);
+            }
+            &:active {
+              background-color: rgba(0, 0, 0, 0.2);
+            }
+          }
+        }
+      }
+    }
+    .modal__contents {
+      overflow: hidden;
+      z-index: 1;
+      position: relative;
+      width: 820px;
+      padding: 0;
+      border-radius: 20px;
+      background-color: #fff;
+      box-shadow: -10px 8px 30px rgba(0, 0, 0, 0.3);
+      .modal-body {
+        overflow-x: auto;
+        position: relative;
+        height: 578px;
+        background-color: #f8fbfd;
+        &::-webkit-scrollbar {
+          width: 6px;
+          height: 4px;
+        }
+        &::-webkit-scrollbar-thumb {
+          height: 10%; /* 스크롤바의 길이 */
+          background: rgba(0, 0, 0, 0.25);
+          border-radius: 10px;
+        }
+        &::-webkit-scrollbar-track {
+          background: transparent; /*스크롤바 뒷 배경 색상*/
+        }
+        .land-template__list {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          padding: 20px;
+          .land-template__item {
+            position: relative;
+            float: left;
+            width: 140px;
+            height: 258px;
+            margin: 0 18px 30px 0;
+            cursor: pointer;
+
+            &:hover {
+              &::before {
+                content: "";
+                position: absolute;
+                width: 91px;
+                height: 120px;
+                left: 24px;
+                top: 84px;
+                background: #7747ff;
+                filter: blur(10px);
+                border-radius: 17px;
+              }
+              .template__thumbnail {
+                border-radius: 20px;
+                background-image: linear-gradient(#fff, #fff), $gradient-primary;
+                background-origin: border-box;
+                background-clip: content-box, border-box;
+              }
+            }
+            &:nth-child(5n) {
+              margin-right: 0;
+            }
+            .template__thumbnail {
+              position: relative;
+              overflow: hidden;
+              width: 140px;
+              height: 204px;
+              border: 2px solid transparent;
+              box-sizing: content-box;
+              > img {
+                width: 140px;
+                height: 204px;
+                min-width: 100%;
+                min-height: 100%;
+                object-fit: cover;
+              }
+              &.live {
+                &::after {
+                  content: "Live";
+                  position: absolute;
+                  top: 10px;
+                  left: 10px;
+                  height: 16px;
+                  padding: 0 6px;
+                  background: #ff471f;
+                  border: 1px solid rgba(0, 0, 0, 0.08);
+                  border-radius: 8px;
+                  color: #fff;
+                  font-size: 9px;
+                  font-weight: $font-bold;
+                  line-height: 13px;
+                }
+              }
+
+              &.update {
+                &::after {
+                  content: "Update";
+                  position: absolute;
+                  top: 10px;
+                  left: 10px;
+                  height: 16px;
+                  padding: 0 6px;
+                  background: #5c3cff;
+                  border: 1px solid rgba(0, 0, 0, 0.08);
+                  border-radius: 8px;
+                  color: #fff;
+                  font-size: 9px;
+                  font-weight: $font-bold;
+                  line-height: 13px;
+                }
+              }
+            }
+            .template__title {
+              width: 123px;
+              margin-top: 12px;
+              padding-top: 0;
+              color: #222;
+              font-size: 14px;
+              font-weight: $font-medium;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              display: -webkit-box;
+              -webkit-line-clamp: 2;
+              -webkit-box-orient: vertical;
+            }
+
+            &.on {
+              opacity: 0.5;
+              .template__thumbnail {
+                position: relative;
+                &::after {
+                  content: "현재 랜드";
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  width: 87px;
+                  height: 28px;
+                  background: rgba(0, 0, 0, 0.3);
+                  border-radius: 27px;
+                  color: #fff;
+                  font-size: 12px;
+                  font-weight: $font-medium;
+                  line-height: 28px;
+                  transform: translate(-50%, -50%);
+                }
+              }
+              &:hover {
+                &::before {
+                  display: none;
+                }
+                .template__thumbnail {
+                  border: 2px solid transparent;
+                  background-image: linear-gradient(#fff, #fff);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// 랜드 단축키 모달 팝업 - common style -> layout.scss
+.land-hotkey_modal {
+  .modal__wrap {
+    overflow: hidden;
+    .modal__contents {
+      width: 542px;
+      padding: 0;
+      .modal-body {
+        overflow-x: auto;
+        position: relative;
+        height: 664px;
+        background-color: #f8fbfd;
+        &::-webkit-scrollbar {
+          width: 6px;
+          height: 4px;
+        }
+        &::-webkit-scrollbar-thumb {
+          height: 10%; /* 스크롤바의 길이 */
+          background: rgba(0, 0, 0, 0.25);
+          border-radius: 10px;
+        }
+        &::-webkit-scrollbar-track {
+          background: transparent; /*스크롤바 뒷 배경 색상*/
+        }
+        .modal-body__contents {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          padding: 20px;
+          .hotkey__title {
+            margin: 20px 0 0 0;
+            font-size: 14px;
+            line-height: 1;
+            font-weight: $font-medium;
+            text-align: left;
+            &:first-of-type {
+              margin-top: 0;
+            }
+          }
+          .land-hotkey__list {
+            margin: 10px 0 0 0;
+            .land-hotkey__item {
+              display: flex;
+              align-items: center;
+              width: 100%;
+              height: 46px;
+              margin-bottom: 5px;
+              padding: 0 20px 0 8px;
+              background: rgba(0, 0, 0, 0.03);
+              border-radius: 10px;
+              span {
+                font-size: 14px;
+                font-weight: $font-bold;
+                &.hotkey {
+                  display: inline-block;
+                  width: 47px;
+                  height: 30px;
+                  margin: 0 10px;
+                  background: #696868;
+                  border: 1px solid rgba(0, 0, 0, 0.1);
+                  border-radius: 6px;
+                  line-height: 30px;
+                  color: #fff;
+                  font-weight: $font-medium;
+                  &:first-of-type {
+                    margin-left: 0;
+                  }
+                  & + .hotkey {
+                    margin-left: 0;
+                  }
+                  &.hotkey--white {
+                    background: #ffffff;
+                    color: #696868;
+                  }
+                  &.hotkey--lg {
+                    width: 98px;
+                  }
+                }
+              }
+              .hotkey__desc {
+                margin-left: auto;
+                font-size: 12px;
+                font-weight: $font-medium;
+                color: #696868;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//랜드 모달 팝업 - common style -> layout.scss
+.land-info_modal {
+  .modal__wrap {
+    overflow: hidden;
+    .modal__contents {
+      width: 680px;
+      padding: 0;
+      .modal-body {
+        overflow-x: auto;
+        position: relative;
+        height: 623px;
+        background-color: #f8fbfd;
+        text-align: left;
+        &::-webkit-scrollbar {
+          width: 6px;
+          height: 4px;
+        }
+        &::-webkit-scrollbar-thumb {
+          height: 10%; /* 스크롤바의 길이 */
+          background: rgba(0, 0, 0, 0.25);
+          border-radius: 10px;
+        }
+        &::-webkit-scrollbar-track {
+          background: transparent; /*스크롤바 뒷 배경 색상*/
+        }
+        .land-info__list {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          padding: 20px 40px 40px;
+          .land-info__item {
+            position: relative;
+            margin-bottom: 25px;
+            .land-info__title {
+              margin: 0 0 10px 0;
+              font-size: 14px;
+              font-weight: $font-medium;
+              line-height: 1;
+              color: #696868;
+            }
+            .land-info__notice {
+              display: block;
+              margin-top: 15px;
+              color: #35afff;
+              font-size: 12px;
+              line-height: 1;
+              font-weight: 400;
+              b {
+                font-weight: 400;
+                color: #ff47b5;
+              }
+            }
+            .land-info__byte {
+              position: absolute;
+              bottom: 0;
+              right: 0;
+              margin: 0;
+              padding: 0;
+              font-size: 14px;
+              color: #a1a1a1;
+            }
+            // input 관련 common style
+            input[type="text"] {
+              width: 100%;
+              padding: 19px 10px;
+              border: 1px solid transparent;
+              border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+              background-color: transparent;
+              color: #222;
+              font-size: 12px;
+              font-weight: $font-medium;
+              line-height: 1;
+              &::placeholder {
+                color: rgba(105, 104, 104, 0.3);
+              }
+              &:focus {
+                background: #ffffff;
+                border: 1px solid rgba(0, 0, 0, 0.1);
+                border-radius: 10px;
+              }
+            }
+            .input-file {
+              position: relative;
+              width: 130px;
+              height: 190px;
+              input[type="file"] {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: #f8fbfd;
+                border: 2px dashed rgba(0, 0, 0, 0.1);
+                border-radius: 16px;
+                font-size: 0;
+                background: url("../../../assets/icons/addFileIcon.png")
+                  no-repeat center;
+                cursor: pointer;
+                &::file-selector-button {
+                  display: none;
+                }
+              }
+              .preview-image {
+                > img {
+                  z-index: 2;
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                  width: 130px;
+                  height: 190px;
+                  min-width: 100%;
+                  min-height: 100%;
+                  border-radius: 16px;
+                  object-fit: cover;
+                }
+                &__button {
+                  z-index: 3;
+                  position: relative;
+                  width: 130px;
+                  height: 190px;
+                  background: url("../../../assets/icons/previewDeleteIcon.svg")
+                    no-repeat center;
+                  background-size: 54px;
+                }
+              }
+            }
+
+            input[type="number"] {
+              width: 50px;
+              height: 50px;
+              margin-right: 10px;
+              background: #f8fbfd;
+              border: 1px solid rgba(0, 0, 0, 0.1);
+              border-radius: 10px;
+              font-size: 22px;
+              font-weight: $font-medium;
+              text-align: center;
+              &::-webkit-outer-spin-button,
+              &::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+              }
+
+              &:focus {
+                background-color: #fff;
+              }
+            }
+            textarea {
+              width: 100%;
+              height: 90px;
+              padding: 20px 10px;
+              border-radius: 10px;
+              border: 1px solid rgba(0, 0, 0, 0.1);
+              background-color: transparent;
+              line-height: 16px;
+              color: #696868;
+              font-size: 12px;
+              font-weight: $font-medium;
+              line-height: 1;
+              resize: none;
+              outline: none;
+              vertical-align: top;
+              &::placeholder {
+                color: rgba(105, 104, 104, 0.3);
+              }
+              &:focus {
+                background: #ffffff;
+              }
+            }
+            &--desc {
+              .land-info__buttons {
+                margin-top: 10px;
+                button {
+                  position: relative;
+                  height: 35px;
+                  margin-right: 5px;
+                  padding: 0 31px 0 15px;
+                  border-radius: 8px;
+                  background: #313247;
+                  color: #fff;
+                  font-size: 12px;
+                  font-weight: $font-medium;
+                  line-height: 35px;
+                  &::after {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    right: 15px;
+                    width: 7px;
+                    height: 5px;
+                    margin-top: -1px;
+                    background: url("../../../assets/icons/selectArrowIcon.svg")
+                      no-repeat center;
+                    background-size: 7px 5px;
+                    transform: rotate(-180deg);
+                  }
+                }
+              }
+              .land-info__byte {
+                bottom: 16px;
+              }
+            }
+            &--link {
+              display: none;
+              input[type="text"] {
+                position: relative;
+                margin-top: 11px;
+                padding-left: 50px;
+                &.land-info__input--youtube {
+                  margin-top: 0;
+                  background: url("../../../assets/icons/youtubeIcon.svg")
+                    no-repeat 10px center;
+                  background-size: 31px 23px;
+                }
+                &.land-info__input--discord {
+                  background: url("../../../assets/icons/discordIcon.svg")
+                    no-repeat 10px center;
+                  background-size: 32px 23px;
+                }
+                &:focus {
+                  background-color: #fff;
+                }
+              }
+              &.on {
+                display: block;
+                animation: dropDown 0.3s forwards;
+                transform-origin: top center;
+              }
+            }
+            &--update {
+              display: none;
+              .update-row {
+                position: relative;
+                margin-top: 50px;
+                &:first-of-type {
+                  margin-top: 0;
+                }
+                &:last-of-type {
+                  .count__button {
+                    &--plus {
+                      display: inline-block !important;
+                    }
+                  }
+                }
+                .count__buttons {
+                  position: absolute;
+                  top: 14px;
+                  right: 10px;
+                  width: 80px;
+                  height: 35px;
+                  text-align: right;
+                  .count__button {
+                    display: inline-block;
+                    width: 35px;
+                    height: 35px;
+                    margin-left: 5px;
+                    background-color: #ffffff;
+                    border: 1px solid #ececec;
+                    border-radius: 8px;
+                    &--plus {
+                      display: none;
+                    }
+                  }
+                }
+                .land-info__byte {
+                  bottom: -29px;
+                }
+              }
+              &.on {
+                display: block;
+                animation: dropDown 0.3s forwards;
+                transform-origin: top center;
+              }
+            }
+
+            &--thumbnail {
+              .land-info__contents {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                margin-top: 10px;
+                .land-info__text {
+                  padding-left: 20px;
+                  p {
+                    padding-top: 0;
+                    margin-bottom: 4px;
+                    color: rgba(105, 104, 104, 0.7);
+                  }
+                  .land-info__notice {
+                    margin-top: 0;
+                  }
+                }
+              }
+            }
+
+            &--password {
+              padding-bottom: 50px;
+              .toggle {
+                position: absolute;
+                top: 0;
+                left: 185px;
+                &.on {
+                  .toggle__button {
+                    background-color: $color-primary;
+                  }
+                  & + .land-info__contents {
+                    display: flex !important;
+                    animation: dropDown 0.3s forwards;
+                    transform-origin: top center;
+                  }
+                }
+                &__button {
+                  background-color: #a1a1a1;
+                  &::after {
+                    background: linear-gradient(
+                      180deg,
+                      #f5f5f5 0%,
+                      #cccccc 100%
+                    );
+                    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25),
+                      inset 0px 0px 8px #ffffff;
+                  }
+                }
+              }
+              .land-info__contents {
+                position: absolute;
+                top: 30px;
+                left: 0;
+                display: none !important;
+                display: flex;
+                align-items: center;
+                .land-info__notice {
+                  margin-top: 0;
+                }
+              }
+            }
+
+            &--screen {
+              .land-info__contents {
+                display: flex;
+                flex-wrap: wrap;
+                padding-bottom: 28px;
+                .input-file {
+                  width: 193px;
+                  height: 120px;
+                  margin: 0 7px 7px 0;
+                  &:nth-child(3n) {
+                    margin: 0;
+                  }
+                  .preview-image {
+                    > img {
+                      z-index: 2;
+                      position: absolute;
+                      top: 0;
+                      right: 0;
+                      width: 193px;
+                      height: 120px;
+                      min-width: 100%;
+                      min-height: 100%;
+                      border-radius: 16px;
+                      object-fit: cover;
+                    }
+                    &__button {
+                      z-index: 3;
+                      position: relative;
+                      width: 193px;
+                      height: 120px;
+                      background: url("../../../assets/icons/previewDeleteIcon.svg")
+                        no-repeat center;
+                      background-size: 54px;
+                    }
+                  }
+                }
+                .land-info__text {
+                  p {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    color: rgba(105, 104, 104, 0.7);
+                  }
+                }
+              }
+            }
+
+            &--video {
+              .land-info__contents {
+                display: flex;
+                align-items: center;
+                .input-file {
+                  width: 193px;
+                  height: 120px;
+                  margin-right: 20px;
+                }
+                .land-info__text {
+                  p {
+                    padding-top: 0;
+                    color: rgba(105, 104, 104, 0.7);
+                    line-height: 18px;
+                  }
+                }
+              }
+            }
+
+            &--theme {
+              .land-info__contents {
+                &.on {
+                  .theme-select__button--add {
+                    opacity: 1 !important;
+                    &::before {
+                      display: none !important;
+                    }
+                  }
+                  .theme-select__body {
+                    display: block;
+                    animation: dropDown 0.3s forwards;
+                    transform-origin: top center;
+                  }
+                }
+                .theme-select__head {
+                  display: flex;
+                  align-items: flex-start;
+                  flex-wrap: wrap;
+                  .theme-select__button--add {
+                    position: relative;
+                    height: 33px;
+                    margin-right: 10px;
+                    margin-bottom: 10px;
+                    padding: 0 31px 0 15px;
+                    border-radius: 8px;
+                    background: linear-gradient(
+                      131.88deg,
+                      #6631fb 15.14%,
+                      #ff72d7 86.3%
+                    );
+                    border-radius: 8px;
+                    font-size: 12px;
+                    font-weight: $font-medium;
+                    color: #fff;
+                    opacity: 0.5;
+                    &::after {
+                      content: "";
+                      position: absolute;
+                      right: 13px;
+                      top: 50%;
+                      width: 11px;
+                      height: 11px;
+                      background: url("../../../assets/icons/plusWhiteIcon.svg")
+                        no-repeat center;
+                      transform: translateY(-50%);
+                    }
+                    &::before {
+                      content: "";
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      width: 100%;
+                      height: 100%;
+                      background-color: transparent;
+                    }
+                  }
+                  .theme-tag {
+                    &__item {
+                      margin-bottom: 0;
+                      span {
+                        padding-right: 30px;
+                      }
+                    }
+                    &__button {
+                      position: absolute;
+                      top: 50%;
+                      right: 8px;
+                      transform: translateY(-50%);
+                    }
+                  }
+                }
+                .theme-select__body {
+                  display: none;
+                  overflow: hidden;
+                  margin-top: 25px;
+                  .land-info__text {
+                    display: flex;
+                    margin-bottom: 12px;
+                    line-height: 12px;
+                    p {
+                      margin-bottom: 0;
+                      margin-right: 5px;
+                      line-height: 1;
+                    }
+                    .land-info__notice {
+                      margin-top: 0;
+                    }
+                  }
+                  .theme-select__option {
+                    background: #ffffff;
+                    border: 1px solid rgba(0, 0, 0, 0.1);
+                    border-radius: 10px;
+                    padding: 13px 12px;
+                  }
+                  .modal__buttons {
+                    float: right;
+                    margin-top: 15px;
+                  }
+                }
+                &.disabled {
+                  .theme-select__head {
+                    .theme-select__button--add {
+                      display: none;
+                    }
+                    .theme-tag__list {
+                      .theme-tag__item {
+                        span {
+                          padding-right: 20px;
+                          .theme-tag__button {
+                            display: none;
+                          }
+                        }
+                      }
+                    }
+                  }
+                  .theme-select__body {
+                    .theme-select__button--add {
+                      display: none;
+                    }
+                  }
+                }
+              }
+            }
+            &--maximum {
+              .land-info__title {
+                display: flex;
+                height: 36px;
+                align-items: center;
+                margin-bottom: 5px;
+
+                .tooltip {
+                  display: flex;
+                  align-items: center;
+                  position: relative;
+                  margin-left: 6px;
+                  &__content {
+                    display: none;
+                    position: relative;
+                    width: auto;
+                    margin-left: 13px;
+                    padding: 12px 22px;
+                    background: linear-gradient(
+                      72deg,
+                      rgba(255, 233, 36, 0.1) -36.81%,
+                      rgba(255, 74, 77, 0.1) 3.91%,
+                      rgba(178, 56, 255, 0.1) 47.23%,
+                      rgba(61, 129, 255, 0.1) 79.54%,
+                      rgba(65, 255, 210, 0.1) 122.76%
+                    );
+                    border-radius: 30px;
+                    font-size: 12px;
+                    font-weight: $font-medium;
+                    line-height: 1;
+                    b {
+                      color: #ff47b5;
+                    }
+                    &::after {
+                      content: "";
+                      position: absolute;
+                      top: 50%;
+                      left: -4px;
+                      width: 16px;
+                      height: 16px;
+                      margin-top: -8px;
+                      background-color: #f9e8eb;
+                      border-radius: 2px;
+                      transform: rotate(-45deg);
+                    }
+                  }
+                  &:hover {
+                    .tooltip__content {
+                      display: block;
+                    }
+                  }
+                }
+              }
+              .land-info__contents {
+                display: flex;
+                padding-bottom: 20px;
+                .land-info__controler {
+                  position: relative;
+                  width: 335px;
+                  height: 40px;
+                  border-radius: 25px;
+                  border: 1px solid transparent;
+                  background-image: linear-gradient(#f4f4f4, #f4f4f4),
+                    linear-gradient(
+                      188deg,
+                      rgba(235, 235, 235, 1) 100%,
+                      rgba(231, 230, 230, 1) 100%
+                    );
+                  background-origin: border-box;
+                  background-clip: content-box, border-box;
+                  .controler {
+                    width: calc(100% - 36px);
+                    height: 40px;
+                    margin: 0 auto;
+                    &::after {
+                      content: "1명";
+                      position: absolute;
+                      bottom: -20px;
+                      left: 16px;
+                      font-size: 11px;
+                      color: #a2a2a2;
+                    }
+                    &::before {
+                      content: "30명";
+                      position: absolute;
+                      bottom: -20px;
+                      right: 16px;
+                      font-size: 11px;
+                      color: #a2a2a2;
+                    }
+                    &__bar {
+                      position: absolute;
+                      top: 50%;
+                      left: 50%;
+                      width: 303px;
+                      height: 8px;
+                      background: linear-gradient(
+                        90deg,
+                        #6631fb 2.6%,
+                        #ff72d7 100%
+                      );
+                      border: 2px solid #fff;
+                      border-radius: 16px;
+                      transform: translate(-50%, -50%);
+                      box-shadow: 0px 0px 8px #ffffff;
+                    }
+                    &__item {
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      position: absolute;
+                      top: 0;
+                      width: 40px;
+                      height: 40px;
+                      border-radius: 50%;
+                      background: linear-gradient(
+                        180deg,
+                        #ffffff 0%,
+                        #f1f1f1 100%
+                      );
+                      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+                      cursor: grab;
+                    }
+                  }
+                }
+                .controler__count {
+                  display: flex;
+                  justify-content: flex-end;
+                  width: 96px;
+                  height: 40px;
+                  margin-left: 10px;
+                  padding: 0 21px;
+                  background: #ffffff;
+                  border: 1px solid rgba(0, 0, 0, 0.1);
+                  border-radius: 20px;
+                  line-height: 40px;
+                  color: #696868;
+                  input {
+                    width: 60px;
+                    height: 100%;
+                    margin-right: 0;
+                    padding: 0 4px;
+                    background-color: transparent;
+                    border: none;
+                    text-align: right;
+                    font-size: 22px;
+                    line-height: 22px;
+                  }
+                }
+              }
+            }
+
+            &--public {
+              .land-info__contents {
+                display: flex;
+                .check-box {
+                  padding-right: 39px;
+                  label {
+                    height: 34px;
+                    margin: 0;
+                    padding-left: 44px;
+                    font-size: 14px;
+                    font-weight: $font-medium;
+                    line-height: 34px;
+                    &::before {
+                      right: auto;
+                      right: 0;
+                      width: 34px;
+                      height: 34px;
+                      background: url("/assets/icons/infoCheckOffIcon.svg")
+                        no-repeat center;
+                    }
+                  }
+                  input {
+                    &:checked + label::before {
+                      background: url("/assets/icons/infoCheckOnIcon.svg")
+                        no-repeat center;
+                    }
+                  }
+                }
+                &.disabled {
+                  .check-box {
+                    label {
+                      &::before {
+                        background: url("/assets/icons/infoCheckDisabledIcon.svg")
+                          no-repeat center;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            &--user {
+              .land-info__contents {
+                padding: 20px 14px;
+                background-color: #fff;
+                border: 1px solid rgba(0, 0, 0, 0.1);
+                border-radius: 10px;
+                p {
+                  margin: 20px 0 0;
+                  color: #333;
+                  font-size: 12px;
+                  font-weight: $font-medium;
+                  line-height: 1;
+                  &:first-child {
+                    margin-top: 0;
+                  }
+                  span {
+                    display: inline-block;
+                    position: relative;
+                    width: 92px;
+                    height: 12px;
+                    margin-right: 15px;
+                    padding: 0 0 0 9px;
+                    line-height: 12px;
+                    border-right: 1px solid rgba(0, 0, 0, 0.1);
+                    color: #696868;
+                    &::after {
+                      content: "";
+                      position: absolute;
+                      left: 0;
+                      top: 50%;
+                      width: 4px;
+                      height: 4px;
+                      border-radius: 50%;
+                      background-color: #bbbbbb;
+                      transform: translateY(-50%);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .modal__buttons {
+          text-align: right !important;
+          .modal__button {
+            &--posting {
+              color: $color-primary;
+              border: 1px solid transparent;
+              background-image: linear-gradient(#fff, #fff), $gradient-primary;
+              background-origin: border-box;
+              background-clip: content-box, border-box;
+              &:hover {
+                background-image: linear-gradient(#efeaff, #efeaff),
+                  $gradient-primary;
+              }
+              &:active {
+                background-image: linear-gradient(#fff, #fff), $gradient-primary;
+              }
+            }
+
+            &.disabled {
+              background-color: rgba(36, 37, 41, 0.5);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//아이템 모달 팝업 - common style -> layout.scss
+.item-info_modal {
+  .modal__wrap {
+    overflow: hidden;
+    .modal__contents {
+      width: 650px;
+      padding: 0;
+      .modal-body {
+        overflow-x: auto;
+        position: relative;
+        height: 696px;
+        background-color: #f8fbfd;
+        text-align: left;
+        .item-detail {
+          position: relative;
+          display: flex;
+          align-items: center;
+          width: 100%;
+          padding: 20px;
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 20px;
+            width: calc(100% - 40px);
+            height: 0;
+            border: 1px dashed rgba(0, 0, 0, 0.1);
+          }
+          &__thumbnail {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 180px;
+            height: 180px;
+            background: #ffffff;
+            border: 2px solid #ececec;
+            border-radius: 34px;
+            > img {
+              max-width: 148px;
+              max-height: 148px;
+              object-fit: contain;
+            }
+          }
+          &__info {
+            width: calc(100% - 200px);
+            margin-left: 20px;
+          }
+          &__title {
+            font-size: 18px;
+            font-weight: $font-bold;
+            line-height: 22px;
+          }
+          &__user {
+            display: flex;
+            align-items: center;
+            margin-top: 15px;
+            &--profile {
+              display: flex;
+              align-items: center;
+              .img {
+                overflow: hidden;
+                width: 33px;
+                height: 33px;
+                border-radius: 50%;
+                > img {
+                  max-width: 33px;
+                  max-height: 33px;
+                  object-fit: contain;
+                }
+              }
+              .name {
+                margin-left: 6px;
+                font-size: 12px;
+                font-weight: $font-medium;
+                color: #666;
+              }
+            }
+            &--amount {
+              position: relative;
+              margin-left: 15px;
+              padding-left: 24px;
+              font-size: 20px;
+              font-weight: $font-bold;
+              color: #222;
+              &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: 18px;
+                height: 18px;
+                background: url("../../../assets/icons/cashIcon.svg") no-repeat
+                  center;
+                background-size: 100%;
+                transform: translateY(-50%);
+              }
+            }
+          }
+
+          &__bottom {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+          }
+
+          &__rank {
+            display: flex;
+            align-items: center;
+            > div {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              .count {
+                position: relative;
+                padding-left: 15px;
+                color: #444;
+                font-size: 14px;
+                font-weight: $font-bold;
+                line-height: 1;
+              }
+              .title {
+                margin-top: 9px;
+                font-size: 12px;
+                line-height: 1;
+                text-align: center;
+                color: #666;
+              }
+            }
+            &--like {
+              border-right: 1px solid rgba(0, 0, 0, 0.1);
+              padding-right: 29px;
+              .count {
+                &::after {
+                  content: "";
+                  position: absolute;
+                  top: 50%;
+                  left: 0;
+                  width: 12px;
+                  height: 11px;
+                  background: url("../../../assets/icons/likeActiveIcon.svg")
+                    no-repeat center;
+                  background-size: 100%;
+                  transform: translateY(-50%);
+                }
+              }
+            }
+            &--category {
+              padding-left: 34px;
+              .count {
+                &::after {
+                  content: "";
+                  position: absolute;
+                  top: 50%;
+                  left: 0;
+                  width: 14px;
+                  height: 15px;
+                  background: url("../../../assets/icons/categoryIcon.svg")
+                    no-repeat center;
+                  background-size: 100%;
+                  transform: translateY(-50%);
+                }
+              }
+            }
+          }
+          &__buttons {
+            margin-left: auto;
+            display: flex;
+            .item-detail__button {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 52px;
+              height: 52px;
+              margin-left: 10px;
+              background-color: rgba(153, 153, 153, 0.1);
+              border-radius: 50%;
+              &--like {
+                background-color: #fff;
+                box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.08);
+              }
+              &:hover {
+                .icon {
+                  &_bookmark-darkblack {
+                    background-image: url("/assets/icons/bookmarkFillDarkblakIcon.svg");
+                  }
+                  &_cart-darkblack {
+                    background-image: url("/assets/icons/cartFillDarkblakIcon.svg");
+                  }
+                  &_like {
+                    background-image: url("/assets/icons/likeActiveIcon.svg");
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .purchase-item {
+          width: 100%;
+          padding: 30px 20px;
+          > div {
+            overflow-x: hidden;
+            overflow-y: auto;
+            position: relative;
+            height: 400px;
+            &::-webkit-scrollbar {
+              width: 6px;
+              height: 4px;
+            }
+            &::-webkit-scrollbar-thumb {
+              height: 10%; /* 스크롤바의 길이 */
+              background: rgba(0, 0, 0, 0.25);
+              border-radius: 10px;
+            }
+            &::-webkit-scrollbar-track {
+              background: transparent; /*스크롤바 뒷 배경 색상*/
+            }
+          }
+          &__title {
+            margin-bottom: 0;
+            color: #000;
+            font-size: 16px;
+            font-weight: $font-medium;
+            line-height: 1;
+          }
+          &__list {
+            display: flex;
+            flex-wrap: wrap;
+            position: absolute;
+            top: 0;
+            left: -9px;
+            width: calc(100% + 20px);
+            margin-top: -5px;
+          }
+          &__item {
+            width: 106px;
+            margin: 25px 9px 0;
+            .img {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 106px;
+              height: 106px;
+              border: 1px solid #ececec;
+              border-radius: 18px;
+              background: #ffffff;
+              > img {
+                max-width: 76px;
+                max-height: 70px;
+                object-fit: contain;
+              }
+            }
+            .name {
+              width: 106px;
+              height: 30px;
+              margin-top: 12px;
+              color: #222;
+              font-size: 13px;
+              font-weight: $font-medium;
+              line-height: 15px;
+              display: -webkit-box;
+              -webkit-line-clamp: 2;
+              -webkit-box-orient: vertical;
+              overflow: hidden;
+            }
+            .price {
+              position: relative;
+              margin-top: 12px;
+              padding-left: 17px;
+              font-size: 12px;
+              font-weight: $font-medium;
+              line-height: 14px;
+              color: #696868;
+              &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 14px;
+                height: 14px;
+                background: url("../../../assets/icons/cashIcon.svg") center
+                  no-repeat;
+                background-size: 100%;
+              }
+              &.hold {
+                width: 53px;
+                height: 20px;
+                padding: 0;
+                background: #ffc7e9;
+                border-radius: 14px;
+                font-size: 0;
+                line-height: 20px;
+                text-align: center;
+                &::before {
+                  content: "보유중";
+                  font-size: 10px;
+                  color: #333;
+                }
+                &::after {
+                  display: none;
+                }
+              }
+              &.free {
+                width: 42px;
+                height: 20px;
+                padding: 0;
+                background: #e6e5e5;
+                border-radius: 14px;
+                font-size: 0;
+                line-height: 20px;
+                text-align: center;
+                &::before {
+                  content: "무료";
+                  font-size: 10px;
+                  color: #333;
+                }
+                &::after {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// 배치된 아이템 중 아직 구매 안함 - common style -> layout.scss
+.item-placed_modal {
+  .modal__contents {
+    width: 335px;
+    .modal-body {
+      > p {
+        font-size: 15px;
+      }
+      .madal-body__notice {
+        padding: 18px 25px;
+        background-color: #f9f9f9;
+        line-height: 16px;
+        .notice--text {
+          margin-top: 16px;
+          &:first-of-type {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+//아이템 모달 팝업 - common style -> layout.scss
+.item-unpurchased_modal {
+  .modal__wrap {
+    overflow: hidden;
+    .modal__contents {
+      width: 650px;
+      padding: 0;
+      .modal-head {
+        h3 {
+          span {
+            margin-left: 6px;
+            color: #ff47b5;
+            font-size: 14px;
+            font-weight: $font-medium;
+          }
+        }
+        .goods-info {
+          margin-left: auto;
+          margin-right: 48px;
+          &__cash {
+            margin-left: 5px;
+          }
+        }
+      }
+      .modal-body {
+        .unpurchased {
+          overflow-x: hidden;
+          overflow-y: auto;
+          position: relative;
+          height: 540px;
+          background: #f8fbfd;
+          &::-webkit-scrollbar {
+            width: 6px;
+            height: 4px;
+          }
+          &::-webkit-scrollbar-thumb {
+            height: 10%; /* 스크롤바의 길이 */
+            background: rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+          }
+          &::-webkit-scrollbar-track {
+            background: transparent; /*스크롤바 뒷 배경 색상*/
+          }
+          &__list {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+          }
+          &__item {
+            position: relative;
+            display: flex;
+            padding: 20px;
+            &:last-child {
+              &::after {
+                display: none;
+              }
+            }
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: 0;
+              left: 20px;
+              width: calc(100% - 40px);
+              height: 0px;
+              border: 1px dashed rgba(0, 0, 0, 0.1);
+            }
+            .item__img {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 140px;
+              height: 140px;
+              border: 1px solid #ececec;
+              border-radius: 18px;
+              background: #ffffff;
+              > img {
+                max-width: 110px;
+                max-height: 110px;
+                object-fit: contain;
+              }
+            }
+            .item__info {
+              position: relative;
+              text-align: left;
+              width: calc(100% - 160px);
+              margin-left: 20px;
+              .item__name {
+                overflow: hidden;
+                width: 380px;
+                height: 48px;
+                color: #222;
+                font-size: 16px;
+                font-weight: $font-medium;
+                line-height: 24px;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+              }
+              .item__price {
+                margin-top: 16px;
+              }
+            }
+            .item__buttons {
+              position: absolute;
+              bottom: 0;
+              right: 0;
+              display: flex;
+              align-items: center;
+              .item__button {
+                position: relative;
+                width: 106px;
+                height: 37px;
+                border-radius: 30px;
+                color: $color-primary;
+                border: 1px solid transparent;
+                background-image: linear-gradient(#fff, #fff), $gradient-primary;
+                background-origin: border-box;
+                background-clip: content-box, border-box;
+                font-size: 13px;
+                font-weight: $font-medium;
+                &::after {
+                  content: "";
+                  position: absolute;
+                  top: 50%;
+                  right: 13px;
+                  width: 9px;
+                  height: 10px;
+                  background: url("../../../assets/icons/plusActiveIcon.svg")
+                    center no-repeat;
+                  background-size: 100%;
+                  transform: translateY(-50%);
+                }
+                &.disabled {
+                  background-image: linear-gradient(#f4f3f7, #f4f3f7),
+                    $gradient-primary;
+                  opacity: 0.5;
+                }
+              }
+              .item__button--delete {
+                position: relative;
+                height: 37px;
+                width: 37px;
+                margin-left: 10px;
+                border-radius: 50%;
+                background: #f0f0f0;
+                border: 1px solid #e6e5e5;
+                &:before,
+                &:after {
+                  content: "";
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  height: 9px;
+                  width: 1px;
+                  margin: -4.5px 0 0 -0.5px;
+                  border-radius: 2px;
+                  background-color: #696868;
+                }
+                &:before {
+                  transform: rotate(45deg);
+                }
+                &:after {
+                  transform: rotate(-45deg);
+                }
+              }
+            }
+          }
+        }
+        .payment {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          padding: 24px 20px 23px;
+          border-top: 1px solid rgba(0, 0, 0, 0.1);
+          &__title {
+            color: #000;
+            font-size: 28px;
+            font-weight: 500;
+            line-height: 1;
+          }
+          &__list {
+            display: flex;
+            margin-left: auto;
+            margin-bottom: 0;
+          }
+          &__item {
+            position: relative;
+            margin-left: 30px;
+            padding-left: 36px;
+            font-size: 24px;
+            font-weight: $font-medium;
+            color: #000;
+            &::after {
+              content: "";
+              position: absolute;
+              top: 50%;
+              left: 0;
+              transform: translateY(-50%);
+            }
+            &--bucks {
+              &::after {
+                width: 28px;
+                height: 28px;
+                background-size: 100%;
+                background: url("../../../assets/icons/bucksIcon.svg") center
+                  no-repeat;
+              }
+            }
+            &--cash {
+              &::after {
+                width: 28px;
+                height: 28px;
+                background-size: 100%;
+                background: url("../../../assets/icons/cashIcon.svg") center
+                  no-repeat;
+              }
+            }
+          }
+        }
+      }
+
+      .modal-footer {
+        padding: 14px 20px 30px;
+        background-color: #f8fbfd;
+        &__notice {
+          width: 100%;
+          min-height: 50px;
+          padding-left: 7px;
+          color: #666666;
+          text-align: left;
+          .notice--text {
+            display: block;
+            position: relative;
+            padding-left: 7px;
+            font-size: 12px;
+            color: #666;
+            font-weight: 400;
+            line-height: 16px;
+            &::after {
+              content: "";
+              position: absolute;
+              top: 8px;
+              left: 0;
+              width: 2px;
+              height: 2px;
+              border-radius: 50%;
+              background-color: #bbbbbb;
+            }
+          }
+        }
+        .modal__button {
+          float: right;
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+}
+
+// 아이템 구매하기 nolist- common style -> layout.scss
+
+.item-purchase-nolist_modal {
+  .modal__wrap {
+    overflow: hidden;
+    .modal__contents {
+      width: 650px;
+      padding: 0;
+      .modal-body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 275px;
+        .nolist {
+          &__text {
+            padding-top: 122px;
+            background: url("../../../assets/images/purchaseNolist.png") top
+              center no-repeat;
+            color: #808080;
+            font-size: 13px;
+            line-height: 1;
+            b {
+              display: inline-block;
+              color: #000;
+              font-size: 16px;
+              font-weight: $font-bold;
+              line-height: 1;
+              margin-bottom: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// 배치된 아이템 중 아직 구매 안함 - common style -> layout.scss
+.item-purchase_modal {
+  .modal__contents {
+    width: 335px;
+    .modal-body {
+      > p {
+        padding-top: 102px;
+        background: url("../../../assets/images/purchaseNolist.png") top center
+          no-repeat;
+        background-size: 70px 82px;
+        font-size: 15px;
+      }
+    }
+  }
+}

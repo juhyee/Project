@@ -1,0 +1,546 @@
+@import 'scss/common.scss';
+@import 'styles/mixins/vw';
+@import 'styles/mixins/flex';
+
+.NoteLandOverlay{
+  &.ReactModal__Overlay {
+    opacity: 0;
+  }
+  //landscape일 때 사이즈 조정 공통 layout
+  &.ReactModal__Overlay--after-open {
+    overflow: hidden;
+    position:absolute;
+    bottom:0;
+    right:0;
+    width:100vw;
+    height: get-vw(1160);
+    opacity: 1;
+    border-radius: get-vw(40) get-vw(40)  0 0;
+    box-sizing: content-box;
+    .baseLayout {
+      position: relative;
+      .baseHeader{
+        @include flex(row, flex-start, center);
+        top: get-vw(120) !important;
+        height: get-vw(100);
+        border-radius: get-vw(40) get-vw(40) 0 0;
+        .backIconWrapper {
+          left: get-vw(40);
+        }
+        .baseHeaderTitle {
+          padding-left: get-vw(120);
+          font-size: get-vw(32);
+        }
+        .buttonGroup {
+          right: get-vw(40);
+          .Icon {
+            width: get-vw(40);
+            &.addButton {
+              margin-right: get-vw(38);
+            }
+          }
+        }
+        .deleteConfirmButton {
+          font-size: get-vw(32);
+        }
+      }
+      .baseLayoutContent {
+        // height: get-vw(1161);
+        padding-top: 0 !important;
+        &::-webkit-scrollbar{
+          display: none;
+        }
+      }
+    }
+
+    @media (orientation:landscape) {
+      top: get-vw1280(20);
+      right: get-vw1280(20);
+      bottom:auto;
+      width: get-vw1280(580);
+      height: get-vh720(680);
+      padding-top: 0;
+      border-radius: get-vw1280(26);
+      .baseLayout {
+        .baseHeader{
+          top: get-vw1280(20) !important;
+          right: get-vw1280(20);
+          width: get-vw1280(580);
+          height: get-vw1280(100);
+          border-radius: get-vw1280(26) get-vw1280(26)  0 0;
+          .backIconWrapper {
+            left: get-vw1280(36);
+            width: get-vw1280(40);
+          }
+          .baseHeaderTitle {
+            padding-left: get-vw1280(112);
+            font-size: get-vw1280(34);
+          }
+          .buttonGroup {
+            right: get-vw1280(40);
+            .Icon {
+              width: get-vw1280(40);
+              &.addButton {
+                margin-right: get-vw1280(38);
+              }
+            }
+          }
+          .deleteConfirmButton {
+            font-size: get-vw1280(32);
+          }
+        }
+      }
+    }
+  }
+  &.ReactModal__Overlay--before-close {
+    opacity: 0;
+  }
+}
+
+
+
+// 받은 쪽지 & 보낸 쪽지
+.NoteLand{
+  .NoteLandWrapper{
+    position:relative;
+    overflow: hidden;
+    overflow-x: auto;
+    height: 100vh;
+    &::-webkit-scrollbar{
+      display: none;
+    }
+    .NoteListPage {
+      margin-top: get-vw(100);
+      .baseLayoutContent {
+        .fixedTabWrapper {
+          top: get-vw(219);
+          padding: 0 get-vw(40) get-vw(18);
+          .tab {
+            height: get-vw(60);
+            padding: get-vw(6);
+            li {
+              .title {
+                color: #707070;
+              }
+              .count {
+                margin-left: get-vw(8);
+                color: #afafaf;
+              }
+
+              &:first-child {
+                margin-right: get-vw(8);
+              }
+            }
+          }
+        }
+        .recvAll {
+          top: get-vw(297);
+          right: get-vw(40);
+          padding: get-vw(6) get-vw(20);
+          border: get-vw(2) solid #ff449a;
+          background-color: #fff;
+          p {
+            color: #ff449a;
+          }
+        }
+        .noteList {
+          padding: 0 0 get-vw(96) 0;
+          &.deleteMode {
+            .selectAllForDelete {
+              height: auto;
+              margin-top: get-vw(140);
+              button {
+                padding: 0 get-vw(40);
+                height: get-vw(36);
+                p {
+                  font-size: get-vw(24);
+                  color: #4e4e4e;
+                }
+                .Checkbox {
+                  width: get-vw(36);
+                  height: get-vw(36);
+                  svg {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                  }
+                }
+              }
+            }
+            .noteItemList {
+              padding-top: get-vw(0);
+            }
+          }
+          &.send {
+            padding-top: get-vw(0);
+            &.deleteMode {
+              .selectAllForDelete {
+                margin-top: get-vw(78);
+              }
+              .noteItemList {
+                padding-top: get-vw(0);
+              }
+            }
+            .noteItemList {
+              padding-top: get-vw(78);
+            }
+          }
+          .noteItemList {
+            padding: get-vw(138) 0 get-vw(96);
+            .noteItem {
+              > div {
+                padding: get-vw(12) get-vw(40);
+                font-weight: $font-regular;
+                .leftWing {
+                  .name {
+                    margin-top: 0;
+                    line-height: get-vw(35);
+                    color: #4e4e4e;
+                  }
+                  time {
+                    margin-top: get-vw(3);
+                    line-height: get-vw(29);
+                  }
+                  .contents {
+                    overflow: hidden;
+                    width: get-vw(342);
+                    margin-top: get-vw(3);
+                    line-height: get-vw(35);
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .notePagination{
+          > div {
+            span {
+              color: #4e4e4e;
+              font-size: get-vw(27);
+              
+              &.disabled {
+                color: #858585;
+              }
+            }
+          }
+        }
+        .empty {
+          background: url('../../../assets/images/notelistEmpty.svg') center 0 no-repeat;
+          background-size: get-vw(304) get-vw(304);
+          padding-top: get-vw(331);
+          transform: translateY(calc(-50% + get-vw(160)));
+        }
+      }
+      @media (orientation:landscape) {
+        padding-top: get-vw1280(0);
+        .baseLayoutContent {
+          .fixedTabWrapper {
+            top: get-vw1280(120);
+            right: get-vw1280(20);
+            left: auto;
+            width: get-vw1280(580); 
+            padding: 0 get-vw1280(36) get-vw1280(18);
+            .tab {
+              height: get-vw1280(60);
+              padding: get-vw1280(6);
+              li {
+                height: get-vw1280(48);
+                .title {
+                  font-size: get-vw1280(24);
+                  color: #707070;
+                }
+                .count {
+                  margin-left: get-vw1280(8);
+                  font-size: get-vw1280(24);
+                  color: #afafaf;
+                }
+
+                &:first-child {
+                  margin-right: get-vw(8);
+                }
+              }
+            }
+          }
+          .recvAll {
+            z-index: 3;
+            top: get-vw1280(198);
+            right: get-vw1280(56);
+            min-width: get-vw1280(176);
+            height: get-vw1280(48);
+            padding: get-vw1280(6) get-vw1280(20);
+            background-color: #c9c9c9;
+            border: none;
+            .iconWrapper {display: none;}
+            p {
+              color: #fff;
+              font-size: get-vw1280(24);
+            }
+          }
+          .noteList {
+            padding-bottom: get-vw1280(0);
+            &.deleteMode {
+              .selectAllForDelete  {
+                margin-top: get-vw1280(00);
+                button {
+                  height: get-vw1280(36);
+                  padding: 0 get-vw1280(40);
+                  p {
+                    font-size: get-vw1280(24);
+                    color: #4e4e4e;
+                  }
+                  .Checkbox {
+                    width: get-vw1280(36);
+                    height: get-vw1280(36);
+                    svg {
+                      width: 100%;
+                      height: 100%;
+                      object-fit: cover;
+                    }
+                  }
+                }
+              }
+            }
+            &.send {
+              padding-top: get-vw1280(0);
+              .noteItemList {
+                padding-top: 0;
+              }
+            }
+            .noteItemList {
+              padding: 0;
+              .noteItem {
+                > div {
+                  padding: get-vw1280(12) get-vw1280(36);
+                  .profileWrapper {
+                    .ProfileAvatarWrapper {
+                      min-width: get-vw1280(116);
+                      min-height: get-vw1280(116);
+                      border-width:get-vw1280(4);
+                      .ProfileAvatar {
+                        width: get-vw1280(100);
+                        height: get-vw1280(100);
+                      }
+                    }
+                  }
+                  .contentsWrapper {
+                    margin-left: get-vw1280(24);
+                    .leftWing {
+                      .name {
+                        font-size: get-vw1280(24);
+                        line-height: get-vw1280(35);
+                      }
+                      time {
+                        margin-top: get-vw1280(3);
+                        font-size: get-vw1280(20);
+                        line-height: get-vw1280(29);
+                      }
+                      .contents{
+                        width: get-vw1280(230);
+                        margin-top: get-vw1280(3);
+                        line-height: get-vw1280(35);
+                        font-size: get-vw1280(24);
+                      }
+                    }
+                    .Checkbox {
+                      width: get-vw1280(36);
+                      height: get-vw1280(36);
+                      svg {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .notePagination{
+            right: get-vw1280(20);
+            left: auto;
+            bottom: get-vw1280(20);
+            width: get-vw1280(580);
+            height: get-vw1280(96);
+            border-radius: 0 0 get-vw1280(26) get-vw1280(26);
+            button {
+              width: get-vw1280(96);
+              height: get-vw1280(96);
+              padding: get-vw1280(30) get-vw1280(36);
+            }
+            > div {
+              span {
+                color: #4e4e4e;
+                font-size: get-vw1280(27);
+                
+                &.disabled {
+                  color: #858585;
+                }
+              }
+            }
+          }
+          .empty {
+            width: get-vw1280(580);
+            padding-top: get-vw1280(200);
+            background: url('../../../assets/images/notelistEmpty.svg') center 0 no-repeat;
+            background-size: get-vw1280(180) get-vw1280(180);
+            font-size: get-vw1280(26);
+            line-height: get-vw1280(37);
+            transform: translateY(calc(-50% + get-vw1280(60)));
+          }
+        }
+      }
+    }
+  }
+}
+
+.NoteNewPage {
+  &.hasHeader {padding-top: get-vw(0) !important;}
+  .baseLayoutContent {
+    .NoteNewContent {
+      position: relative;
+      padding: 0 get-vw(32);
+      .TopBar {
+        top: get-vw(219);
+        width: 100%;
+        height: get-vw(160);
+        padding: 0;
+        background-color: #fff;
+        .inputWrapper {
+          width: get-vw(656);
+          margin: 0 auto;
+        }
+        .Navbar {
+          margin-top: get-vw(20);
+          border-bottom: get-vw(1) solid #e9ebee;
+          .item {
+            font-size: get-vw(28);
+            margin-left: get-vw(32);
+            padding: get-vw(11) 0;
+          }
+        }
+      }
+      .friendList, .userList {
+        margin-top: get-vw(274);
+        .friendItemWrapper  {
+          & + .friendItemWrapper {
+            margin-top: get-vw(24);
+          }
+          .friendItem {
+            .friendItemInfo {
+              margin-left: get-vw(24);
+              color: #4e4e4e;
+              .relation {
+                font-weight: $font-medium;
+                line-height: get-vw(35);
+              }
+              .statusMessage {
+                margin-top: get-vw(5);
+                color: #7d7d7d;
+                line-height: get-vw(35);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (orientation:landscape) {
+    .baseLayoutContent{
+      margin-top: get-vw1280(262);
+      .NoteNewContent {
+        padding: get-vw1280(0) get-vw1280(36); 
+        .TopBar {
+          top: get-vw1280(120);
+          left: auto;
+          right: 1.5625vw;
+          width: get-vw1280(580);
+          height:  get-vw1280(162);
+          .inputWrapper {
+            width: get-vw1280(508);
+            height: get-vw1280(80);
+            .searchIcon {
+              top: get-vw1280(16);
+              left: get-vw1280(25);
+              width: get-vw1280(48);
+              height: get-vw1280(48);
+            }
+            input {
+              height: get-vw1280(80);
+              padding: 0 get-vw1280(64) 0 get-vw1280(93);
+              font-size: get-vw1280(32);
+            }
+            .clearButton {
+              top: get-vw1280(22);
+              right: get-vw1280(28);
+              width: get-vw1280(36);
+              height: get-vw1280(36);
+              background:#a8a8a8 url('../../../assets/icons/closeWhite.svg') center no-repeat;
+              &::after, &::before {display: none;}
+            }
+          }
+          .Navbar {
+            width: get-vw1280(580);
+            margin-top: get-vw(8);
+            column-gap:0;
+            .item {
+              margin-left: get-vw1280(41);
+              padding: get-vw1280(11) 0;
+              font-size: get-vw1280(28);
+              line-height: get-vw1280(40);
+              &:first-child {
+                margin-left: get-vw(32);
+              }
+            }
+          }
+        }
+        .emptyJSX {
+          position: absolute;
+          left: 0;
+          width: get-vw1280(580);
+          transform: translate(0, calc(-50% + get-vw1280(-149)));
+          .description  {
+            font-size: get-vw1280(26);
+            line-height: get-vw1280(37);
+          }
+        }
+        .friendList, .userList {
+          margin-top: get-vw1280(24);
+          padding-bottom: get-vw1280(186);
+          .friendItemWrapper {
+            & + .friendItemWrapper {
+              margin-top: get-vw1280(12);
+            }
+            .friendItem {
+              .ProfileAvatarWrapper {
+                min-width: get-vw1280(116);
+                min-height: get-vw1280(116);
+                border-width:get-vw1280(4);
+                .ProfileAvatar {
+                  width: get-vw1280(100);
+                  height: get-vw1280(100);
+                }
+              }
+              .friendItemInfo {
+                margin-left: get-vw1280(24);
+                .nickname {
+                  font-size: get-vw1280(24);
+                }
+                .relation  {
+                  font-size: get-vw1280(24);
+                  line-height: get-vw1280(35);
+                }
+                .statusMessage {
+                  margin-top: get-vw1280(5);
+                  font-size: get-vw1280(24);
+                  line-height: get-vw1280(35);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

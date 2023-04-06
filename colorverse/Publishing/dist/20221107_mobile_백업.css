@@ -1,0 +1,131 @@
+@charset "UTF-8";
+.styles_top__Cdx7m {
+  display: none;
+}
+
+.thumbnail {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 335px;
+  height: 113px;
+  left: 20px;
+  top: 558px;
+}
+
+.active {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 96px;
+  height: 113px;
+  left: 139px;
+}
+
+.disabled {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 335px;
+  height: 86px;
+  left: 20px;
+}
+
+.swiper {
+  width: 92px;
+  height: auto;
+}
+
+.avatar {
+  position: absolute;
+  width: 156px;
+  height: 456px;
+  left: 109px;
+  top: 88px;
+}
+
+.arrow {
+  position: absolute;
+  left: 45.73%;
+  width: 16.04px;
+  height: 11px;
+  /* 그라데이션_01 */
+  background: linear-gradient(131.88deg, #6631fb 15.14%, #ff72d7 86.3%);
+}
+
+.swiper-slide {
+  position: relative;
+  margin: 10px;
+  display: block;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  background-image: linear-gradient(0deg, #f9f9f9, #f9f9f9), linear-gradient(131.88deg, #6631fb 15.14%, #ff72d7 86.3%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.swiper-slide:not(.swiper-slide-active) {
+  opacity: 1;
+}
+
+.text-decription {
+  position: absolute;
+  width: 191px;
+  height: 10px;
+  left: 92px;
+  top: 686px;
+  font-family: "Noto Sans CJK KR";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 100%;
+  /* identical to box height, or 10px */
+  text-align: center;
+  letter-spacing: -0.3px;
+  white-space: nowrap;
+  color: #989898;
+}
+
+.button-complete {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 20px 140px 20px 150px;
+  position: absolute;
+  width: 335px;
+  height: 56px;
+  left: 20px;
+  top: 741px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: -webkit-gradient(linear, left top, right top, color-stop(2.6%, #6631fb), to(#ff72d7));
+  background: linear-gradient(90deg, #6631fb 2.6%, #ff72d7 100%);
+  border-radius: 32px;
+  font-family: "Noto Sans CJK KR";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  /* identical to box height, or 16px */
+  white-space: nowrap;
+  text-align: center;
+  letter-spacing: -0.3px;
+  color: #ffffff;
+}
+
+.layout {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background: #ffffff;
+}

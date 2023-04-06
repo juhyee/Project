@@ -1,0 +1,209 @@
+    <div className="item-manager">
+      <div className="land-manager__inner">
+        <div className="manager-aside">
+          <div className="aside__inner">
+            <div className="aside__inner--top">
+              <div className="aside__logo">
+                <div className="logo">
+                  <h1>
+                    <span className="blind">colorvers</span>
+                    <span>빌더</span>
+                  </h1>
+                </div>
+              </div>
+              <div className="aside__gnb">
+                <ul className="gnb">
+                  {/* D: gnb__itme 활성화 시 addClass on */}
+                  <li className="gnb__item">랜드 빌더</li>
+                  <li className="gnb__item on">아이템 빌더</li>
+                  <li className="gnb__item">에셋 빌더</li>
+                </ul>
+              </div>
+            </div>
+            <div className="aside__inner--bottom">
+              <div className="manager-snb">
+                <ul className="snb">
+                  {/* D: snb__item 활성화 시 addClass on */}
+                  <li className="snb__item snb__item--all on">
+                    <span>모든 아이템</span>
+                    <ul className="snb-depth">
+                      <li className="snb-depth__head">
+                        <div className="snb-depth__item">
+                          <button className="snb-depth__button"></button>
+                          <span>복장</span>
+                        </div>
+                      </li>
+                      <li className="snb-depth__head on">
+                        <div className="snb-depth__item">
+                          <button className="snb-depth__button active"></button>
+                          <span>미용</span>
+                        </div>
+                        <ul className="snb-depth__body">
+                          {/* D: snb-depth__item 활성화 시 addClass on */}
+                          <li className="snb-depth__item on">헤어</li>
+                          <li className="snb-depth__item">수염</li>
+                          <li className="snb-depth__item">눈 화장</li>
+                          <li className="snb-depth__item">색조 화장</li>
+                          <li className="snb-depth__item">문신</li>
+                          <li className="snb-depth__item">립스틱</li>
+                        </ul>
+                      </li>
+                      <li className="snb-depth__head">
+                        <div className="snb-depth__item">
+                          <button className="snb-depth__button disabled"></button>
+                          <span>장식</span>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li className="snb__item snb__item--avatar">
+                    <span>아바타 아이템</span>
+                  </li>
+                  <li className="snb__item snb__item--land">
+                    <span>랜드 아이템</span>
+                  </li>
+                </ul>
+                <button className="button--tutorial">
+                  <p>
+                    <b>빌더 사용 튜토리얼</b>
+                    인기 랜드는 어떻게 만드나요?
+                  </p>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* D: 랜드가 없을 시  manager-container addClass nolist*/}
+        <div className="manager-container">
+          <div className="manager-header">
+            <div className="header__inner">
+              <div className="header__inner--left">
+                <div className="user-profile">
+                  <div className="user-profile__thumbnail">
+                    <img
+                      src={require("../../../assets/images/ting-xue-xue-ting-pinkhairgril.png")}
+                    />
+                  </div>
+                  <span className="user-profile__name">천억부자님</span>
+                  <span className="user-profile__email">
+                    potato1010@gmail.com
+                  </span>
+                </div>
+                <button className="button--lg button--logout">
+                  <i className="icon icon_logout">로그아웃</i>
+                </button>
+              </div>
+              <div className="header__inner--right">
+                <div className="header__search">
+                  <div className="search">
+                    <input
+                      className="search__input"
+                      type="text"
+                      name=""
+                      id=""
+                      placeholder="랜드 빌더 검색어를 입력하세요"
+                    />
+                    <button className="button--hg search__button">
+                      <i className="icon icon_search-white">검색</i>
+                    </button>
+                  </div>
+                </div>
+                <button className="button--hg button--make">랜드만들기</button>
+              </div>
+            </div>
+          </div>
+          <div className="manager-contents">
+            <div className="contents__inner">
+              <div className="item-result">
+                <p className="item-result__total">
+                  모든 아이템 <span>총 13개</span>
+                </p>
+                {/* D: item-result__select 활성화 시 addClass on */}
+                <div className="item-result__select">
+                  <button className="select__button">
+                    <i className="icon icon_sort"></i>
+                  </button>
+                  <div className="select-layer">
+                    <ul className="select-layer__list">
+                      {/* D: select-layer__item 활성화 시 addClass on */}
+                      <li className="select-layer__item on">최근순</li>
+                      <li className="select-layer__item">오래된순</li>
+                      <li className="select-layer__item">이름순</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div className="item-card">
+                <ul className="item-card__list">
+                  <li className="item-card__item">
+                    <div className="item-card__info">
+                      <div className="item-card__thumbnail">
+                        {/* 확인용 이미지 */}
+                        <img
+                          src={require("../../../assets/images/1737855024176.png")}
+                        />
+                      </div>
+                      <div className="item__detail">
+                        <div className="item-title">
+                          <span className="item-title__text">
+                            일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십
+                          </span>
+                          {/* D: item-title__select 활성화 시 addClass on */}
+                          <div className="item-title__select">
+                            <button className="select__button"></button>
+                            <div className="select-layer">
+                              <ul className="select-layer__list">
+                                {/* D: select-layer__item 활성화 시 addClass on */}
+                                <li className="select-layer__item on">
+                                  랜드 게시하기
+                                </li>
+                                <li className="select-layer__item">
+                                  랜드 비공개하기
+                                </li>
+                                <li className="select-layer__item">
+                                  랜드 삭제하기
+                                </li>
+                                <li className="select-layer__item">
+                                  랜드 정보
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="item-state">
+                          <div className="item-state--left">
+                            <div className="item-state__item">
+                              <span className="item__title">판매 상태</span>
+                              <span className="item__contents">판매 중</span>
+                            </div>
+                          </div>
+                          <div className="item-state--right">
+                            <div className="item-state__item">
+                              <span className="item__title">게시 상태</span>
+                              <span className="item__contents">게시 됨</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="item__buttons">
+                          <button className="item__button button--fetch">
+                            불러오기
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div className="manager-nolist">
+            <div className="nolist">
+              <p className="nolist__text">
+                <b>새로운 랜드를 만들어 보세요!</b>아직 랜드가 없어요. 랜드를
+                만들어 즐겨보세요.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

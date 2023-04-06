@@ -1,0 +1,125 @@
+@import 'scss/common.scss';
+@import 'styles/mixins/vw';
+@import 'styles/mixins/flex';
+
+.AlarmLandOverlay{
+  &.ReactModal__Overlay {
+    opacity: 0;
+  }
+
+  &.ReactModal__Overlay--after-open {
+    //height width 고정
+    height: 100vh;
+    width:100vw;
+    position:absolute;
+    bottom:0;
+    right:0;
+    opacity: 1;
+    //ReactModal__Content--after-open 여기서 내용 수정
+    .ReactModal__Content--after-open{
+      overflow: hidden;
+      position:absolute;
+      bottom:0;
+      right:0;
+      width:100vw;
+      height: get-vh1280(1160);
+      border-radius: get-vw(40) get-vw(40)  0 0;
+      box-sizing: content-box;
+      .baseLayout {
+        .baseHeader{
+          @include flex(row, flex-start, center);
+          top: get-vh1280(119) !important;
+          height: get-vw(100);
+          border-radius: get-vw(40) get-vw(40) 0 0;
+          .backIconWrapper {
+            left: get-vw(40);
+          }
+          .baseHeaderTitle {
+            padding-left: get-vw(120);
+            font-size: get-vw(32);
+          }
+          .buttonGroup {
+            right: get-vw(40);
+            .Icon {
+              width: get-vw(40);
+              &.addButton {
+                margin-right: get-vw(38);
+              }
+            }
+          }
+          .deleteConfirmButton {
+            font-size: get-vw(32);
+          }
+        }
+        .baseLayoutContent {
+          height: get-vh1280(1160);
+          padding-top: 0 !important;
+          &::-webkit-scrollbar{
+            display: none;
+          }
+        }
+      }
+      // @media (orientation:landscape) {
+      // }
+    }
+  }
+
+  &.ReactModal__Overlay--before-close {
+    opacity: 0;
+  }
+
+  .AlarmLand{
+    .AlarmListPage {
+      position:relative;
+      height: 100vh;
+      .baseLayoutContent {
+        .alarmList {
+          padding: get-vw(104) get-vw(40) 0;
+          .alarmCategoryWrapper {
+            .timeCategory {
+              margin-bottom: get-vw(18);
+            }
+            .alarmItem {
+              .content {
+                color: #4e4e4e;
+                .date {
+                  color: #b1b1b1;
+                }
+              }
+              .thumbnailWrapper {
+              }
+              .alarmItemContentWrapper {
+                margin-left: get-vw(23);
+              }
+              .alarmButtonGroup {
+                margin-left: get-vw(31);
+                button {
+                  & + & {
+                    margin-left: get-vw(12);
+                  }
+                } 
+              }
+            }
+          }
+        }
+        .notFoundWrapper {
+          top: 50%;
+          background: url('../../../assets/images/notelistEmpty.svg') center 0 no-repeat;
+          background-size: get-vw(304) get-vw(304);
+          padding-top: get-vw(331);
+          transform: translateY(calc(-50%));
+          .notFoundText {
+            color: #767676;
+            font-weight: $font-medium;
+            line-height: get-vw(46);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+  
+

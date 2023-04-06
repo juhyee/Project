@@ -1,0 +1,583 @@
+.Toplayout {
+  position: absolute;
+  width: 375px;
+  height: 670px;
+  left: 0px;
+  top: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #f4f3f7;
+  border-radius: 0px;
+}
+
+.header-box {
+  position: absolute;
+  width: 328px;
+  height: 58px;
+  left: 20px;
+  top: 13px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header-box .back {
+  height: 14px;
+  width: 7px;
+  left: 1px;
+  top: 22px;
+  border-radius: 0px;
+  background-image: url("/assets/img/avatar/header/back.png");
+}
+.header-box .my-account {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 90px;
+  height: 30px;
+  background: #ffffff;
+  border: 1px solid #ececec;
+  border-radius: 15px;
+  margin-left: auto;
+}
+.header-box .my-account .point {
+  height: 10px;
+  width: 10px;
+  left: 0px;
+  top: 0px;
+  border-radius: 0px;
+  background-image: url("/assets/img/avatar/header/point.png");
+}
+.header-box .my-account .coin {
+  height: 10px;
+  width: 10px;
+  left: 0px;
+  top: 0px;
+  border-radius: 0px;
+  background-image: url("/assets/img/avatar/header/coin.png");
+}
+.header-box .search {
+  height: 20px;
+  width: 20px;
+  left: 324px;
+  top: 64px;
+  border-radius: 0px;
+  background-image: url("/assets/icons/search.svg");
+}
+.header-box span {
+  margin: 3px;
+  font-family: "Noto Sans CJK KR";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: -0.3px;
+  color: #000000;
+}
+
+.right-button-group {
+  position: absolute;
+  width: 42px;
+  height: 198px;
+  left: 313px;
+  top: 110px;
+}
+.right-button-group .item {
+  width: 42px;
+  height: 42px;
+}
+.right-button-group button:nth-child(1) {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  background-image: url("/assets/img/avatar/rightbutton/01-1.png");
+}
+.right-button-group button:nth-child(1).select {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  background-image: url("/assets/img/avatar/rightbutton/01.png");
+}
+.right-button-group button:nth-child(2) {
+  background-image: url("/assets/img/avatar/rightbutton/2-1.png");
+}
+.right-button-group button:nth-child(2).select {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  background-image: url("/assets/img/avatar/rightbutton/2.png");
+}
+.right-button-group button:nth-child(3) {
+  background-image: url("/assets/img/avatar/rightbutton/3-1.png");
+}
+.right-button-group button:nth-child(3).select {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  background-image: url("/assets/img/avatar/rightbutton/3.png");
+}
+.right-button-group button:nth-child(4) {
+  background-image: url("/assets/img/avatar/rightbutton/4-1.png");
+}
+.right-button-group button:nth-child(4).select {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  background-image: url("/assets/img/avatar/rightbutton/4.png");
+}
+
+.Contaniter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  width: 375px;
+  height: 208px;
+  left: 0px;
+  top: 601px;
+  background: linear-gradient(131.88deg, #6631fb 15.14%, #ff72d7 86.3%);
+  border-radius: 40px 40px 0px 0px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.Contaniter.top {
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  top: 400px;
+}
+.Contaniter.bottom {
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  top: 815px;
+}
+.Contaniter .bar {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  width: 94px;
+  height: 6px;
+  left: 141px;
+  top: -8px;
+  background: #ececec;
+  border: 1px solid #d9d9d9;
+  border-radius: 22px;
+}
+.Contaniter .right-button-float {
+  position: absolute;
+  height: 40px;
+  width: 90px;
+  left: 265px;
+  bottom: 229px;
+  border-radius: 20px;
+}
+.Contaniter .right-button-float button {
+  position: absolute;
+  width: 90px;
+  height: 40px;
+  background: #000000;
+  -webkit-box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.08);
+          box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  font-family: "Noto Sans CJK KR";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: -0.3px;
+  color: #ffffff;
+}
+.Contaniter .left-button-group {
+  position: absolute;
+  width: 42px;
+  height: 178px;
+  left: 20px;
+  bottom: 229px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-flow: wrap-reverse;
+          flex-flow: wrap-reverse;
+}
+.Contaniter .left-button-group button {
+  height: 42px;
+  width: 42px;
+  left: 0px;
+  top: 0px;
+  border-radius: 0px;
+}
+.Contaniter .left-button-group .cloths {
+  margin-top: 10px;
+  background-image: url("/assets/img/avatar/leftbutton/closet.png");
+}
+.Contaniter .left-button-group .btn-group-box {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-flow: wrap-reverse;
+          flex-flow: wrap-reverse;
+  background: #ffffff;
+  border: 1px solid #ececec;
+  border-radius: 21px;
+}
+.Contaniter .left-button-group .reset {
+  background-image: url("/assets/img/avatar/leftbutton/reset.png");
+}
+.Contaniter .left-button-group .undo {
+  background-image: url("/assets/img/avatar/leftbutton/pre.png");
+}
+.Contaniter .left-button-group .redo {
+  background-image: url("/assets/img/avatar/leftbutton/back.png");
+}
+.Contaniter .Itemlayout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 375px;
+  margin-top: 60px;
+  height: 546px;
+  background: #ffffff;
+  border-radius: 40px 40px 0px 0px;
+}
+.Contaniter .ButtonLayout {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 335px;
+  height: 34px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.Contaniter .ButtonLast {
+  margin-left: auto;
+}
+.Contaniter .CategoryLayout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 0px;
+  gap: 19px;
+  position: absolute;
+  width: 299px;
+  height: 34px;
+  left: 38px;
+  top: 15px;
+}
+.Contaniter .layout {
+  overflow: hidden;
+  position: relative;
+  width: 375px;
+  height: 812px;
+  background: #ffffff;
+}
+.Contaniter .btn {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: var(--button-bg-color);
+  color: var(--button-color);
+  margin: 0;
+  padding: 0.5rem 1rem;
+  font-family: "Noto Sans CJK KR";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  display: inline-block;
+  width: auto;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.Contaniter .btn-status {
+  background: #ffe1f3;
+  border-radius: 10px 6px 6px 6px;
+  position: relative;
+}
+.Contaniter .btn-icon {
+  background: #ff72d7;
+  border-radius: 6px;
+  margin-left: -16px;
+}
+.Contaniter .btn-icon img {
+  margin-left: 9px;
+}
+.Contaniter .ToggleCircle {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 34px;
+  height: 34px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+.Contaniter ul {
+  list-style-type: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.Contaniter li {
+  list-style-type: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.Contaniter .shopItemWrapper {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(5, 1fr);
+  row-gap: get-vw(20);
+  -webkit-column-gap: get-vw(14);
+     -moz-column-gap: get-vw(14);
+          column-gap: get-vw(14);
+  width: 100%;
+  max-height: calc(80vh - get-vw(600));
+  padding: get-vw(0) get-vw(32) get-vw(68);
+  overflow-y: scroll;
+  background-color: #ffffff;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+  margin-top: 10px;
+}
+.Contaniter .shopItemWrapper .itemWrapper {
+  position: relative;
+  height: 78px;
+  width: 58px;
+  left: 0px;
+  top: 0px;
+  border-radius: 8px;
+  gap: 5px;
+}
+.Contaniter .shopItemWrapper .itemWrapper.select::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  padding: 2px;
+  background: linear-gradient(45deg, #ff72d7, #7747ff) border-box;
+  -webkit-mask: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff)) content-box, -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+.Contaniter .shopItemWrapper .itemWrapper .itemImage {
+  width: get-vw(120);
+  height: get-vw(120);
+  border: get-vw(2) solid #e9e9e9;
+  border-radius: get-vw(10);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.Contaniter .shopItemWrapper .itemWrapper .itemImage .thumbNail {
+  width: get-vw(106);
+  height: get-vw(106);
+  background-color: #ffffff;
+  border-radius: get-vw(10);
+}
+.Contaniter .shopItemWrapper .itemWrapper .itemIconWrapper {
+  position: absolute;
+  right: 0;
+  top: get-vw(88);
+  width: 100%;
+  padding: 0 get-vw(6);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.Contaniter .shopItemWrapper .itemWrapper .itemIconWrapper .starIcon {
+  position: absolute;
+  right: get-vw(4);
+  bottom: 0;
+}
+.Contaniter .shopItemWrapper .itemWrapper .itemIconWrapper.isInventory {
+  bottom: get-vw(4);
+}
+.Contaniter .shopItemWrapper .itemWrapper .priceInfo {
+  margin-top: get-vw(8);
+  margin-left: get-vw(4);
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.Contaniter .shopItemWrapper .itemWrapper .priceInfo span {
+  font-family: "Noto Sans CJK KR";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 100%;
+  /* identical to box height, or 11px */
+  letter-spacing: -0.3px;
+  /* S_T_01 */
+  color: #696868;
+}
+.Contaniter .shopItemWrapper .itemWrapper .priceInfo .price {
+  height: get-vw(24);
+  margin-left: get-vw(10);
+  font-size: get-vw(22);
+  font-weight: 700;
+  line-height: get-vw(24);
+  color: #4e4e4e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.Contaniter .shopItemWrapper .itemWrapper .priceInfo .price.long {
+  margin-left: get-vw(4);
+}
+.Contaniter .shopItemWrapper .itemWrapper .priceInfo .salePrice {
+  font-size: size(11);
+  color: #c1c1c1;
+  margin-left: get-vw(10);
+  margin-top: size(4);
+}
+.Contaniter .shopItemWrapper .itemWrapper .priceInfo .salePrice.long {
+  margin-left: get-vw(4);
+}
+.Contaniter .shopItemWrapper .itemWrapper.isActive .itemImage {
+  border: get-vw(4) solid #ff449a;
+}
+.Contaniter .shopItemWrapper .itemWrapper.isActive .itemName {
+  position: absolute;
+  bottom: get-vw(64);
+  left: get-vw(40);
+  z-index: 1;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  padding: get-vw(8) get-vw(16);
+  background-color: #ffffff;
+  border: solid get-vw(2) #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.Contaniter .shopItemWrapper .itemWrapper.isActive .itemName .name {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  font-size: get-vw(18);
+}
+.Contaniter .shopItemWrapper .itemWrapper .itemName {
+  display: none;
+}
+.Contaniter .shopItemWrapper .itemWrapper:nth-child(5n+0) .itemName {
+  position: absolute;
+  bottom: get-vw(64);
+  left: get-vw(-60);
+  z-index: 1;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  padding: get-vw(8) get-vw(16);
+  background-color: #ffffff;
+  border: solid get-vw(2) #000000;
+}
+.Contaniter .shopItemWrapper::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, Opera */
+}
+.Contaniter .act {
+  background-color: #696868;
+}

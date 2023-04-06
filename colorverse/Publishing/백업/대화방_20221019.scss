@@ -1,0 +1,205 @@
+@import 'scss/common.scss';
+@import 'styles/mixins/vw';
+@import 'styles/mixins/flex';
+
+.ChatLandOverlay{
+  &.ReactModal__Overlay {
+    opacity: 0;
+  }
+
+  &.ReactModal__Overlay--after-open {
+    //height width 고정
+    height: 100vh;
+    width:100vw;
+    position:absolute;
+    bottom:0;
+    right:0;
+    opacity: 1;
+    //ReactModal__Content--after-open 여기서 내용 수정
+    .ReactModal__Content--after-open{
+      overflow: hidden;
+      position:absolute;
+      bottom:0;
+      right:0;
+      width:100vw;
+      height: get-vh1280(1160);
+      border-radius: get-vw(40) get-vw(40)  0 0;
+      box-sizing: content-box;
+      .baseLayout {
+        .baseHeader{
+          @include flex(row, flex-start, center);
+          top: get-vh1280(119) !important;
+          height: get-vw(100);
+          border-radius: get-vw(40) get-vw(40) 0 0;
+          .backIconWrapper {
+            left: get-vw(40);
+          }
+          .baseHeaderTitle {
+            padding-left: get-vw(120);
+            font-size: get-vw(32);
+          }
+          .buttonGroup {
+            right: get-vw(40);
+            .Icon {
+              width: get-vw(40);
+              &.addButton {
+                margin-right: get-vw(38);
+              }
+            }
+          }
+          .deleteConfirmButton {
+            font-size: get-vw(32);
+          }
+        }
+        .baseLayoutContent {
+          height: get-vh1280(1160);
+          padding-top: 0 !important;
+          &::-webkit-scrollbar{
+            display: none;
+          }
+        }
+      }
+      // @media (orientation:landscape) {
+      // }
+    }
+  }
+
+  &.ReactModal__Overlay--before-close {
+    opacity: 0;
+  }
+
+  .ChatLand{
+    .ChatLandWrapper{
+      overflow: hidden;
+      overflow-x: auto;
+      position:relative;
+      height: 100vh;
+      // 대화방 list
+      .ChatChannelPage {
+        .baseLayoutContent {
+          .form {
+            top: calc(get-vw(100) + get-vh1280(119));
+          }
+          .channelList {
+            padding-top: get-vw(212);
+            .channelItem {
+              position: relative;
+              .ProfileAvatarWrapper  {
+                .isOnline {
+                  top: get-vw(-8);
+                  right: get-vw(-12);
+                }
+              }
+              .contentWrapper {
+                width: get-vw(368);
+                margin-left: get-vw(24);
+                .top {
+  
+                  .name {
+                    color: #4e4e4e;
+                  }
+                  .date {
+                    margin-left: get-vw(10);
+                    color: #d1d1d1;
+                  }
+                }
+                
+              }
+              .unreadCount {
+                position: absolute;
+                right: 0;
+                top: 50%;
+                min-width: get-vw(36);
+                height: get-vw(36);
+                text-align: center;
+                line-height: get-vw(18);
+                transform: translateY(-50%);
+              }
+            }
+          }
+        }
+      }
+  
+      // 대화방 채팅방
+      .ChatRoomPage {
+        .roomHeaderJSX {
+          top: get-vh1280(119) !important;
+          height: get-vw(100);
+          padding-left: get-vw(40);
+          border-bottom: get-vw(1) solid #f5f5f5;
+          border-radius: get-vw(40) get-vw(40) 0 0;
+          box-shadow: none;
+          .backIcon {
+            margin-right: get-vw(40);
+          }
+          .ProfileAvatarWrapper {
+            // display: none;
+          }
+          .info {
+            .name {
+              line-height: get-vw(44);
+              font-weight: $font-bold;
+              color: #2b2b2b;
+            }
+            .date {
+              margin-top: get-vw(3);
+              font-size: get-vw(18);
+              line-height: get-vw(26);
+            }
+          }
+          .report-red {
+            width: get-vw(40);
+            height: get-vw(40);
+            background-size: get-vw(39) get-vw(40);
+          }
+        }
+        .baseLayoutContent {
+          .messageList {
+            .messageItem {
+              >div {
+                .friend-profile-box {
+                  .profileImageUrl {
+                    width: get-vw(48);
+                    height: get-vw(48);
+                    & + span {
+                      font-size: 24px;
+                    }
+                  }
+                }
+              }
+              .image {
+                max-width: get-vw(554);
+                max-height: get-vw(324);
+                object-fit: contain;
+                border-radius: get-vw(20);
+              }
+              .createdAt  {
+                display: inline-block;
+                font-size: get-vw(20);
+                color: #ababb5;
+              }
+            }
+          }
+          .chatRoomInput {
+            .FileInputWrapper {
+              margin: get-vw(30) 0 get-vw(28) get-vw(30);
+            }
+            .input {
+              padding: 0 get-vw(32) 0;
+              height: get-vw(80);
+              font-size: get-vw(32);
+              line-height: get-vw(80);
+              color: #4e4e4e;
+              &::placeholder {
+                color: #4e4e4e;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+

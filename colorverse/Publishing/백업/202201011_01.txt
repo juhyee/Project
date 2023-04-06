@@ -1,0 +1,245 @@
+
+@import 'scss/common.scss';
+@import 'styles/mixins/vw';
+@import 'styles/mixins/flex';
+
+.NoteLandOverlay{
+  &.ReactModal__Overlay {
+    opacity: 0;
+  }
+  //landscape일 때 사이즈 조정
+  &.ReactModal__Overlay--after-open {
+    overflow: hidden;
+    position:absolute;
+    bottom:0;
+    right:0;
+    width:100vw;
+    height: 82.8125vh;
+    padding-top: get-vw(100);
+    opacity: 1;
+    border-radius: get-vw(40) get-vw(40)  0 0;
+    box-sizing: content-box;
+    .NoteListPage {
+      position: relative;
+      .baseHeader{
+        @include flex(row, flex-start, center);
+        border-radius: get-vw(40) get-vw(40) 0 0;
+        top: get-vw(119) !important;
+        height: get-vw(100);
+        .backIconWrapper {
+          left: get-vw(40);
+        }
+        .baseHeaderTitle {
+          padding-left: get-vw(120);
+          font-size: get-vw(32);
+        }
+        .buttonGroup {
+          right: get-vw(40);
+          .Icon {
+            width: get-vw(40);
+            &.addButton {
+              margin-right: get-vw(38);
+            }
+          }
+        }
+      }
+      .baseLayoutContent {
+        padding-top: 0 !important;
+        height: 82.8906vh;
+    
+        &::-webkit-scrollbar{
+          display: none;
+        }
+        .fixedTabWrapper {
+          top: get-vw(219);
+          padding: 0 get-vw(40) get-vw(18);
+          .tab {
+            height: get-vw(60);
+            padding: get-vw(6);
+            li {
+              .title {
+                color: #707070;
+              }
+              .count {
+                margin-left: get-vw(8);
+                color: #AFAFAF;
+              }
+
+              &:first-child {
+                margin-right: get-vw(8);
+              }
+            }
+          }
+        }
+
+        .recvAll {
+          top: get-vw(297);
+          right: get-vw(40);
+          padding: get-vw(6) get-vw(20);
+          background-color: transparent;
+          border: get-vw(2) solid #FF449A;
+          p {
+            color: #FF449A;
+          }
+        }
+      }
+      .noteList {
+        padding-top: get-vw(126);
+      }
+      .notePagination{
+        >div {
+          span {
+            color: #4E4E4E;
+            font-size: get-vw(27);
+            
+            &.disabled {
+              color: #858585;
+            }
+          }
+        }
+      }
+      .empty {
+        background: url('../../../assets/images/notelistEmpty.svg') center 0 no-repeat;
+        background-size: get-vw(304) get-vw(304);
+        padding-top: get-vw(331);
+        transform: translateY(calc(-50% + get-vw(160)));
+      }
+    }
+
+    @media (orientation:landscape) {
+      top: get-vw1280(20);
+      right: get-vw1280(20);
+      bottom:auto;
+      width: get-vw1280(580);
+      height: get-vh720(680);
+      padding-top: 0;
+      border-radius: get-vw1280(26);
+
+      .NoteListPage {
+        .baseHeader{
+          top: get-vw1280(20) !important;
+          right: get-vw1280(20);
+          width: get-vw1280(580);
+          height: get-vw1280(100);
+          border-radius: get-vw1280(26) get-vw1280(26)  0 0;
+          .backIconWrapper {
+            left: get-vw1280(36);
+            width: get-vw1280(40);
+          }
+          .baseHeaderTitle {
+            padding-left: get-vw1280(112);
+            font-size: get-vw1280(34);
+          }
+          .buttonGroup {
+            right: get-vw1280(40);
+            .Icon {
+              width: get-vw1280(40);
+              &.addButton {
+                margin-right: get-vw1280(38);
+              }
+            }
+          }
+        }
+        .baseLayoutContent {
+          padding-top: 0 !important;
+          height: 82.8906vh;
+      
+          &::-webkit-scrollbar{
+            display: none;
+          }
+          .fixedTabWrapper {
+            top: get-vw1280(120);
+            right: get-vw1280(20);
+            left: auto;
+            width: get-vw1280(580); 
+            padding: 0 get-vw1280(36) get-vw1280(18);
+            .tab {
+              height: get-vw1280(60);
+              padding: get-vw1280(6);
+              li {
+                height: get-vw1280(48);
+                .title {
+                  font-size: get-vw1280(24);
+                  color: #707070;
+                }
+                .count {
+                  margin-left: get-vw1280(8);
+                  font-size: get-vw1280(24);
+                  color: #AFAFAF;
+                }
+  
+                &:first-child {
+                  margin-right: get-vw(8);
+                }
+              }
+            }
+          }
+  
+          .recvAll {
+            z-index: 2;
+            top: get-vw1280(198);
+            right: get-vw1280(56);
+            min-width: get-vw1280(176);
+            height: get-vw1280(48);
+            padding: get-vw1280(6) get-vw1280(20);
+            background-color: #C9C9C9;
+            border: none;
+            .iconWrapper {display: none;}
+            p {
+              color: #fff;
+              font-size: get-vw1280(24);
+            }
+          }
+          .noteList {
+            padding-top: get-vw1280(260);
+          }
+        }
+        .notePagination{
+          right: get-vw1280(20);
+          left: auto;
+          bottom: get-vw1280(20);
+          width: get-vw1280(580);
+          height: get-vw1280(96);
+          border-radius: 0 0 get-vw1280(26) get-vw1280(26);
+
+          >div {
+            span {
+              color: #4E4E4E;
+              font-size: get-vw1280(27);
+              
+              &.disabled {
+                color: #858585;
+              }
+            }
+          }
+        }
+        .empty {
+          width: get-vw1280(580);
+          padding-top: get-vw1280(200);
+          background: url('../../../assets/images/notelistEmpty.svg') center 0 no-repeat;
+          background-size: get-vw1280(180) get-vw1280(180);
+          font-size: get-vw1280(26);
+          line-height: get-vw1280(37);
+          transform: translateY(calc(-50% + get-vw1280(60)));
+        }
+      }
+    }
+  }
+
+  &.ReactModal__Overlay--before-close {
+    opacity: 0;
+  }
+}
+
+.NoteLand{
+  .NoteLandWrapper{
+    position:relative;
+    overflow: hidden;
+    overflow-x: auto;
+    height: 100vh;
+    &::-webkit-scrollbar{
+      display: none;
+    }
+  }
+}
+

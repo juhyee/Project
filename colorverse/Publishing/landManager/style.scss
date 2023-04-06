@@ -1,0 +1,984 @@
+@import "scss/common.scss";
+@import "styles/mixins/flex";
+
+.land-manager {
+  overflow: hidden;
+  width: 100%;
+  min-width: 1240px;
+  height: 100%;
+  min-height: 700px;
+  padding: 20px;
+  background-color: #0f111e;
+  letter-spacing: -0.5px;
+
+  &__inner {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+  }
+  .manager-aside {
+    width: 320px;
+    height: 100%;
+    background-color: #3a3f45;
+    .aside__inner {
+      position: relative;
+      height: 100%;
+      &--top {
+        position: relative;
+        width: 320px;
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: -50px;
+          height: calc(100% + 30px);
+          width: 50px;
+          background-color: #3a3f45;
+        }
+        .aside__logo {
+          padding: 22px 26px 20px;
+          .logo {
+            h1 {
+              position: relative;
+              margin-bottom: 0;
+              padding-left: 185px;
+              color: #fff;
+              font-size: 19px;
+              font-weight: $font-medium;
+              line-height: 38px;
+              &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 177px;
+                height: 38px;
+                background: url("/assets/icons/builderLogo.svg") no-repeat
+                  center;
+              }
+            }
+          }
+        }
+        .aside__gnb {
+          position: relative;
+          &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 20px;
+            width: 280px;
+            height: 1px;
+            background-color: rgba(255, 255, 255, 0.1);
+          }
+          .gnb {
+            @include flex(row, space-between, center);
+            overflow: hidden;
+            padding: 16px 6px 18px;
+            margin-bottom: 0;
+            &__item {
+              height: 36px;
+              padding: 0 18px;
+              font-size: 16px;
+              font-weight: $font-bold;
+              color: rgba(255, 255, 255, 0.5);
+              line-height: 36px;
+              cursor: pointer;
+              &.on {
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+
+      &--bottom {
+        position: relative;
+        width: 320px;
+        height: calc(100% - 150px);
+        padding: 21px 20px 30px;
+        border-radius: 30px 30px 0px 0;
+        background-color: #515860;
+        box-shadow: 0px -10px 20px rgba(0, 0, 0, 0.1);
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          right: -50px;
+          height: calc(100% - 30px);
+          width: 50px;
+          background-color: #515860;
+        }
+        .manager-snb {
+          width: 100%;
+          .snb {
+            &__item {
+              position: relative;
+              width: 100%;
+              margin-bottom: 15px;
+              padding: 16px 0 16px 53px;
+              border-radius: 60px;
+              background-color: rgba(0, 0, 0, 0);
+              color: #dedeec;
+              font-weight: $font-bold;
+              line-height: 1;
+              cursor: pointer;
+              &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 27px;
+                width: 17px;
+                height: 18px;
+                transform: translateY(-50%);
+              }
+              &--land {
+                &::after {
+                  background: url("/assets/icons/snbLandIcon.svg") center
+                    no-repeat;
+                }
+              }
+              &--mall {
+                &::after {
+                  background: url("/assets/icons/snbMymallIcon.svg") center
+                    no-repeat;
+                }
+              }
+              &--town {
+                &::after {
+                  background: url("/assets/icons/snbTownIcon.svg") center
+                    no-repeat;
+                }
+              }
+              &--plaza {
+                &::after {
+                  background: url("/assets/icons/snbPlazaIcon.svg") center
+                    no-repeat;
+                }
+              }
+              &.on {
+                color: #fff;
+                background-color: #8458ff;
+                &.snb__item--land {
+                  &::after {
+                    background: url("/assets/icons/snbLandActiveIcon.svg")
+                      center no-repeat;
+                  }
+                }
+                &.snb__item--mall {
+                  &::after {
+                    background: url("/assets/icons/snbMymallActiveIcon.svg")
+                      center no-repeat;
+                  }
+                }
+                &.snb__item--town {
+                  &::after {
+                    background: url("/assets/icons/snbTownActiveIcon.svg")
+                      center no-repeat;
+                  }
+                }
+                &.snb__item--plaza {
+                  &::after {
+                    background: url("/assets/icons/snbPlazaActiveIcon.svg")
+                      center no-repeat;
+                  }
+                }
+                &:hover {
+                  background-color: #8458ff;
+                }
+                &:active {
+                  background-color: #8458ff;
+                }
+              }
+              &:hover {
+                background-color: rgba(0, 0, 0, 0.1);
+              }
+              &:active {
+                background-color: rgba(0, 0, 0, 0.2);
+              }
+            }
+          }
+        }
+        .button--tutorial {
+          position: absolute;
+          left: 30px;
+          bottom: 30px;
+          width: 260px;
+          padding: 21px 19px;
+          border-radius: 16px;
+          background: #464c53;
+          &::after {
+            content: "";
+            position: absolute;
+            top: 20px;
+            right: 18px;
+            width: 39px;
+            height: 34px;
+            background: url("/assets/icons/tutorialIcon.svg") no-repeat center;
+          }
+          p {
+            margin: 0;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 14px;
+            font-weight: $font-medium;
+            text-align: left;
+            line-height: 1;
+            b {
+              display: block;
+              margin-bottom: 8px;
+              color: #fff;
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .manager-container {
+    z-index: 2;
+    position: relative;
+    overflow: hidden;
+    width: calc(100% - 320px);
+    min-width: 900px;
+    height: calc(100vh - 40px);
+    min-height: 680px;
+    background: #eef1fa;
+    box-shadow: -10px 0px 30px rgba(43, 31, 80, 0.3);
+    border-radius: 50px;
+    .manager-header {
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      background-color: #f7f9ff;
+      .header__inner {
+        @include flex(row, flex-start, center);
+        height: 80px;
+        padding: 0 30px;
+        &--left {
+          display: flex;
+          align-items: center;
+          .user-profile {
+            position: relative;
+            @include flex(column, center, flex-start);
+            height: 46px;
+            line-height: 1;
+            &__thumbnail {
+              overflow: hidden;
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 46px;
+              height: 46px;
+              border-radius: 50%;
+            }
+            &__name {
+              padding-left: 56px;
+              color: #666;
+              font-size: 11px;
+              font-weight: $font-bold;
+            }
+            &__email {
+              margin-top: 5px;
+              padding-left: 56px;
+              color: #999;
+              font-size: 12px;
+              font-weight: $font-medium;
+            }
+          }
+          .button--logout {
+            margin-left: 20px;
+          }
+        }
+        &--right {
+          @include flex(row, center, center);
+          margin-left: auto;
+          .header__search {
+            .search {
+              @include flex(row, center, center);
+              &__wrap {
+                position: relative;
+                @include flex(row, center, center);
+                width: 316px;
+                height: 46px;
+              }
+              &__input {
+                width: 100%;
+                height: 100%;
+                padding: 0 20px;
+                line-height: 46px;
+                border: 1px solid #eeeeee;
+                border-radius: 23px;
+                background-color: #f9fafd;
+                color: #d0cecf;
+                &:focus {
+                  color: #333;
+                  border: 1px solid #d0cecf;
+                }
+              }
+              &-box__button--delete {
+                right: 14px;
+              }
+              &__button {
+                margin-left: 10px;
+                background-color: #0f111e;
+                .icon {
+                  width: 20px;
+                  height: 20px;
+                }
+                &:hover {
+                  background-color: #61626a;
+                }
+                &:active {
+                  background-color: #000;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .manager-contents {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      max-height: calc(100vh - 121px);
+      padding: 20px 30px 0;
+      .contents__inner {
+        .land-result {
+          @include flex(row, flex-start, center);
+          margin-top: 3px;
+          &__total {
+            margin-bottom: 0;
+            font-weight: $font-bold;
+            font-size: 20px;
+            span {
+              margin-left: 6px;
+              font-size: 14px;
+              font-weight: $font-medium;
+              color: #ff47b5;
+            }
+          }
+          &__caution {
+            position: relative;
+            margin-left: auto;
+            margin-bottom: 0;
+            padding: 10px 20px 10px 25px;
+            border-radius: 35px;
+            background: #e6e9f3;
+            color: #7747ff;
+            font-size: 11px;
+            &:after {
+              content: "";
+              position: absolute;
+              top: 50%;
+              left: 9px;
+              width: 15px;
+              height: 15px;
+              background: url("../../../assets/icons/cautionIcon.svg") no-repeat
+                center/100%;
+              transform: translateY(-50%);
+            }
+          }
+
+          &__select {
+            position: relative;
+            .select__button {
+              width: 40px;
+              height: 40px;
+              margin-left: 10px;
+              border-radius: 50%;
+              border: 1px solid rgba(119, 71, 255, 0.3);
+              box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.05);
+              background: #ffffff;
+              &::after {
+                display: none;
+              }
+              &:hover {
+                background: #efeaff;
+                border: 1px solid rgba(119, 71, 255, 0.3);
+              }
+              &:active {
+                background: #ddd1ff;
+                border: 1px solid #7747ff;
+              }
+            }
+            .select-layer {
+              z-index: 3;
+              display: none;
+              position: absolute;
+              top: 48px;
+              right: 0;
+              width: 69px;
+              padding: 5px 6px 7px;
+              background: #ffffff;
+              border: 1px solid #e5e5e5;
+              border-radius: 8px;
+              &__list {
+                margin-bottom: 0;
+                li {
+                  margin-top: 2px;
+                  padding: 5px 6px;
+                  border-radius: 5px;
+                  color: #716f87;
+                  font-size: 12px;
+                  font-weight: $font-medium;
+                  line-height: 1;
+                  cursor: pointer;
+                  &.on {
+                    background: #f4f3f7;
+                    font-weight: $font-bold;
+                    color: #7747ff;
+                  }
+                  &:hover {
+                    background: #f4f3f7;
+                    font-weight: $font-bold;
+                    color: #7747ff;
+                  }
+                }
+              }
+            }
+            &.on {
+              .select-layer {
+                display: block;
+              }
+            }
+          }
+        }
+
+        .land-card {
+          position: relative;
+          overflow: auto;
+          display: flex;
+          width: 100%;
+          // theme-tag 한줄일때
+          width: calc(100% + 42px);
+          height: calc(100vh - 238px);
+          margin: 13px 0 0 -30px;
+          padding-right: 10px;
+          &::-webkit-scrollbar {
+            border-radius: 50px;
+            width: 6px; /* 세로축 스크롤바 길이 */
+            height: 20px; /* 가로축 스크롤바 길이 */
+          }
+          &::-webkit-scrollbar:vertical {
+            width: 18px;
+          }
+          &::-webkit-scrollbar:horizontal {
+            height: 30px;
+          }
+          &::-webkit-scrollbar-track {
+            background-color: transparent; /*스크롤 바 배경 색상*/
+            border-radius: 16px;
+          }
+          &::-webkit-scrollbar-corner {
+            background-color: #eef1fa;
+          }
+          &::-webkit-scrollbar-thumb:horizontal {
+            background-color: rgba(0, 0, 0, 0.1);
+            border: 12px solid #eef1fa;
+            border-left: 30px solid #eef1fa;
+          }
+          &::-webkit-scrollbar-thumb:vertical {
+            background-color: rgba(0, 0, 0, 0.1);
+            border-left: 12px solid #eef1fa;
+          }
+
+          @media all and (max-width: 2150px) {
+            // theme-tag 두 줄일때
+            max-height: calc(100vh - 278px);
+          }
+          @media all and (max-width: 1305px) {
+            // theme-tag 세 줄일때
+            max-height: calc(100vh - 323px);
+          }
+          &__list {
+            @include flex(row, flex-start, center);
+            flex-wrap: wrap;
+            position: absolute;
+            top: 0;
+            left: 30px;
+            right: 0;
+            border: 0;
+            width: calc(100% - 30px);
+            margin-bottom: 0;
+          }
+          &__item {
+            position: relative;
+            width: calc(50% - 13px);
+            height: 337px;
+            margin: 0 26px 26px 0;
+            &::after {
+              z-index: 0;
+              content: "";
+              position: absolute;
+              left: 50%;
+              bottom: 50px;
+              height: 181px;
+              width: 492px;
+              background: rgba(0, 0, 0, 0.25);
+              filter: blur(75px);
+              border-radius: 40px;
+              transform: translateX(-50%);
+            }
+            &:nth-child(2n) {
+              margin-right: 0;
+            }
+
+            &:hover {
+              &::after {
+                background-color: rgba(119, 71, 255, 0.4);
+              }
+              .land-card__info {
+                border: 2px solid rgba(119, 71, 255, 0.3);
+                box-shadow: 0px 20px 40px rgba(119, 71, 255, 0.1);
+              }
+            }
+          }
+          &__thumbnail {
+            overflow: hidden;
+            width: 203px;
+            height: 297px;
+            border-radius: 20px;
+            > img {
+              width: 203px;
+              height: 297px;
+              min-width: 100%;
+              min-height: 100%;
+              object-fit: cover;
+            }
+          }
+
+          &__info {
+            z-index: 2;
+            @include flex(row, flex-start, flex-start);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 18px;
+            border-radius: 34px;
+            background-color: #fff;
+            border: 2px solid transparent;
+            box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
+            .land__detail {
+              width: calc(100% - 223px);
+              height: 100%;
+              margin-left: 20px;
+              .land-title {
+                position: relative;
+                width: 100%;
+                height: 45px;
+                padding: 0 18px;
+                background: #f2f3f8;
+                border-radius: 10px;
+                font-weight: $font-medium;
+                font-size: 18px;
+                &__text {
+                  overflow: hidden;
+                  width: calc(100% - 25px);
+                  display: block;
+                  white-space: nowrap;
+                  text-overflow: ellipsis;
+                  line-height: 45px;
+                }
+
+                &__select {
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                  .select__button {
+                    width: 45px;
+                    height: 45px;
+                    background: url("../../../assets/icons/titleSeletIcon.svg")
+                      no-repeat center;
+                    background-size: 4px 18px;
+                  }
+                  .select-layer {
+                    z-index: 3;
+                    display: none;
+                    position: absolute;
+                    top: 55px;
+                    right: 0;
+                    width: 105px;
+                    padding: 5px 6px 7px;
+                    background: #ffffff;
+                    border: 1px solid #e5e5e5;
+                    border-radius: 8px;
+                    &__list {
+                      margin-bottom: 0;
+                      li {
+                        margin-top: 2px;
+                        padding: 5px 6px;
+                        border-radius: 5px;
+                        height: 21px;
+                        color: #716f87;
+                        font-size: 12px;
+                        font-weight: $font-medium;
+                        line-height: 1;
+                        cursor: pointer;
+                        &.on {
+                          background: #f4f3f7;
+                          font-weight: $font-bold;
+                          color: #7747ff;
+                        }
+                        &:hover {
+                          background: #f4f3f7;
+                          font-weight: $font-bold;
+                          color: #7747ff;
+                        }
+                      }
+                    }
+                  }
+                  &.on {
+                    .select-layer {
+                      display: block;
+                    }
+                  }
+                }
+              }
+
+              .land-desc {
+                @include flex(row, space-between, flex-start);
+                margin-top: 15px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+                &__item {
+                  overflow: hidden;
+                  font-weight: 500;
+                  width: calc(50% - 7px);
+                  padding-bottom: 10px;
+                  &--name {
+                    padding-right: 50px;
+                  }
+                  .item__title {
+                    display: block;
+                    font-size: 11px;
+                    line-height: 1;
+                    color: $color-primary;
+                  }
+                  .item__contents {
+                    overflow: hidden;
+                    margin: 8px 0 0;
+                    font-size: 14px;
+                    color: #333;
+                    width: 100%;
+                    line-height: 1;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                  }
+                  .item__theme-list {
+                    overflow: hidden;
+                    width: 100%;
+                    height: 14px;
+                    li {
+                      position: relative;
+                      float: left;
+                      padding-left: 17px;
+                      &::after {
+                        content: "";
+                        position: absolute;
+                        left: 8px;
+                        top: 50%;
+                        width: 1px;
+                        height: 13px;
+                        background-color: rgba(0, 0, 0, 0.1);
+                        transform: translateY(-50%);
+                      }
+                      &:first-child {
+                        padding-left: 0;
+                        &::after {
+                          display: none;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+
+              .land-state {
+                overflow: hidden;
+                padding: 10px 0;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+                &--left {
+                  float: left;
+                }
+                &--right {
+                  float: right;
+                }
+                &__item {
+                  float: left;
+                  overflow: hidden;
+                  width: 137px;
+                  height: 30px;
+                  border: 1px solid #e3eefa;
+                  border-radius: 8px;
+                  margin-right: 10px;
+                  span {
+                    display: inline-block;
+                    font-size: 12px;
+                    line-height: 29px;
+                    font-weight: $font-medium;
+                  }
+                  .item__title {
+                    width: 69px;
+                    height: 30px;
+                    background-color: #e3eefa;
+                    text-align: center;
+                  }
+                  .item__contents {
+                    width: calc(100% - 69px);
+                    height: 30px;
+                    padding-left: 11px;
+                    color: #ff47b5;
+                  }
+
+                  &:last-of-type {
+                    margin-right: 0;
+                  }
+                }
+              }
+
+              .land-history {
+                @include flex(row, space-between, flex-start);
+                flex-wrap: nowrap;
+                margin-top: 10px;
+                &__item {
+                  position: relative;
+                  width: calc(25% - 7.5px);
+                  height: 76px;
+                  padding: 33px 9px 0;
+                  border: 1px solid #f4f3f7;
+                  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+                  border-radius: 10px;
+                  background-size: 19px 14px !important;
+                  font-size: 11px;
+                  font-weight: $font-medium;
+                  color: #696868;
+                  line-height: 1;
+                  &:nth-of-type(1) {
+                    background: url("../../../assets/icons/historyIcon_01.svg")
+                      no-repeat 9px 11px;
+                  }
+                  &:nth-of-type(2) {
+                    background: url("../../../assets/icons/historyIcon_02.svg")
+                      no-repeat 9px 11px;
+                  }
+                  &:nth-of-type(3) {
+                    background-size: 14px !important;
+                    background: url("../../../assets/icons/historyIcon_03.svg")
+                      no-repeat 9px 11px;
+                  }
+                  &:nth-of-type(4) {
+                    background-size: 13px 15px !important;
+                    background: url("../../../assets/icons/historyIcon_04.svg")
+                      no-repeat 9px 11px;
+                  }
+                }
+                &__count {
+                  display: block;
+                  font-weight: normal;
+                  margin-top: 2px;
+                  font-size: 18px;
+                  color: #1d1d1d;
+                }
+              }
+            }
+
+            .land__buttons {
+              float: right;
+              margin-top: 20px;
+              .land__button {
+                width: 115px;
+                height: 37px;
+                margin-left: 7px;
+                border-radius: 29px;
+                background-color: #313247;
+                font-size: 13px;
+                font-weight: $font-medium;
+                line-height: 36px;
+                color: #fff;
+                &.button--record {
+                  position: relative;
+                  color: $color-primary;
+                  border: 1px solid transparent;
+                  background-image: linear-gradient(#fff, #fff),
+                    $gradient-primary;
+                  background-origin: border-box;
+                  background-clip: content-box, border-box;
+                  &:hover {
+                    background-image: linear-gradient(#efeaff, #efeaff),
+                      $gradient-primary;
+                  }
+                  &:active {
+                    background-image: linear-gradient(#fff, #fff),
+                      $gradient-primary;
+                  }
+                }
+                &:hover {
+                  background-color: #61626a;
+                }
+                &:active {
+                  background-color: #000000;
+                }
+              }
+            }
+          }
+          // 1920이하
+          @media all and (max-width: 1919px) {
+            .land-card__list {
+              .land-card__item {
+                width: 100%;
+                margin: 0 0 26px 0;
+              }
+            }
+          }
+          // 1920이상
+          @media all and (min-width: 1921px) {
+            width: calc(100% + 42px);
+            margin-left: -30px;
+            .land-card__list {
+              min-width: 2300px;
+              left: 30px;
+              padding-bottom: 50px;
+              .land-card__item {
+                min-width: 737px;
+                width: calc(33.333% - 26px);
+                height: 337px;
+                &:nth-child(2n) {
+                  margin-right: 26px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .manager-nolist {
+      display: none;
+    }
+    // list 없을때
+    &.nolist {
+      position: relative;
+      .manager-contents {
+        display: none;
+      }
+      .manager-nolist {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: calc(100% - 83px);
+        .nolist {
+          @include flex(column, center, center);
+          width: 100%;
+          height: 100%;
+          &__text {
+            width: 100%;
+            padding-top: 345px;
+            background: url("../../../assets/images/landNolist.png") no-repeat
+              top center;
+            font-size: 18px;
+            font-weight: $font-medium;
+            line-height: 1;
+            text-align: center;
+            color: #696868;
+            b {
+              display: block;
+              margin-bottom: 14px;
+              color: #222;
+              font-size: 24px;
+              font-weight: $font-bold;
+            }
+          }
+
+          &__button {
+            margin-top: 53px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 테마 태그 common. style
+.theme-tag {
+  &__list {
+    @include flex(row, flex-start, center);
+    flex-wrap: wrap;
+    margin: 0;
+  }
+  &__item {
+    position: relative;
+    margin: 0 5px 5px 0;
+    border-radius: 8px;
+    border: 1px solid #d6dce0;
+    cursor: pointer;
+    &.on {
+      border: 1px solid transparent;
+      background-image: linear-gradient(#fff, #fff), $gradient-primary;
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+      span {
+        color: $color-primary;
+        font-weight: $font-bold;
+        &:hover {
+          background: #fff;
+        }
+        &:active {
+          background: #fff;
+        }
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 44px;
+      height: 19px;
+      background-color: rgba(0, 0, 0, 0.15);
+      filter: blur(10px);
+      border-radius: 6px;
+      transform: translateX(-50%);
+    }
+    //하단 블러로 인하여 span 묶음 처리
+    span {
+      z-index: 2;
+      display: block;
+      position: relative;
+      padding: 0 20px 0 8px;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      height: 33px;
+      border-radius: 8px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+      background-color: #fff;
+      color: #444;
+      font-weight: $font-medium;
+      font-size: 13px;
+      line-height: 32px;
+      &:hover {
+        background: #fff;
+      }
+      &:active {
+        background: #e6e5e5;
+      }
+      > i {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 6px;
+        line-height: 31px;
+      }
+    }
+  }
+}
+
+@keyframes dropDown {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
