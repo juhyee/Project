@@ -7,11 +7,7 @@
       "photo": "pr1.jpg",
       "price": 10000,
       "sale": 36,
-      "tag": {
-        "bigSale" : "빅세일",
-        "gift" : "사은품",
-        "time3": "3시간전"
-      }
+      "tag": ["bigSale", "gift",  "time3" ]
     },
     {
       "id": 1,
@@ -20,10 +16,7 @@
       "photo": "pr2.jpg",
       "price": 20000,
       "sale": 50,
-      "tag":{
-        "bigSale" : "빅세일",
-        "time3": "3시간전"
-      }
+      "tag":["bigSale", "time3" ]
     },
     {
       "id": 2,
@@ -32,9 +25,7 @@
       "photo": "pr3.jpg",
       "price": 30000,
       "sale": 40,
-      "tag": {
-        "time3": "3시간전"
-      }
+      "tag": ["gift",  "time3" ]
     },
     {
       "id": 3,
@@ -43,9 +34,7 @@
       "photo": "pr4.jpg",
       "price": 40000,
       "sale": 10,
-      "tag":  {
-        "time3": "3시간전"
-      }
+      "tag":  ["bigSale", "gift",  "time3" ]
     }
   ]
 }
