@@ -1,0 +1,52 @@
+{
+  "products": [
+    {
+      "id": 0,
+      "title": "식기세척기",
+      "brand": "세척나라",
+      "photo": "pr1.jpg",
+      "price": 10000,
+      "sale": 36,
+      "tag": {
+        "bigSale" : "빅세일",
+        "gift" : "사은품",
+        "time3": "3시간전"
+      }
+    },
+    {
+      "id": 1,
+      "title": "원목 침대 프레임",
+      "brand": "침대나라",
+      "photo": "pr2.jpg",
+      "price": 20000,
+      "sale": 50,
+      "tag":{
+        "bigSale" : "빅세일",
+        "time3": "3시간전"
+      }
+    },
+    {
+      "id": 2,
+      "title": "천연 디퓨저 세트",
+      "brand": "향기나라",
+      "photo": "pr3.jpg",
+      "price": 30000,
+      "sale": 40,
+      "tag": {
+        "time3": "3시간전"
+      }
+    },
+    {
+      "id": 3,
+      "title": "시원한 서큘레이터",
+      "brand": "바람나라",
+      "photo": "pr4.jpg",
+      "price": 40000,
+      "sale": 10,
+      "tag":  {
+        "time3": "3시간전"
+      }
+    }
+  ]
+}
+
