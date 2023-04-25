@@ -34,6 +34,12 @@
         <div class="header__search">
           <input type="text" placeholder="상품명을 입력하세요." class="header__search--input">
         </div>
+
+        <div class="header__utill">
+          <button class="header__utill--cart">
+            <span class="header__utill-count"></span>
+          </button>
+        </div>
       </div>
     </header>
 
@@ -43,26 +49,57 @@
         <p class="product_total">총<span class="num">16</span>개의 상품이 있습니다.</p>
         <ul class="product__list">
           <!-- 상품 뿌려지는 곳 -->
-          <!-- <li class="product__item">
-            <div class="product_thumb">
-              <img src="./img/pr2.jpg" alt="">
-            </div>
-            <div class="product_info">
-              <span class="product__brand">침대나라</span>
-              <p class="product__title">원목 침대 프레임</p>
-              <p class="product_price"><span class="sale">56%</span> 20000원</p>
-              <div class="product__tag">
-                <span class="tag bigSale">빅세일</span>
-                <span class="tag gift">사은품</span>
-                <span class="tag time3">3시간전</span>
-              </div>
-            </div>
-          </li> -->
         </ul>
       </div>
     </main>
 
   </div>
+
+
+  <div class="cart-moodal modal">
+    <div class="modal__wrap">
+      <div class="modal-head">
+        <h3>장바구니</h3>
+        <button class="modal-head__button--close"><span class="blind">장바구니 팝업 닫기</span></button>
+      </div>
+      <div class="modal__contents">
+        <div class="modal-body">
+          <ul class="cart-product__list">
+            <!-- 상품 뿌려지는 곳 -->
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button  class="modal__btn modal__btn--buy">구매하기</button>
+          <p class="total_price_wrap">합계<span class="total_price"></span>원</p>
+        </div>
+      </div>
+    </div>
+    <div class="filter"></div>
+  </div>
+  <div class="profile-moodal modal">
+    <div class="modal__wrap">
+      <div class="modal-head">
+        <h3>회원 정보 확인</h3>
+        <button class="modal-head__button--close"></button>
+      </div>
+      <div class="modal__contents">
+        <div class="modal-body">
+          <div class="login_form">
+            <input type="text" placeholder="아이디를 입력해 주세요." class="login_form__input input--id">
+            <input type="text" placeholder="비밀번호를 입력해 주세요." class="login_form__input input--pw">
+            <button class="login_form__btn">로그인</button>
+          </div>
+        </div>
+        <!-- <div class="modal-buttons">
+          <button class="modal__btn modal__btn--cancle">
+            취소
+          </button>
+        </div> -->
+      </div>
+    </div>
+    <div class="filter"></div>
+  </div>
+
 
   <script src="./js/script.js"></script>
 </body>
