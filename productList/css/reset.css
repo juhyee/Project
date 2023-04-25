@@ -1,20 +1,4 @@
 @charset "utf-8";
-
-/* 웹접근성을 위한 텍스트 숨김 처리 */
-.blind {
-  display: block;
-  overflow: hidden;
-  position: absolute !important;
-  left: -9999px;
-  width: 1px;
-  height: 1px;
-  font-size: 0;
-  line-height: 0;
-  text-indent: -9999px;
-}
-/* 웹접근성을 위한 텍스트 숨김 처리 */
-
-
 /* //reset css */
 *,
 *::before,
@@ -179,20 +163,42 @@ textarea {
 }
 
 img {
-  width:100%;
+  width: 100%;
   vertical-align: top;
+}
+
+button {
+  background: inherit;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+  overflow: visible;
+  cursor: pointer
+}
+
+input[type="number"] {
+  text-align: center;
+  padding: 0;
+  border-radius: 0;
+  font-size: 16px;
+}
+ input[type="number"]::-webkit-outer-spin-button,
+ input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 /* 웹접근성을 고려한 .blind(hidden) 처리 */
 .blind {
   border: 0;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    white-space: nowrap;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
 }
