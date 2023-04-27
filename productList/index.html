@@ -45,11 +45,13 @@
 
 
     <main id="content" class="content">
-      <div class="content_inner">
-        <p class="product_total">총<span class="num">16</span>개의 상품이 있습니다.</p>
-        <ul class="product__list">
-          <!-- 상품 뿌려지는 곳 -->
-        </ul>
+      <div class="content__inner">
+        <div class="product__wrap product">
+          <p class="product__total">총<span class="num">16</span>개의 상품이 있습니다.</p>
+          <ul class="product__list">
+            <!-- 상품 뿌려지는 곳 -->
+          </ul>
+        </div>
       </div>
     </main>
 
@@ -57,10 +59,10 @@
 
 
   <div class="cart-moodal modal">
-    <div class="modal__wrap">
+    <div class="modal-wrap">
       <div class="modal-head">
         <h3>장바구니</h3>
-        <button class="modal-head__button--close"><span class="blind">장바구니 팝업 닫기</span></button>
+        <button class="modal-head__btn--close"><span class="blind">장바구니 팝업 닫기</span></button>
       </div>
       <div class="modal__contents">
         <div class="modal-body">
@@ -70,7 +72,7 @@
         </div>
         <div class="modal-footer">
           <button  class="modal__btn modal__btn--buy">구매하기</button>
-          <p class="total_price_wrap">합계<span class="total_price price"></span>원</p>
+          <p class="total-price">합계<span class="total-price__num price"></span>원</p>
         </div>
       </div>
     </div>
@@ -79,10 +81,10 @@
 
 
   <div class="profile-moodal modal">
-    <div class="modal__wrap">
+    <div class="modal-wrap">
       <div class="modal-head">
         <h3>회원 정보 확인</h3>
-        <button class="modal-head__button--close"></button>
+        <button class="modal-head__btn--close"></button>
       </div>
       <div class="modal__contents">
         <div class="modal-body">
