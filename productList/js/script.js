@@ -20,23 +20,23 @@
     var products = data.products
     let prCount = data.products.length;
 
-    document.querySelector('.product_total > .num').innerText = prCount;
+    document.querySelector('.product__total > .num').innerText = prCount;
     products.forEach(item => {
       prdList.insertAdjacentHTML('afterbegin', `
           <li class="product__item">
-            <div class="product_thumb">
+            <div class="product__thumb">
               <img src="./img/${item.photo}" alt="">
-              <div class="product_btn-group">
+              <div class="product__item-btns">
                   <button class="product__btn product__btn--cart" data-id=${item.id}><span class="blind">장바구니에 담기</span></button>
               </div>
             </div>
-            <div class="product_info">
-              <span class="product__brand">${item.brand}</span>
-              <p class="product__title">${item.title}</p>
-              <div class="star_wrap">
-                <div class="star score${item.star}"><span class="blind">5점</span></div>
+            <div class="product__info">
+              <span class="product__info--brand">${item.brand}</span>
+              <p class="product__info--title">${item.title}</p>
+              <div class="product__info--star">
+                <div class="star star${item.star}"><span class="blind">5점</span></div>
               </div>
-              <p class="product_price"><span class="sale">${item.sale}%</span> <span class="price">${item.price}</span> 원</p>
+              <p class="product__info--price"><span class="sale">${item.sale}%</span> <span class="price">${item.price}</span> 원</p>
               <div class="product__tag">
               </div>
             </div>
@@ -66,25 +66,24 @@
           searchPrd.forEach(item => {
             prdList.insertAdjacentHTML('afterbegin', `
             <li class="product__item">
-            <div class="product_thumb type02">
+            <div class="product__thumb type02">
               <img src="./img/${item.photo}" alt="">
             </div>
-            <div class="product_info">
-              <span class="product__brand">${item.brand}</span>
-              <p class="product__title">${item.title}</p>
-              <div class="star_wrap">
-               <div class="star score${item.star}"><span class="blind">5점</span></div>
+            <div class="product__info">
+              <span class="product__info--brand">${item.brand}</span>
+              <p class="product__info--title">${item.title}</p>
+              <div class="product__info--star">
+               <div class="star star${item.star}"><span class="blind">5점</span></div>
               </div>
-              <p class="product_price"><span class="sale">${item.sale}%</span> <span class="price">${item.price}</span>원</p>
+              <p class="product__info--price"><span class="sale">${item.sale}%</span> <span class="price">${item.price}</span>원</p>
               <div class="product__tag">
               </div>
-
             </div>
           </li>
             `)
           })
 
-          document.querySelector('.product_total > .num').innerText = searchPrd.length;
+          document.querySelector('.product__total > .num').innerText = searchPrd.length;
 
           for(let i = 0; i < searchPrd.length; i++) {
             searchPrd[i]['tag'].forEach(item => {
@@ -97,7 +96,7 @@
           }
 
           // title 하이라이트
-          let findKwd = document.querySelectorAll('.product__title, .product__brand')
+          let findKwd = document.querySelectorAll('.product__info--title, .product__info')
           findKwd.forEach(item => {
             let highlight = item.innerHTML
             highlight = highlight.replace(keyword,  `<span class="highlight">${keyword}</span>`)
@@ -110,13 +109,13 @@
         function nodata(){
           if(cartPrd.length == 0) {
             document.querySelector('.cart-moodal').classList.add('nodata');
-            document.querySelector('.total_price').innerText = 0
+            document.querySelector('.total-price__num').innerText = 0
             document.querySelector('.cart-product__list').insertAdjacentHTML('afterbegin', `
             <div class="nodata">
-            <div class="nodata__contents">
-              <p>장바구니가 비어있습니다.</p>
-              <span>상품을 장바구니에 담아보세요.</span>
-            </div>
+              <div class="nodata__contents">
+                <p>장바구니가 비어있습니다.</p>
+                <span>상품을 장바구니에 담아보세요.</span>
+              </div>
             </div>
             `)
           }
@@ -133,18 +132,18 @@
         function calc(){
           for(let i = 0;  i <  cartPrd.length; i++){
               var totalPrice = 0;
-              var cartItem = document.querySelectorAll('.product_count')
+              var cartItem = document.querySelectorAll('.count__input')
               var count = cartItem[i].value;
               cartPrd = [...cartPrd].reverse();
               var targetPrice = cartPrd[i]['price'];
 
-              document.querySelectorAll('.plus')[i].addEventListener('click', function(e){
+              document.querySelectorAll('.count__btn--plus')[i].addEventListener('click', function(e){
                 cartItem[i].value = ++cartItem[i].value
                 cartPrd[i]['count'] = cartItem[i].value
                 console.log(targetPrice)
               })
 
-              document.querySelectorAll('.minus')[i].addEventListener('click', function(e){
+              document.querySelectorAll('.count__btn--minus')[i].addEventListener('click', function(e){
                 if(count <= 1){
                   cartItem[i].value = 1
                   cartPrd[i]['count'] = count
@@ -155,7 +154,7 @@
               })
 
               totalPrice += parseInt(cartItem[i].value * targetPrice)
-              document.querySelector('.total_price').innerText = totalPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+              document.querySelector('.total-price__num').innerText = totalPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
             }
         }
 
@@ -197,17 +196,17 @@
 
               document.querySelector('.cart-product__list').insertAdjacentHTML('afterbegin', `
                 <div class="product__item">
-                <div class="product_thumb">
+                <div class="product__thumb">
                   <img src="./img/${item.photo}" alt="">
                 </div>
-                <div class="product_info">
-                  <span class="product__brand">${item.brand}</span>
-                  <p class="product__title">${item.title}</p>
-                  <p class="product_price price">${item.price}</p>
-                  <div class="option_count">
-                      <button href="#" class="count_btn minus" title="수량 빼기"><img src="http://simjuhye.com/portfolio/img/product_detail/minus_icon.png" alt="더하기"></button>
-                      <input class="product_count" value=${item.count}>
-                      <button href="#" class="count_btn plus" title="수량 더하기"><img src="http://simjuhye.com/portfolio/img/product_detail/plus_icon.png" alt="빼기"></button>
+                <div class="product__info">
+                  <span class="product__info--brand">${item.brand}</span>
+                  <p class="product__info--title">${item.title}</p>
+                  <p class="product__info--price price">${item.price}</p>
+                  <div class="product__info--count">
+                      <button href="#" class="count__btn count__btn--minus" title="수량 빼기"><img src="http://simjuhye.com/portfolio/img/product_detail/minus_icon.png" alt="더하기"></button>
+                      <input class="count__input" value=${item.count}>
+                      <button href="#" class="count__btn count__btn--plus" title="수량 더하기"><img src="http://simjuhye.com/portfolio/img/product_detail/plus_icon.png" alt="빼기"></button>
                     </div>
                 </div>
                 <button class="product__btn--del" data-id=${item.id}></button>
@@ -218,7 +217,7 @@
               calc();
               del();
               comma();
-              var cartItemInput = document.querySelectorAll('.product_count')
+              var cartItemInput = document.querySelectorAll('.count__input')
               for(let i = 0; i < cartItemInput.length; i++){
                 cartItemInput[i].addEventListener('change', function(){
                   let totalCount = cartItemInput[i].value
@@ -241,7 +240,7 @@
         })
         // 닫기
         let modal = document.querySelectorAll('.modal')
-        let closeBtn = document.querySelectorAll('.modal-head__button--close')
+        let closeBtn = document.querySelectorAll('.modal-head__btn--close')
         for(let i = 0; i < modal.length; i++){
           closeBtn[i].addEventListener('click', function(e){
             if(e.currentTarget !== 0){
