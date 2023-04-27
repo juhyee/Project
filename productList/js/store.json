@@ -7,6 +7,7 @@
       "photo": "pr1.jpg",
       "price": 10000,
       "sale": 36,
+      "star": 45,
       "tag": ["bigSale", "gift",  "time3" ]
     },
     {
@@ -16,6 +17,7 @@
       "photo": "pr2.jpg",
       "price": 20000,
       "sale": 50,
+      "star": 30,
       "tag":["bigSale", "time3" ]
     },
     {
@@ -25,6 +27,7 @@
       "photo": "pr3.jpg",
       "price": 30000,
       "sale": 40,
+      "star": 25,
       "tag": ["gift",  "time3" ]
     },
     {
@@ -34,6 +37,7 @@
       "photo": "pr4.jpg",
       "price": 40000,
       "sale": 10,
+      "star": 50,
       "tag":  ["bigSale", "gift",  "time3" ]
     }
   ]

@@ -54,7 +54,7 @@
 .product__list .product__title .highlight,
 .product__list .product__brand .highlight {background-color:#99e4ff; color:#000;}
 
-.product__list .product_price {margin-top:10px; font-size:18px; font-weight:bold;}
+.product__list .product_price {margin-top:10px; font-size:18px; font-weight:bold; letter-spacing:-2px;}
 .product__list .product_price .sale {margin-right:4px; color:#00bbff; font-weight:900;}
 .product__list .product__tag {display:flex; align-items: center; flex-wrap: wrap;}
 .product__list .product__tag .tag {margin:10px 4px 0 0; font-size:10px; padding:3px 8px 4px 6px; border-radius:2px; box-sizing:border-box;}
@@ -65,6 +65,20 @@
 .product__list .product__tag .tag.time3 {border:1px solid #c9c9c9; background-color:#c9c9c9;  color:#222;}
 .product__list .product__tag .tag.time3::after {content: '3시간전';}
 
+
+.product__list .star_wrap {overflow: hidden; position: relative; display: inline-block; width: 54px; height: 10px; margin-top:8px; background: url(http://simjuhye.com/portfolio/img/product_list/star_0.png) 100% 0 no-repeat;}
+.product__list .star_wrap .star {position: absolute; top: 0; left: 0; height: 10px; background: url(http://simjuhye.com/portfolio/img/product_list/star_100.png) 0 0 no-repeat;}
+.product__list .score50 {width: 54px;}
+.product__list .score45 {width: 49px;}
+.product__list .score40 {width: 43px;}
+.product__list .score35 {width: 38px;}
+.product__list .score30 {width: 32px;}
+.product__list .score25 {width: 27px;}
+.product__list .score20 {width: 21px;}
+.product__list .score15 {width: 16px;}
+.product__list .score10 {width: 10px;}
+.product__list .score05 {width: 5px;}
+.product__list .score00 {width: 0px;}
 
 /* cart modal  */
 .cart-moodal .modal__contents {width: 580px; padding:0;}
@@ -78,7 +92,7 @@
 .cart-product__list .product_price {margin-top:6px; font-size:18px; font-weight:bold; letter-spacing: -2px;}
 .option_count {display:inline-block;margin-top:10px;border:1px solid #eee;color:#333;text-align:center;}
 .option_count .count_btn {display:inline-block;width:32px;height:32px;padding:4px;box-sizing:border-box;}
-.option_count .product_count {display:inline-block;width:44px;height:32px;line-height:32px;border:none;border-right:1px solid #eee;border-left:1px solid #eee;vertical-align:top;}
+.option_count .product_count {display:inline-block;width:44px;height:32px;line-height:32px;border:none;border-right:1px solid #eee;border-left:1px solid #eee;text-align:center; vertical-align:top;}
 .product__btn--del {position:absolute; right:0; top: 4px; width:20px; height:20px; background:url(../img/deleteIcon.svg) no-repeat 0 0/100%; }
 .total_price_wrap {width:calc(100% - 147px); height:47px; padding: 0 40px;  border-radius:6px; background-color:#eee; font-size:16px; line-height:47px; text-align:right;}
 .total_price {padding:0 4px 0 10px; font-weight:900; letter-spacing: -1px;font-size:20px;}

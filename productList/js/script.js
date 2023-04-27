@@ -13,6 +13,7 @@
 
  window.onload = function(){
 //  json data get
+  var cartPrd = []
   var prdList = document.querySelector('.product__list')
   $.get('./js/store.json').done((data) => {
 
@@ -21,8 +22,7 @@
 
     document.querySelector('.product_total > .num').innerText = prCount;
     products.forEach(item => {
-      prdList.insertAdjacentHTML('afterbegin',
-        `
+      prdList.insertAdjacentHTML('afterbegin', `
           <li class="product__item">
             <div class="product_thumb">
               <img src="./img/${item.photo}" alt="">
@@ -33,6 +33,9 @@
             <div class="product_info">
               <span class="product__brand">${item.brand}</span>
               <p class="product__title">${item.title}</p>
+              <div class="star_wrap">
+                <div class="star score${item.star}"><span class="blind">5점</span></div>
+              </div>
               <p class="product_price"><span class="sale">${item.sale}%</span> <span class="price">${item.price}</span> 원</p>
               <div class="product__tag">
               </div>
@@ -69,9 +72,13 @@
             <div class="product_info">
               <span class="product__brand">${item.brand}</span>
               <p class="product__title">${item.title}</p>
+              <div class="star_wrap">
+               <div class="star score${item.star}"><span class="blind">5점</span></div>
+              </div>
               <p class="product_price"><span class="sale">${item.sale}%</span> <span class="price">${item.price}</span>원</p>
               <div class="product__tag">
               </div>
+
             </div>
           </li>
             `)
@@ -100,8 +107,6 @@
         })
 
 
-
-
         function nodata(){
           if(cartPrd.length == 0) {
             document.querySelector('.cart-moodal').classList.add('nodata');
@@ -124,48 +129,53 @@
           }
         }
 
-        // var count = 1;
+
         function calc(){
-          var totalPrice = 0;
-            for(let i = 0;  i <  cartPrd.length; i++){
+          for(let i = 0;  i <  cartPrd.length; i++){
+              var totalPrice = 0;
               var cartItem = document.querySelectorAll('.product_count')
-              var count = parseFloat(cartItem[i].value);
-              var cartPrdReverse = [...cartPrd].reverse();
-              var targetPrice = cartPrdReverse[i]['price'];
+              var count = cartItem[i].value;
+              cartPrd = [...cartPrd].reverse();
+              var targetPrice = cartPrd[i]['price'];
+
               document.querySelectorAll('.plus')[i].addEventListener('click', function(e){
-                count = ++cartItem[i].value;
-                return;
+                cartItem[i].value = ++cartItem[i].value
+                cartPrd[i]['count'] = cartItem[i].value
+                console.log(targetPrice)
               })
+
               document.querySelectorAll('.minus')[i].addEventListener('click', function(e){
                 if(count <= 1){
-                  count = cartItem[i].value;
-                  return;
+                  cartItem[i].value = 1
+                  cartPrd[i]['count'] = count
                 }else {
-                  count = --cartItem[i].value;
-                  return;
+                  cartItem[i].value = --cartItem[i].value
+                  cartPrd[i]['count'] = cartItem[i].value
                 }
               })
-              totalPrice += parseFloat(count * targetPrice)
+
+              totalPrice += parseInt(cartItem[i].value * targetPrice)
               document.querySelector('.total_price').innerText = totalPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
             }
         }
 
+
+        // 장바구니 상품 삭제
         function del(){
-          var cartDel = document.querySelectorAll('.product__btn--del')
+          var cartDel = document.querySelectorAll('.product__btn--del');
           for(let i = 0;  i < cartPrd.length; i++)
           cartDel[i].addEventListener('click', function(e){
-            var cartPrdReverse = [...cartPrd].reverse();
-            cartPrd = cartPrdReverse.splice(i, 1)
             e.target.parentNode.remove();
-            calc();
+            let prdId = e.target.dataset.id
+            let prdIdx = cartPrd.findIndex(item => {return prdId == item.id})
+            cartPrd.splice(prdIdx, 1)
+            document.querySelector('.header__utill-count').innerText = cartPrd.length
             nodata();
           })
         }
 
 
-
         // 장바구니에 담기
-        var cartPrd = []
         nodata();
         var cart = document.querySelectorAll('.product__btn--cart')
         document.querySelector('.header__utill-count').innerText = 0
@@ -196,24 +206,24 @@
                   <p class="product_price price">${item.price}</p>
                   <div class="option_count">
                       <button href="#" class="count_btn minus" title="수량 빼기"><img src="http://simjuhye.com/portfolio/img/product_detail/minus_icon.png" alt="더하기"></button>
-                      <input type="number"  value="${item.count}" min="1" class="product_count">
+                      <input class="product_count" value=${item.count}>
                       <button href="#" class="count_btn plus" title="수량 더하기"><img src="http://simjuhye.com/portfolio/img/product_detail/plus_icon.png" alt="빼기"></button>
                     </div>
                 </div>
                 <button class="product__btn--del" data-id=${item.id}></button>
               </div>
                 `)
-
               })
-              del();
-              calc();
-              comma();
 
+              calc();
+              del();
+              comma();
               var cartItemInput = document.querySelectorAll('.product_count')
               for(let i = 0; i < cartItemInput.length; i++){
                 cartItemInput[i].addEventListener('change', function(){
                   let totalCount = cartItemInput[i].value
-                  cart[i].count = totalCount;
+                  cartPrd[i].count = totalCount;
+                  del();
                   calc();
                 })
               }
