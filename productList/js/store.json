@@ -37,7 +37,7 @@
       "photo": "pr4.jpg",
       "price": 40000,
       "sale": 10,
-      "star": 51,
+      "star": 50,
       "tag":  ["bigSale", "gift",  "time3" ]
     }
   ]
