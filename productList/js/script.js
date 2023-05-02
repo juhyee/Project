@@ -134,27 +134,27 @@
               var totalPrice = 0;
               var cartItem = document.querySelectorAll('.count__input')
               var count = cartItem[i].value;
-              cartPrd = [...cartPrd].reverse();
               var targetPrice = cartPrd[i]['price'];
 
               document.querySelectorAll('.count__btn--plus')[i].addEventListener('click', function(e){
                 cartItem[i].value = ++cartItem[i].value
                 cartPrd[i]['count'] = cartItem[i].value
                 console.log(targetPrice)
+                totalPrice += parseInt(targetPrice)
+                document.querySelector('.total-price__num').innerText = totalPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
               })
 
               document.querySelectorAll('.count__btn--minus')[i].addEventListener('click', function(e){
-                if(count <= 1){
-                  cartItem[i].value = 1
-                  cartPrd[i]['count'] = count
-                }else {
+                if(cartItem[i].value  >=  1){
                   cartItem[i].value = --cartItem[i].value
                   cartPrd[i]['count'] = cartItem[i].value
+                }else {
+                  cartPrd[i]['count'] = 1
                 }
               })
 
-              totalPrice += parseInt(cartItem[i].value * targetPrice)
-              document.querySelector('.total-price__num').innerText = totalPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+              // totalPrice += parseInt(cartItem[i].value * targetPrice)
+              // document.querySelector('.total-price__num').innerText = totalPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
             }
         }
 
