@@ -181,7 +181,7 @@
     &__item {
       width: calc(25% - 20px);
       float: left;
-      margin-left: 20px;
+      margin: 0 0 60px 20px;
       cursor: pointer;
 
       &-btns {
@@ -282,14 +282,15 @@
       }
 
       &--price {
-        margin-top: 10px;
+        margin-top: 8px;
         font-size: 18px;
         font-weight: bold;
         letter-spacing: -2px;
 
         .sale {
-          margin-right: 4px;
+          margin-right: 10px;
           color: #00bbff;
+          font-size: 20px;
           font-weight: 900;
         }
       }
@@ -300,7 +301,7 @@
         display: inline-block;
         width: 54px;
         height: 10px;
-        margin-top: 8px;
+        margin-top: 14px;
         background: url(http://simjuhye.com/portfolio/img/product_list/star_0.png) 100% 0 no-repeat;
 
         .star {
@@ -365,11 +366,11 @@
 
       .tag {
         margin: 10px 4px 0 0;
-        font-size: 10px;
         padding: 3px 8px 4px 6px;
         border-radius: 2px;
         box-sizing: border-box;
-
+        font-size: 12px;
+        font-weight: 500;
         &.bigSale {
           background-color: rgb(243, 29, 29);
           border: 1px solid rgb(243, 29, 29);
@@ -390,8 +391,8 @@
         }
 
         &.time3 {
-          border: 1px solid #c9c9c9;
-          background-color: #c9c9c9;
+          border: 1px solid rgba(0, 0, 0, 0.07);
+          background-color: rgba(0, 0, 0, 0.07);
           color: #222;
 
           &::after {
@@ -555,7 +556,7 @@
 
         &--title {
           margin-top: 8px;
-          font-size: 16px;
+          font-size: 15px;
           color: #7e7e7e;
         }
 
