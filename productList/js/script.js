@@ -129,32 +129,35 @@
         }
 
 
+        var totalPrice = 0;
         function calc(){
           for(let i = 0;  i <  cartPrd.length; i++){
-              var totalPrice = 0;
-              var cartItem = document.querySelectorAll('.count__input')
-              var count = cartItem[i].value;
-              var targetPrice = cartPrd[i]['price'];
+              let cartItem = document.querySelectorAll('.count__input')
 
+              var cartPrdReverse = [...cartPrd].reverse();
               document.querySelectorAll('.count__btn--plus')[i].addEventListener('click', function(e){
+                let targetPrice = cartPrdReverse[i]['price'];
                 cartItem[i].value = ++cartItem[i].value
-                cartPrd[i]['count'] = cartItem[i].value
-                console.log(targetPrice)
+                cartPrdReverse[i]['count'] = cartItem[i].value
+
                 totalPrice += parseInt(targetPrice)
                 document.querySelector('.total-price__num').innerText = totalPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
               })
 
+
               document.querySelectorAll('.count__btn--minus')[i].addEventListener('click', function(e){
-                if(cartItem[i].value  >=  1){
+                if(cartItem[i].value  > 1){
                   cartItem[i].value = --cartItem[i].value
-                  cartPrd[i]['count'] = cartItem[i].value
+                  cartPrdReverse[i]['count'] = cartItem[i].value
+                  var targetPrice = cartPrdReverse[i]['price'];
+
+                  totalPrice -= parseInt(targetPrice)
+                  document.querySelector('.total-price__num').innerText = totalPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
                 }else {
-                  cartPrd[i]['count'] = 1
+                  cartPrdReverse[i]['count'] = 1
                 }
               })
 
-              // totalPrice += parseInt(cartItem[i].value * targetPrice)
-              // document.querySelector('.total-price__num').innerText = totalPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
             }
         }
 
@@ -162,13 +165,19 @@
         // 장바구니 상품 삭제
         function del(){
           var cartDel = document.querySelectorAll('.product__btn--del');
+          var cartPrdReverse = [...cartPrd].reverse();
           for(let i = 0;  i < cartPrd.length; i++)
           cartDel[i].addEventListener('click', function(e){
+
             e.target.parentNode.remove();
             let prdId = e.target.dataset.id
             let prdIdx = cartPrd.findIndex(item => {return prdId == item.id})
+            totalPrice -= parseInt(cartPrdReverse[i]['count'] * cartPrdReverse[i]['price'])
             cartPrd.splice(prdIdx, 1)
+            document.querySelector('.total-price__num').innerText = totalPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+            console.log(cartPrd)
             document.querySelector('.header__utill-count').innerText = cartPrd.length
+
             nodata();
           })
         }
@@ -189,11 +198,12 @@
               cartPrd.push(addPrd)
               addPrd.count = 1
               document.querySelector('.header__utill-count').innerText = cartPrd.length
+              totalPrice += parseInt(addPrd['price'])
+              document.querySelector('.total-price__num').innerText = totalPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
             }
 
             document.querySelector('.cart-product__list').innerHTML = ''
             cartPrd.forEach(item => {
-
               document.querySelector('.cart-product__list').insertAdjacentHTML('afterbegin', `
                 <div class="product__item">
                 <div class="product__thumb">
@@ -212,20 +222,13 @@
                 <button class="product__btn--del" data-id=${item.id}></button>
               </div>
                 `)
+
               })
 
               calc();
               del();
               comma();
-              var cartItemInput = document.querySelectorAll('.count__input')
-              for(let i = 0; i < cartItemInput.length; i++){
-                cartItemInput[i].addEventListener('change', function(){
-                  let totalCount = cartItemInput[i].value
-                  cartPrd[i].count = totalCount;
-                  del();
-                  calc();
-                })
-              }
+
             })
 
         }
