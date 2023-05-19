@@ -81,11 +81,11 @@ function mousewheelE() {
 
 
   $(window).on('wheel DOMMouseScroll', function () {
-    var menu_h = document.querySelector("#header").clientHeight
+    // var menu_h = document.querySelector("#header").clientHeight
     $('.sec01_01').on('mousewheel DOMMouseScroll', function (event) {
       if (event.originalEvent.detail < 0 || event.originalEvent.wheelDelta > 0) {
         product_swiper_pc.mousewheel.disable()
-        $('html').stop().animate({ scrollTop: $('.section_visual').offset().top - menu_h + 2 }, 600);
+        $('html').stop().animate({ scrollTop: $('.section_visual').offset().top + 2 }, 600);
       } else {
         product_swiper_pc.mousewheel.enable()
       }
@@ -103,7 +103,7 @@ function mousewheelE() {
     $('.sec02_01').on('mousewheel DOMMouseScroll', function (event) {
       if (event.originalEvent.detail < 0 || event.originalEvent.wheelDelta > 0) {
         product_swiper02_pc.mousewheel.disable()
-        $('html').stop().animate({ scrollTop: $('.product01_sec').offset().top - menu_h + 2 }, 600);
+        $('html').stop().animate({ scrollTop: $('.product01_sec').offset().top + 2 }, 600);
       } else {
         product_swiper02_pc.mousewheel.enable()
       }
@@ -121,7 +121,7 @@ function mousewheelE() {
     $('.sec03_01').on('mousewheel DOMMouseScroll', function (event) {
       if (event.originalEvent.detail < 0 || event.originalEvent.wheelDelta > 0) {
         product_swiper03_pc.mousewheel.disable()
-        $('html').stop().animate({ scrollTop: $('.product02_sec').offset().top - menu_h + 2 }, 600);
+        $('html').stop().animate({ scrollTop: $('.product02_sec').offset().top + 2 }, 600);
       } else {
         product_swiper03_pc.mousewheel.enable()
       }
@@ -143,7 +143,7 @@ function mousewheelE() {
     });
     $(".partner_sec").on('wheel DOMMouseScroll', function (event) {
       if (event.originalEvent.detail < 0 || event.originalEvent.wheelDelta > 0) {
-        $('html').stop().animate({ scrollTop: $('.product03_sec').offset().top - menu_h + 2 }, 400);
+        $('html').stop().animate({ scrollTop: $('.product03_sec').offset().top + 2 }, 400);
       }
     });
   })

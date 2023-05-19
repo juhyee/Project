@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="ko-KR">
 
@@ -11,7 +13,6 @@
     <link rel="stylesheet" href="./fonts/font.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.6/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-    <!-- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2a4fb7723234cf9cd4227306526ff667"></script> -->
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <title>INTEGRITICS</title>
 </head>
@@ -64,7 +65,7 @@
             </div>
 
             <div class="section sec01">
-                <div class="swiper mySwiper price_swiper section_inner">
+                <div class="swiper mySwiper section_inner">
                     <div class="swiper-wrapper price_list">
                         <div class="swiper-slide price_item">
                             <div class="item_head">
@@ -192,7 +193,7 @@
                         <li><a href="tel:028893691">연구소 : 02-889-3691</a></li>
                     </ul>
                     <ul>
-                        <li><a href="mailto:bjpark21@integritics.io">E-mail : bjpark21@integritics.io</a></li>
+                            <li><a href="mailto:bjpark21@integritics.io">E-mail : bjpark21@integritics.io</a></li>
                         <li>본사 : 경기도 성남시 수정구 달래내로46 글로벌융합센터 A동 202호</li>
                     </ul>
                     <p class="copyright">&copy;COPYRIGHT 2023. INTEGRITICS, INC, All Rights Reserved.</p>
@@ -233,8 +234,7 @@
                             </div>
                             <div class="modal_item">
                                 <label class="item_label" for="input_messege">Messege</label>
-                                <textarea name="message" id="input_messege" class="item_input" cols="30"
-                                    rows="10"></textarea>
+                                <textarea name="message" id="input_messege" class="item_input" cols="30" rows="10"></textarea>
                             </div>
                         </div>
                         <div class="modal_footer">
@@ -247,13 +247,14 @@
         </div>
         <!-- 도입하기 모달 팝업 -->
 
-
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.6/swiper-bundle.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-        <script src="./js/common.js"></script>
+        <script src="./js/common.js?ver=0.1"></script>
         <script src="./js/contact.js"></script>
+
         <script>
-            var price_swiper = new Swiper(".price_swiper", {
+
+            var price_swiper = new Swiper(".mySwiper", {
                 observer: true,
                 observeParents: true,
                 autoHeight: true,
@@ -278,6 +279,7 @@
                     }
                 }
             });
+
         </script>
 </body>
 
