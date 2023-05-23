@@ -1,0 +1,47 @@
+@import url('./reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+.blind {display:block;position:absolute;overflow:hidden;width:1px;height:1px;margin:-1px;clip:rect(0 0 0 0)}
+/* display, overflow, float, position, width, height, padding, margin, border, background, color/font, animation */
+.popup_wrap {width:861px;font-size:12px;font-family:'Nanum Gothic', sans-serif;}
+.popup_wrap .popup_tit {width:100%;height:38px;line-height:38px;padding:0 15px;background-color:#d2352b;color:#fff;-webkit-box-sizing:border-box;box-sizing:border-box;}
+.popup_wrap .popup_cnt_wrap {padding:17px 15px 16px 15px;}
+.popup_wrap .popup_cnt_wrap .notice {position:relative;width:100%;height:30px;line-height:30px;padding-left:18px;border-bottom:1px solid #b1b1b1;-webkit-box-sizing:border-box;box-sizing:border-box;}
+.popup_wrap .popup_cnt_wrap .notice::before {content:'';position:absolute;top:50%;left:0;width:14px;height:14px;margin-top:-9px;background:url(../img/basket_page/notice_icon.jpg) 0 0 no-repeat;-webkit-background-size:100%;background-size:100%;}
+.popup_cnt01 {width:100%;margin-top:30px;}
+.popup_cnt01 table {width:100%;margin-top:20px;border-top:2px solid #050504;border-bottom:1px solid #afafb1;background-color:#f7f8fc;color:#333;}
+.popup_cnt01 .cnt_tbl01 {margin-top:10px;}
+.popup_cnt01 table tr {border-bottom:1px solid #e7e8ec;}
+.popup_cnt01 table tr:first-child, .popup_cnt01 table tr:last-child {border-bottom:none;}
+.popup_cnt01 table th {text-align:left;word-break:keep-all;overflow:hidden;}
+.popup_cnt01 table tbody tr:first-child th {height:36px;padding:0 15px;background-color:#e1e3e7;}
+.popup_cnt01 table tfoot {border-top: 1px solid #e7e8ec;}
+.popup_cnt01 table .coupon_list_wrap {font-size:11px;}
+.popup_cnt01 table .coupon_list_wrap td {padding:15px 0;}
+.popup_cnt01 table .coupon_list_wrap th {padding:18px 15px 15px;vertical-align:top}
+.popup_cnt01 table .coupon_list_wrap li {margin-top:6px;color:#4d4d4d;font-size:0;}
+.popup_cnt01 table .coupon_list_wrap li:first-child {margin-top:0;}
+.popup_cnt01 table .coupon_list_wrap li label {display:inline-block;margin-left:8px;font-size:10px;vertical-align:middle;cursor:pointer;}
+.popup_cnt01 table .coupon_list_wrap .coupon_price {padding:15px 13px;color:#111;text-align:right;vertical-align:bottom;}
+.popup_cnt01 table .product_price {height:40px;padding:0 10px;text-align:right;font-weight:bold;}
+.popup_cnt01 table .product_price {font-size:11px;}
+/* .popup_cnt01 table .product_price span {display: inline-block; vertical-align: top;} */
+.popup_cnt01 table .product_price .number {font-size:12px;color:#d82e20;}
+
+.popup_bill_wrap {width:100%;margin-top:20px;border:1px solid #7c7c7e; overflow: hidden;}
+.popup_bill_wrap>div {float: left; width:33.333%;background-color:#f7f8fc;font-size:11px;text-align:left;border-right:1px solid #d8dbe3;}
+.popup_bill_wrap .bill_tit {padding:10px 17px;border-bottom:1px solid #d8dbe3;color:#4d4d4d;}
+
+.popup_bill_wrap .bill_cnt03 {border-right:none;background-color:#ebeef5;}
+
+.popup_bill_wrap .price_detail {position:relative;height:38px;line-height: 38px;padding:0 19px;text-align:right;}
+.popup_bill_wrap .price_detail .price {font-size:10px;}
+.popup_bill_wrap .price_detail .price em {display:inline-block;font-size:12px;font-weight:bold;vertical-align:middle;}
+.popup_bill_wrap .price_detail .price span {display: inline-block; vertical-align: top; margin-top: 1px;}
+.popup_bill_wrap .price_detail .price.final {color:#d82e20;}
+.minus, .equals {position:absolute;right:-12px;top:50%;width:24px;height:24px;margin-top:-12px;z-index:2;}
+.minus {background:url(../img/basket_page/minus.png) 0 0 no-repeat;-webkit-background-size:100%;background-size:100%;}
+.equals {background:url(../img/basket_page/equals.png) 0 0 no-repeat;-webkit-background-size:100%;background-size:100%;}
+
+.popup_btn_wrap {margin-top:45px;}
+.popup_btn {display:block;width:100px;height:35px;line-height:35px;margin:0 auto;border:1px solid #c00e02;border-radius:2px;background-color:#d2372d;color:#fff;text-align:center;}
