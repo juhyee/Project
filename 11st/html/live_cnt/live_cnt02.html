@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>심주혜 포트폴리오</title>
+		<script type="text/javascript" src="http://c.011st.com/js/lib/jquery/jquery-3.1.1.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="../../css/live_cnt.css">
+	</head>
+	<body>
+
+
+		<div class="wrap">
+			<div class="content">
+				<div class="popup_wrap">
+
+					<h3 class="title">방송 등록/수정</h3>
+
+					<div class="popup_cnt">
+						<div class="info_wrap">
+
+							<h5>방송코드</h5>
+							<div class="info_cnt_wrap type01">
+								<a href="#" class="live_cancle_btn" title="방송취소">방송취소</a>
+							</div>
+
+							<div class="info_cnt_wrap type02">
+								<ul class="info_cnt01">
+									<li>RTMP URL<span>방송이 등록되면 URL이 자동 생성됩니다</span></li>
+									<li>KEY<span>방송이 등록되면 자동 생성됩니다</span></li>
+								</ul>
+
+								<div class="info_cnt02">
+									<label for="search_wrap01">방송셀러(옵션)</label>
+									<input type="text" id="search_wrap01" name="seller_search">
+									<a href="#" class="search_btn" title="방송셀러 검색">검색</a>
+								</div>
+							</div>
+						</div>
+						<div class="popup_tbl_wrap">
+							<table>
+								<caption>방송 예정일, 방송명, 소제목, 방송설명, 방송 진행자, 탭 상단 빅배너 이미지, 방송 세로형 이미지, 예고 영상, 다시보기 영상링크, 기대평 기능 사용 여부 등록 수정</caption>
+								<colgroup>
+									<col style="width: 150px;">
+									<col>
+								</colgroup>
+
+								<tbody>
+									<tr>
+										<th scope="row"><label for="select_schedule">방송 예정일</label></th>
+										<td>
+											<select id="select_schedule" name="live_start_day" class="tbl_select">
+												<option value="2020.11.26" selected>2020.11.26</option>
+												<option value="2020.11.26">2020.11.26</option>
+												<option value="2020.11.26">2020.11.26</option>
+												<option value="2020.11.26">2020.11.26</option>
+												<option value="2020.11.26">2020.11.26</option>
+											</select>
+
+											<input type="number" name="live_start_hour" class="tbl_input type01" title="방송 예정 시작 시간" placeholder="00">
+											<span>:</span>
+											<input type="number" name="live_start_minute" class="tbl_input type01" title="방송 예정 시작 분" placeholder="00">
+											<span>~</span>
+
+											<select name="live_end_day" class="tbl_select" title="방송 예정 끝나는 날짜">
+												<option value="2020.11.26" selected>2020.11.26</option>
+												<option value="2020.11.26">2020.11.26</option>
+												<option value="2020.11.26">2020.11.26</option>
+												<option value="2020.11.26">2020.11.26</option>
+												<option value="2020.11.26">2020.11.26</option>
+											</select>
+
+											<input type="number" name="live_end_hour" class="tbl_input type01" title="방송 예정 끝나는 시간" placeholder="00">
+											<span>:</span>
+											<input type="number" name="live_end_hour" class="tbl_input type01" title="방송 예정 끝나는 시간" placeholder="00">
+
+											<span class="tbl_txt01 mgt5">현재 시간 이후 생성 가능</span>
+										</td>
+									</tr>
+
+									<tr>
+										<th scope="row"><label for="input_title">방송명</label> <span class="required">(필수)</span></th>
+										<td>
+											<input type="text" id="input_title" name="live_title" class="tbl_input type02" maxlength="23" placeholder="방송명을 입력해주세요.">
+											<span class="tbl_txt02">최대 23자</span>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row"><label for="input_sub">소제목</label> <span class="required">(필수)</span></th>
+										<td>
+											<input type="text" id="input_sub" name="live_sub_title" class="tbl_input type02" maxlength="23" placeholder="소제목을 입력해주세요.">
+											<span class="tbl_txt02">최대 23자</span>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" class="th_type01"><label for="textarea_detail">방송설명</label></th>
+										<td>
+											<textarea id="textarea_detail" name="live_detail" class="tbl_textarea" maxlength="800" cols="30" rows="10" placeholder="에디터 영역&#13;&#10;*에디터 확인 후 높이값 조정"></textarea>
+											<span class="tbl_txt02">최대 800자</span></td>
+									</tr>
+									<tr>
+										<th scope="row">방송 진행자</th>
+										<td>
+											<a href="#" class="tbl_add_btn" title="방송 진행자 추가하기">추가하기</a>
+											<span class="tbl_txt02">최대 3인 선택가능</span>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" class="th_type01"><label for="input_file01">탭 상단 빅배너 이미지</label></th>
+										<td>
+											<div class="upload_wrap type01">
+												<input type="file" id="input_file01" class="input_file">
+											</div>
+											<span class="tbl_txt01">등록 사이즈 600 x 900</span>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" class="th_type01"><label for="input_file02">방송 세로형 이미지</label><br><span class="required">(필수)</span></th>
+										<td>
+											<div class="upload_wrap type01">
+												<input type="file" id="input_file02" class="input_file">
+											</div>
+											<span class="tbl_txt01">등록 사이즈 600 x 900</span>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" class="th_type01"><label for="input_file03">예고 영상 (2:3비율)</label></th>
+										<td>
+											<div class="upload_wrap type02">
+												<span>추가하기</span>
+												<input type="file" id="input_file03" class="input_file">
+											</div>
+											<p class="mgt5">용량이 큰 영상 업로드 시, 다소 시간이 소요될 수 있습니다.</p>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row"><label for="input_link">다시보기 영상링크</label></th>
+										<td><input type="text" id="input_link" name="replay_video_link" class="tbl_input type03" placeholder="링크를 입력해주세요."></td>
+									</tr>
+									<tr>
+										<th scope="row">기대평 기능 사용여부</th>
+										<td>
+											<button class="tbl_btn_wrap"><span class="tbl_btn_txt">ON</span><span class="circle"></span></button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+					<div class="btn_wrap">
+						<a href="#" class="btn cancle" title="취소">취소</a>
+						<a href="#" class="btn save" title="저장하기">저장하기</a>
+					</div>
+
+					<a href="#" class="close_btn" title="방송 등록/수정 페이지 닫기"><img src="../../img/live_cnt/close_btn.gif" alt="닫기"></a>
+				</div>
+			</div>
+		</div>
+	<script type="text/javascript" src="../../js/pc.js" charset="utf-8"></script>
+	</body>
+</html>

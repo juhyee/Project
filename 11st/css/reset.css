@@ -1,0 +1,291 @@
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+b, u, i, center,select,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video{
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	font: inherit;
+	font-weight: inherit;
+}
+address, article, aside, blockquote, canvas, dd,
+div, dl, dt, fieldset, figcaption, figure, footer,
+form, h1, h2, h3, h4, h5, h6, header, hr, li, main,
+nav, noscript, ol, p, pre, section, table, tfoot, ul, video{
+	box-sizing: border-box;
+}
+
+
+ol, ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing : 0;
+
+}
+
+caption {
+	overflow: hidden;
+	width: 0;
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+}
+
+button{
+	background: inherit;
+	border:none;
+	box-shadow:none;
+	border-radius:0;
+	padding:0;
+	overflow:visible;
+	cursor:pointer
+}
+
+select {
+		color: inherit;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* page01 */
+input.login_input {
+		width:100%;
+		height:44px;
+		padding:0 10px;
+		margin-top:8px;
+		box-sizing:border-box;
+		background-color: #fafafa;
+		border: 1px solid #ddd;
+		color: #999;
+		font-size: 13px;
+}
+/* page02 */
+select.category_select {
+		width: 0;
+		height: 24px;
+		background:transparent url(../img/product_detail/select_arrow.png) no-repeat 100% 0;
+		-webkit-background-size: 24px 24px;
+		background-size: 24px 24px;
+		border-radius: 0;
+		border: none;
+}
+
+.option_info input[type="number"] {
+		text-align: center;
+		padding: 0;
+		border-radius: 0;
+		font-size: 16px;
+}
+
+.option_info input[type="number"]::-webkit-outer-spin-button,
+.option_info input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+.info_option input[type="radio"] {
+	-webkit-appearance: none;
+	width: 100%;
+	height: 100%;
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+	margin: 0;
+	display: inline-block;
+	vertical-align: middle;
+	border: 1px solid #ccc;
+  outline: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.info_option input[type="radio"]:checked {
+	border:1px solid #f43142;
+
+}
+.info_option input[type="radio"]:disabled {
+	border:1px dashed #ddd;
+	color:#bbb;
+	background-color: #fafafa;
+	cursor: default;
+}
+/* page03 */
+select.sale_select {
+		padding-right: 20px;
+		height: 15px;
+		background:#fff url(../img/page03/select_arrow.jpg) no-repeat 100% 0;
+		-webkit-background-size: 15px 15px;
+		background-size: 15px 15px;
+		border-radius: 0;
+		border: none;
+}
+
+select.delivery_select {
+		font-size: 11px;
+		background-color: #f8f8f8;
+		padding: 0 15px 0 7px;
+		height: 20px;
+		line-height: 20px;
+		background:#f8f8f8 url(../img/basket_page/select_arrow02.jpg) no-repeat 100% 50%;
+		-webkit-background-size: 9px 12px;
+		background-size: 9px 12px;
+		border-radius: 6px;
+		border: 1px solid #a6a6a6;
+}
+
+
+input.count_input {
+		text-align: center;
+		padding: 0;
+		border-radius: 0;
+		border: 1px solid #c7c7c7;
+}
+
+input.count_input::-webkit-outer-spin-button,
+input.count_input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+.coupon_list input[type="radio"] {
+	-webkit-appearance: none;
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+	margin: 0;
+	display: inline-block;
+	vertical-align: middle;
+	border: 1px solid #a1a1a1;
+  outline: none;
+	background-color: #fff;
+	cursor: pointer;
+}
+
+
+.coupon_list input[type='radio']:before {
+		content: '';
+		display: block;
+		width: 4px;
+		height: 4px;
+		margin: 4px auto 0;
+		border-radius: 50%;
+}
+
+.coupon_list input[type="radio"]:checked {
+	border: 1px solid #5499f5;
+	background-color: #5499f5;
+}
+
+.coupon_list input[type="radio"]:checked:before {
+		background: #fff;
+
+}
+.coupon_list input[type="checkbox" i] {
+	margin: 0;
+}
+/* page04 */
+select.search_select_wrap {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background:#fff url(../img/live_cnt/select_btn.jpg) no-repeat 100% 0;
+		-webkit-background-size: auto 100%;
+		background-size: auto 100%;
+		border-radius: 0;
+		border: 1px solid #ccc;
+}
+
+select.tbl_select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background:#fff url(../img/live_cnt/calendar_btn.gif) no-repeat 100% 0;
+		-webkit-background-size: auto 100%;
+		background-size: auto 100%;
+		border-radius: 0;
+		border: 1px solid #ccc;
+}
+
+.popup_cnt input {
+	border-radius: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	padding: 12px 9px;
+}
+
+.popup_cnt input::placeholder {
+  color: #999;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+input.input_file {
+	border: none;
+	padding: 0;
+}
+
+input.tbl_input::-webkit-outer-spin-button,
+input.tbl_input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+textarea.tbl_textarea {
+	border-radius: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	resize: none;
+	padding: 16px;
+	border: 1px solid #ccc;
+}
+/* page06 */
+.term_cnt02 select {
+		color: inherit;
+    -webkit-appearance: auto;
+    -moz-appearance: auto;
+    appearance: auto;
+}
+
+.mgt0 {margin-top: 0px !important;}
+.mgt5 {margin-top: 5px !important;}
+.mgt10 {margin-top: 10px !important;}
+.mgt20 {margin-top: 20px !important;}
+.mgt30 {margin-top: 30px !important;}
+.mgt40 {margin-top: 40px !important;}
+.mgt50 {margin-top: 50px !important;}
+.mgt60 {margin-top: 60px !important;}
+.mgt70 {margin-top: 70px !important;}
+.mgt80 {margin-top: 80px !important;}
+.mgt90 {margin-top: 90px !important;}
