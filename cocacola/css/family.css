@@ -1,0 +1,58 @@
+#wrap {overflow: hidden; position: relative; width: 100%; min-width: 1520px;}
+.section01 {width: 100%; padding: 60px 0; background: url(http://simjuhye.com/img/pp_img/sec1_bg.png) no-repeat bottom center/100%;}
+/* .section01 {width: 100%; padding: 60px 0;} */
+.dragContainer{display: flex; align-items: center; justify-content:space-between; position:relative; width: 1520px; margin: 0 auto; }
+.dragContainer .btn_list {width: 320px; font-size: 0;}
+.dragContainer .btn_list li {position: relative; display: inline-block; width: 150px; height: 150px; margin: 0 0 10px 20px; cursor: move;}
+.dragContainer .btn_list li:nth-child(odd) {margin-left: 0;}
+.dragContainer .btn_list li .drag_area {position: absolute; top: 0; left: 0;}
+.draggable{display: inline-block; width:100%; height:100%;text-align:center; line-height:50px;}
+.drag_area a{position: relative; display: block; width:100%; height:100%; color: #fff; font-size: 50px; line-height:40px; z-index: 10;}
+
+.right_area { width: 1100px; height: 740px;}
+.right_area .popup_area {position: relative; width: 100%; height: 100%;}
+.right_area .popup_area .popup_wrap {position: absolute; top: 0; left: 0;  width: 100%; height: 100%;}
+.right_area .popup_area .popup_wrap.focus {display: block;}
+.right_area .popup_area .popup_wrap {display: none;}
+
+.products_box { width: 100%; padding-bottom: 100%; display: inline-block; border-radius: 100%; transform-origin:50% 50%; position: relative; overflow: hidden;}
+.products_logo { position: absolute; top: 0; left: 0; width: 100%; }
+
+.popup {width: 100%; height: 100%; position: absolute; top: 0; left: 0; font-family: 'Exo 2', sans-serif; color: #fff;}
+.close_btn { width: 4%; position: absolute; right: 2%; top: 2%;}
+.right_area .popup {width: 100%; height: 100%; background-color: rgba(0,0,0,0.6);}
+.popup .popup_cnt {position: relative; width: 100%; height: 100%; padding: 80px 80px 80px 60px; box-sizing: border-box; display: flex; align-items: flex-start;}
+.popup .popup_cnt .drink_img {position: relative; width: 240px; height: 100%;}
+.popup .popup_cnt .drink_img img {position: absolute; top: 50%; left: 0; transform: translateY(-50%);}
+.popup .popup_cnt .table_wrap {width: 280px;}
+.popup .popup_cnt .tbl_tit { width: 170px; height: 46px; margin-left: 16px; background: transparent url(../img/w_btn02.png) no-repeat top center/100%; text-align: center; line-height: 46px;}
+.popup .popup_cnt .popup_info {width: 380px; padding: 0 20px 0 40px;}
+.popup .popup_cnt .popup_tit {font-size: 22px; color: #c9c9c9;}
+.popup .popup_cnt .popup_tit b {display: block; margin-bottom: 16px; font-size: 40px; color: #fff;}
+.popup .popup_cnt .bottle_list {overflow: hidden; width: 100%; display: block; margin-top: 36px;}
+.popup .popup_cnt .bottle_list li {float: left; width: 23px; margin-right: 20px;}
+.ingredient_info h3 {width: 147px; height: 40px; margin-top: 24px;background: transparent url(../img/w_btn02.png) no-repeat top center/100%; text-align: center; font-size: 16px; line-height: 40px;}
+.ingredient_info p {margin-top: 12px; font-size: 14px;}
+.flavor_list {width: 340px; height: 96px; margin-top: 40px; background: transparent url(http://simjuhye.com/img/pp_img/box4.png) no-repeat top center/100%;}
+.flavor_list h3 {padding: 9px 0 0 36px; font-size: 18px;}
+.flavor_list ul {width: 295px; margin: 10px auto 0; text-align: center;}
+.flavor_list ul li {display: inline-block; padding: 0 8px;}
+
+.products_logo { position: absolute; top: 0; left: 0; width: 100%; }
+.can { width: 80%; position: absolute; bottom: -100%; left: 50%; margin-left: -40%;}
+
+.empty {display: none; position: absolute; top: 30px; right: 0; width: 1100px; height: 740px; text-align: center; background-color: rgba(0,0,0,.6); font-family: 'Mulish', sans-serif;}
+.empty.on {display: block;}
+.empty_txt {position: absolute; top: 50%; left: 50%; margin: -90px 0 0 -90px; overflow: hidden; color: #000; background-color: rgb(255, 255, 255); width: 180px; height: 180px; font-size: 26px; line-height: 30px; font-weight: bold; border-radius: 50%; box-sizing: border-box;}
+.empty_txt span {font-size: 22px;}
+.empty_txt.ani {animation-name: btnExpand; animation-duration: .8s; animation-fill-mode: forwards;}
+.empty_txt {display: flex; align-items: center; justify-content: center; font-size: 26px;} 
+.empty_txt .txt_inner b {font-size: 40px;}
+.empty_txt .txt_inner span {font-size: 20px; vertical-align: top;}
+
+.section02 {font-family: 'Nunito Sans', sans-serif; padding-bottom: 140px;}
+.sec02_info { width: 1300px; line-height: 35px; margin: 0 auto; font-size: 21px; color:#747474;}
+.sec02_info h3 {line-height: 1; font-size: 57px; color:#3d3d3d;}
+.sec02_info h4 {margin-top: 50px; font-size: 25px; color:#333;}
+.sec02_info h5 {margin: 15px 0; font-style:italic; font-size:21px;	color:#3d3d3d;}
+.sec02_info p span {color:red; text-decoration:underline;}

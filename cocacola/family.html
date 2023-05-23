@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- meta, title, link, script, style 순으로 정렬 -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Coca-Cola</title>
+    <link rel="shortcut icon" href="http://simjuhye.com/img/icon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Exo+2:900" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@1,600;1,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/keyframes.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/family.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+</head>
+<body>
+    <div id="wrap">
+      <div id="header" class="family">
+          <div class="inner">
+              <h1 class="logo">
+                  <a href="http://simjuhye.com">
+                      <span class="blind">coca-cola</span>
+                  </a>
+              </h1>
+              <ul class="gnb">
+                  <li><a href="http://simjuhye.com">HOME</a></li>
+                  <li><a href="http://simjuhye.com/history.html">HISTORY</a></li>
+                  <li><a href="http://simjuhye.com/family.html">FAMILY</a></li>
+              </ul>
+              <a href="" class="btn share">SHARE</a>
+          </div>
+      </div>
+      <div class="section01">
+        <div class="dragContainer"> 
+          <ul class="btn_list">
+            <li>
+              <div class="draggable drag_area drag_area02">
+                <div class="products_box" id="classic">
+                  <img class="products_logo" src="http://simjuhye.com/img/pp_img/classic_bg.png" alt="">
+                  <img src="http://simjuhye.com/img/pp_img/cla_can.png" alt="" class="can">
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="draggable drag_area drag_area02">
+                <div class="products_box" id="zero">
+                  <img class="products_logo" src="http://simjuhye.com/img/pp_img/zero_logo2.png" alt="">
+                  <img src="http://simjuhye.com/img/pp_img/zero_can2.png" alt="" class="can">
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="draggable drag_area drag_area02">
+                <div class="products_box" id="life">
+                  <img class="products_logo" src="http://simjuhye.com/img/pp_img/life_logo.png" alt="">
+                  <img src="http://simjuhye.com/img/pp_img/life_can.png" alt="" class="can">
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="draggable drag_area drag_area02">
+                <div class="products_box" id="diet">
+                  <img class="products_logo" src="http://simjuhye.com/img/pp_img/diet_logo.png" alt="">
+                  <img src="http://simjuhye.com/img/pp_img/diet_can.png" alt="" class="can">
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="draggable drag_area drag_area02">
+                <div class="products_box" id="cherry">
+                  <img class="products_logo" src="http://simjuhye.com/img/pp_img/no_logo.png" alt="">
+                  <img src="http://simjuhye.com/img/pp_img/no_can.png" alt="" class="can">
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="draggable drag_area drag_area02">
+                <div class="products_box" id="power">
+                  <img class="products_logo" src="http://simjuhye.com/img/pp_img/powerade_logo.png" alt="">
+                  <img src="http://simjuhye.com/img/pp_img/powerade.png" alt="" class="can">
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="draggable drag_area drag_area02">
+                <div class="products_box" id="fanta">
+                  <img class="products_logo" src="http://simjuhye.com/img/pp_img/fanta_logo.png" alt="" >
+                  <img src="http://simjuhye.com/img/pp_img/fanta-orange-12oz.png" alt="" class="can">
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="draggable drag_area drag_area02">
+                <div class="products_box" id="sprite">
+                  <img class="products_logo" src="http://simjuhye.com/img/pp_img/Sprite-logo.png" alt="">
+                  <img src="http://simjuhye.com/img/pp_img/sprite-12oz.png" alt="" class="can">
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="draggable drag_area drag_area02">
+                <div class="products_box" id="mm">
+                  <img class="products_logo" src="http://simjuhye.com/img/pp_img/mm_logo.png" alt="" >
+                  <img src="http://simjuhye.com/img/pp_img/minute-maid-jtg-orange-juice-12-oz.png" alt="" class="can">
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="draggable drag_area drag_area02">
+                <div class="products_box" id="vit">
+                  <img class="products_logo" src="http://simjuhye.com/img/pp_img/vitamin_logo.png" alt="" >
+                  <img src="http://simjuhye.com/img/pp_img/vw-powerc-20oz.png" alt="" class="can">
+              </div>
+              </div>
+            </li>
+          </ul>
+          <div class="right_area">
+            <ul class="popup_area">
+              <li class="popup_wrap">
+                	<!--popup_wrap -->
+                    <div class="popup">
+                      <div class="popup_cnt">
+                        <div class="drink_img">
+                          <img src="http://simjuhye.com/img/pp_img/Coke-12oz.png" alt="" class="full_img">
+                        </div> 
+                        <div class="popup_info">
+                          <div class="popup_tit">
+                            <b>Original</b>Coca-Cola is  well as</br>the best-known brand</br>in the worldin the world !
+                          </div>
+                          <ul class="bottle_list">
+                            <li><img src="http://simjuhye.com/img/pp_img/12-fl-oz-can-red1.png" alt="" class="full_img"></li>
+                            <li><img src="http://simjuhye.com/img/pp_img/12oz-pet-g.png" alt="" class="full_img"></li>
+                            <li><img src="http://simjuhye.com/img/pp_img/fanta-355-ml-glass-bottle-grey.png" alt="" class="full_img"></li>
+                            <li><img src="http://simjuhye.com/img/pp_img/last.png" alt="" class="full_img"></li>
+                            <li><img src="http://simjuhye.com/img/pp_img/Fountain_Grey_90x171.png" alt="" class="full_img"></li>
+                          </ul>
+                          <div class="ingredient_info">
+                            <h3>INGREDIENTS</h3>
+                            <p>CARBONATED WATER, HIGH FRUCTOSE CORN SYRUP, CARAMEL COLOR, PHOSPHORIC ACID, NATURAL FLAVORS, CAFFEINE.Caffeine Content: 34 mg/12 fl oz This product includes ingredients sourced from genetically engineered (GE) crops.</p>
+                          </div>
+
+                          <div class="flavor_list">
+                            <h3>FLAVOR </h3>
+                            <ul>
+                              <li>Original</li>
+                              <li>Cherry</li>
+                              <li>Vanilla</li>
+                              <li>Georgia Peach</li>
+                              <li>Raspberry</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="table_wrap">
+                          <h5 class="tbl_tit">NUTRITION TABLE</h5>
+                          <img src="http://simjuhye.com/img/pp_img/cla_table.png" alt="" class="full_img">
+                        </div>
+                        <a href="#" class="close_btn"><img src="http://simjuhye.com/img/pp_img/close.png" alt="팝업 닫기" class="full_img"></a>
+                    </div>
+                </div>
+              </li>
+              <li class="popup_wrap">
+                <!--popup_wrap -->
+                <div class="popup">
+                  <div class="popup_cnt">
+                    <div class="drink_img">
+                      <img src="http://simjuhye.com/img/pp_img/zero_drink.png" alt="" class="full_img">
+                    </div> 
+                    <div class="popup_info">
+                      <div class="popup_tit">
+                        <b>Zero Suger</b>reduced-calorie cola<br>sweetened with a blend of <br>sugar and stevia leaf extract.
+                      </div>
+                      <ul class="bottle_list">
+                        <li><img src="http://simjuhye.com/img/pp_img/12-fl-oz-can-red1.png" alt="" class="full_img"></li>
+                        <li><img src="http://simjuhye.com/img/pp_img/12oz-pet-g.png" alt="" class="full_img"></li>
+                        <li><img src="http://simjuhye.com/img/pp_img/fanta-355-ml-glass-bottle-grey.png" alt="" class="full_img"></li>
+                      </ul>
+                      <div class="ingredient_info">
+                        <h3>INGREDIENTS</h3>
+                        <p>CARBONATED WATER, CANE SUGAR, CARAMEL COLOR, NATURAL FLAVORS, PHOSPHORIC ACID, POTASSIUM BENZOATE (TO PROTECT TASTE), CAFFEINE, *STEVIA LEAF EXTRACT (STEVIOL GLYCOSIDES PROCESSED FROM STEVIA LEAF).This product includes ingredients sourced from genetically engineered (GE) crops, commonly known as GMOs.</p>
+                      </div>
+                    </div>
+                    <div class="table_wrap">
+                      <h5 class="tbl_tit">NUTRITION TABLE</h5>
+                      <img src="http://simjuhye.com/img/pp_img/zero_table.png" alt="" class="full_img">
+                    </div>
+                    <a href="#" class="close_btn"><img src="http://simjuhye.com/img/pp_img/close.png" alt="팝업 닫기" class="full_img"></a>
+                  </div>
+                </div>
+              </li>
+              <li class="popup_wrap">
+                <div class="popup">
+                  <div class="popup_cnt">
+                    <div class="drink_img">
+                      <img src="http://simjuhye.com/img/pp_img/Coke-Life-12oz.png" alt="" class="full_img">
+                    </div> 
+                    <div class="popup_info">
+                      <div class="popup_tit">
+                        <b>Life Coke</b>reduced-calorie cola<br>sweetened with a blend of <br>sugar and stevia leaf extract.
+                      </div>
+                      <ul class="bottle_list">
+                        <li><img src="http://simjuhye.com/img/pp_img/12-fl-oz-can-red1.png" alt="" class="full_img"></li>
+                        <li><img src="http://simjuhye.com/img/pp_img/fanta-355-ml-glass-bottle-grey.png" alt="" class="full_img"></li>
+                      </ul>
+                      <div class="ingredient_info">
+                        <h3>INGREDIENTS</h3>
+                        <p>CARBONATED WATER, CANE SUGAR, CARAMEL COLOR, NATURAL FLAVORS, PHOSPHORIC ACID, POTASSIUM BENZOATE (TO PROTECT TASTE), CAFFEINE, *STEVIA LEAF EXTRACT (STEVIOL GLYCOSIDES PROCESSED FROM STEVIA LEAF).This product includes ingredients sourced from genetically engineered (GE) crops, commonly known as GMOs.</p>
+                      </div>
+                    </div>
+                    <div class="table_wrap">
+                      <h5 class="tbl_tit">NUTRITION TABLE</h5>
+                      <img src="http://simjuhye.com/img/pp_img/life_table.png" alt="" class="full_img">
+                    </div>
+                    <a href="#" class="close_btn"><img src="http://simjuhye.com/img/pp_img/close.png" alt="팝업 닫기" class="full_img"></a>
+                  </div>
+                </div>
+              </li>
+              <li class="popup_wrap">
+                <div class="popup">
+                  <div class="popup_cnt">
+                    <div class="drink_img">
+                      <img src="http://simjuhye.com/img/pp_img/diet_drink.png" alt="" class="full_img">
+                    </div> 
+                    <div class="popup_info">
+                      <div class="popup_tit">
+                        <b>Diet Coke</b>Enjoy the great taste</br>you love—anytime</br>you want it !
+                      </div>
+                      <ul class="bottle_list">
+                        <li><img src="http://simjuhye.com/img/pp_img/12-fl-oz-can-red1.png" alt="" class="full_img"></li>
+                        <li><img src="http://simjuhye.com/img/pp_img/last.png" alt="" class="full_img"></li>
+                        <li><img src="http://simjuhye.com/img/pp_img/Fountain_Grey_90x171.png" alt="" class="full_img"></li>
+                      </ul>
+                      <div class="ingredient_info">
+                        <h3>INGREDIENTS</h3>
+                        <p>CARBONATED WATER, CARAMEL COLOR, ASPARTAME, PHOSPHORIC ACID, POTASSIUM BENZOATE (TO PROTECT TASTE), NATURAL FLAVORS, CITRIC ACID.PHENYLKETONURICS: CONTAINS PHENYLALANINE.This product includes ingredients sourced from genetically engineered (GE) crops, commonly known as GMOs.</p>
+                      </div>
+                    </div>
+                    <div class="table_wrap">
+                      <h5 class="tbl_tit">NUTRITION TABLE</h5>
+                      <img src="http://simjuhye.com/img/pp_img/diet_table.png" alt="" class="full_img">
+                    </div>
+                    <a href="#" class="close_btn"><img src="http://simjuhye.com/img/pp_img/close.png" alt="팝업 닫기" class="full_img"></a>
+                  </div>
+                </div>
+              </li>
+              <li class="popup_wrap">
+                <div class="popup">
+                  <div class="popup_cnt">
+                    <div class="drink_img">
+                      <img src="http://simjuhye.com/img/pp_img/cherry_drink.png" alt="" class="full_img">
+                    </div> 
+                    <div class="popup_info">
+                      <div class="popup_tit">
+                        <b>Cherry Coke</b>offers real cola taste </br>with cherry flavor and<br>zero calories.
+                      </div>
+                      <ul class="bottle_list">
+                        <li><img src="http://simjuhye.com/img/pp_img/12-fl-oz-can-red1.png" alt="" class="full_img"></li>
+                        <li><img src="http://simjuhye.com/img/pp_img/Fountain_Grey_90x171.png" alt="" class="full_img"></li>
+                      </ul>
+                      <div class="ingredient_info">
+                        <h3>INGREDIENTS</h3>
+                        <p>CARBONATED WATER, CARAMEL COLOR, PHOSPHORIC ACID, ASPARTAME, POTASSIUM BENZOATE (TO PROTECT TASTE), NATURAL FLAVORS, ACESULFAME POTASSIUM, POTASSIUM CITRATE, CAFFEINE.PHENYLKETONURICS: CONTAINS PHENYLALANINE. Caffeine Content: 34mg/12 fl oz This product includes ingredients sourced from genetically engineered (GE) crops, commonly known as GMOs.</p>
+                      </div>
+                    </div>
+                    <div class="table_wrap">
+                      <h5 class="tbl_tit">NUTRITION TABLE</h5>
+                      <img src="http://simjuhye.com/img/pp_img/no_table.png" alt="" class="full_img">
+                    </div>
+                    <a href="#" class="close_btn"><img src="http://simjuhye.com/img/pp_img/close.png" alt="팝업 닫기" class="full_img"></a>
+                  </div>
+                </div>
+              </li>
+              <li class="popup_wrap">
+                <div class="popup">
+                  <div class="popup_cnt">
+                    <div class="drink_img" style="width: 200px; margin: 0 20px;">
+                      <img src="http://simjuhye.com/img/pp_img/pow_drink.png" alt="" class="full_img">
+                    </div> 
+                    <div class="popup_info">
+                      <div class="popup_tit">
+                        <b>Powerade</b>Naturally flavored <br>sports drink with<br> B3, B6 and B12.
+                      </div>
+                      <ul class="bottle_list">
+                        <li><img src="http://simjuhye.com/img/pp_img/pow_1.png" alt="" class="full_img"></li>
+                        <li><img src="http://simjuhye.com/img/pp_img/pow_2.png" alt="" class="full_img"></li>
+                        <li><img src="http://simjuhye.com/img/pp_img/Fountain_Grey_90x171.png" alt="" class="full_img"></li>
+                      </ul>
+                      <div class="ingredient_info">
+                        <h3>INGREDIENTS</h3>
+                        <p>Water, High Fructose Corn Syrup, Less than 0.5% of:, Citric Acid, Salt, Magnesium Chloride, Calcium Chloride, Monopotassium Phosphate, Natural Flavors, Modified Food Starch, Calcium Disodium EDTA (to protect color), Medium Chain Triglycerides, Sucrose Acetate Isobutyrate, Vitamin B3, Vitamin B6, Vitamin B12, Blue 1.</p>
+                      </div>
+                      <div class="flavor_list">
+                        <h3>FLAVOR </h3>
+                        <ul>
+                          <li>Mountain Berry</li>
+                          <li>Lamonade</li>
+                          <li>Fruit Punch</li>
+                          <li>Kiwi Pineapple</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="table_wrap">
+                      <h5 class="tbl_tit">NUTRITION TABLE</h5>
+                      <img src="http://simjuhye.com/img/pp_img/pow_table.png" alt="" class="full_img">
+                    </div>
+                    <a href="#" class="close_btn"><img src="http://simjuhye.com/img/pp_img/close.png" alt="팝업 닫기" class="full_img"></a>
+                  </div>
+                </div>
+              </li>
+              <li class="popup_wrap">
+                <div class="popup">
+                  <div class="popup_cnt">
+                    <div class="drink_img" style="width: 200px; margin: 0 20px;">
+                      <img src="http://simjuhye.com/img/pp_img/fanta_dirnk.png" alt="" class="full_img">
+                    </div> 
+                    <div class="popup_info">
+                      <div class="popup_tit">
+                        <b>FANTA</b>It has a fantastic<br>variety of fruit flavors<br>so lets choose your own !
+                      </div>
+                      <ul class="bottle_list">
+                        <li><img src="http://simjuhye.com/img/pp_img/12oz-pet-red.png" alt="" class="full_img"></li>
+                        <li><img src="http://simjuhye.com/img/pp_img/12-fl-oz-can-grey1.png" alt="" class="full_img"></li>
+                        <li><img src="http://simjuhye.com/img/pp_img/fanta-355-ml-glass-bottle-grey.png" alt="" class="full_img"></li>
+                        <li><img src="http://simjuhye.com/img/pp_img/Fountain_Grey_90x171.png" alt="" class="full_img"></li>
+                        <li><img src="http://simjuhye.com/img/pp_img/last.png" alt="" class="full_img"></li>
+                      </ul>
+                      <div class="ingredient_info">
+                        <h3>INGREDIENTS</h3>
+                        <p>CARBONATED WATER, HIGH FRUCTOSE CORN SYRUP, CITRIC ACID, SODIUM BENZOATE (TO PROTECT TASTE), NATURAL FLAVORS, MODIFIED FOOD STARCH, SODIUM POLYPHOSPHATES, GLYCEROL ESTER OF ROSIN, YELLOW 6, RED 40.Caffeine Content: CAFFEINE FREEThis product includes ingredients sourced from genetically engineered (GE) crops.</p>
+                      </div>
+                      <div class="flavor_list">
+                        <h3>FLAVOR </h3>
+                        <ul>
+                          <li>Orange</li>
+                          <li>Grape</li>
+                          <li>Pineapple</li>
+                          <li>Strawberry</li>
+                          <li>Grapefruit</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="table_wrap">
+                      <h5 class="tbl_tit">NUTRITION TABLE</h5>
+                      <img src="http://simjuhye.com/img/pp_img/fanta_table.png" alt="" class="full_img">
+                    </div>
+                    <a href="#" class="close_btn"><img src="http://simjuhye.com/img/pp_img/close.png" alt="팝업 닫기" class="full_img"></a>
+                  </div>
+                </div>
+              </li>
+              <li class="popup_wrap">
+                <div class="popup">
+                  <div class="popup_cnt">
+                    <div class="drink_img" style="width: 200px; margin: 0 20px;">
+                      <img src="http://simjuhye.com/img/pp_img/sprite-original-20-oz.png" alt="" class="full_img">
+                    </div> 
+                    <div class="popup_info">
+                      <div class="popup_tit">
+                        <b>SPRITE</b>You make me happy<br>You are so funny<br>than anyone in the world.
+                      </div>
+                      <ul class="bottle_list">
+                        <li><img src="http://simjuhye.com/img/img/pp_img/12oz-pet-red.png" alt="" class="full_img"></li>
+                        <li><img src="http://simjuhye.com/img/img/pp_img/12-fl-oz-can-grey1.png" alt="" class="full_img"></li>
+                        <li><img src="http://simjuhye.com/img/img/pp_img/fanta-355-ml-glass-bottle-grey.png" alt="" class="full_img"></li>
+                        <li><img src="http://simjuhye.com/img/img/pp_img/Fountain_Grey_90x171.png" alt="" class="full_img"></li>
+                        <li><img src="http://simjuhye.com/img/img/pp_img/last.png" alt="" class="full_img"></li>
+                      </ul>
+                      <div class="ingredient_info">
+                        <h3>INGREDIENTS</h3>
+                        <p>CARBONATED WATER, HIGH FRUCTOSE CORN SYRUP, CITRIC ACID, SODIUM BENZOATE (TO PROTECT TASTE), NATURAL FLAVORS, MODIFIED FOOD STARCH, SODIUM POLYPHOSPHATES, GLYCEROL ESTER OF ROSIN, YELLOW 6, RED 40.Caffeine Content: CAFFEINE FREEThis product includes ingredients sourced from genetically engineered (GE) crops.</p>
+                      </div>
+                      <div class="flavor_list">
+                        <h3>FLAVOR </h3>
+                        <ul>
+                          <li>Original</li>
+                          <li>Cranberry</li>
+                          <li>Tropical Mix</li>
+                          <li>Strawberry</li>
+                          <li>Tropic Berry</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="table_wrap">
+                      <h5 class="tbl_tit">NUTRITION TABLE</h5>
+                      <img src="http://simjuhye.com/img/pp_img/sprite_table.png" alt="" class="full_img">
+                    </div>
+                    <a href="#" class="close_btn"><img src="http://simjuhye.com/img/pp_img/close.png" alt="팝업 닫기" class="full_img"></a>
+                  </div>
+                </div>
+              </li>
+              <li class="popup_wrap">
+                <div class="popup">
+                  <div class="popup_cnt">
+                    <div class="drink_img" style="width: 200px; margin: 0 20px;">
+                      <img src="http://simjuhye.com/img/pp_img/minute-maid-orange-juice-original-59-oz-(1).png" alt="" class="full_img">
+                    </div> 
+                    <div class="popup_info">
+                      <div class="popup_tit">
+                        <b>Minute Maid</b>but that is what <br>makes it so good.<br>This is GOOD.
+                      </div>
+                      <ul class="bottle_list">
+                        <li><img src="http://simjuhye.com/img/pp_img/b2.png" alt="" class="full_img"></li>
+                        <li><img src="http://simjuhye.com/img/pp_img/b1.png" alt="" class="full_img"></li>
+                      </ul>
+                      <div class="ingredient_info">
+                        <h3>INGREDIENTS</h3>
+                        <p>CONTAINS PURE FILTERED WATER, HIGH FRUCTOSE CORN SYRUP, PEAR, PINEAPPLE AND ORANGE JUICES FROM CONCENTRATE, LESS THAN 0.5% OF: PASSIONFRUIT JUICE FROM CONCENTRATE, CITRIC ACID (PROVIDES TARTNESS), SUGAR, NATURAL FLAVORS, MODIFIED CORNSTARCH, GLYCEROL ESTER OF ROSIN, POTASSIUM SORBATE AND SODIUM BENZOATE AND SODIUM HEXAMETAPHOSPHATE AND CALCIUM DISODIUM EDTA (TO PROTECT TASTE), RED #40, GREEN #3.</p>
+                      </div>
+                      <div class="flavor_list">
+                        <h3>FLAVOR </h3>
+                        <ul>
+                          <li>Original</li>
+                          <li>Peach</li>
+                          <li>Watermelon</li>
+                          <li>Berry Punch</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="table_wrap">
+                      <h5 class="tbl_tit">NUTRITION TABLE</h5>
+                      <img src="http://simjuhye.com/img/pp_img/mm_table.png" alt="" class="full_img">
+                    </div>
+                    <a href="#" class="close_btn"><img src="http://simjuhye.com/img/pp_img/close.png" alt="팝업 닫기" class="full_img"></a>
+                  </div>
+                </div>
+              </li>
+              <li class="popup_wrap">
+                <div class="popup">
+                  <div class="popup_cnt">
+                    <div class="drink_img" style="width: 200px; margin: 0 20px;">
+                      <img src="http://simjuhye.com/img/pp_img/vit_drink.png" alt="" class="full_img">
+                    </div> 
+                    <div class="popup_info">
+                      <div class="popup_tit">
+                        <b>VITAMINWATER</b>meet your<br>new workout partner<br>just do not ask it to spot you.
+                      </div>
+                      <ul class="bottle_list">
+                        <li><img src="http://simjuhye.com/img/pp_img/20oz_VW_Red.png" alt="" class="full_img"></li>
+                        <li><img src="http://simjuhye.com/img/pp_img/vitamin-32-grey.png" alt="" class="full_img"></li>
+                      </ul>
+                      <div class="ingredient_info">
+                        <h3>INGREDIENTS</h3>
+                        <p>REVERSE OSMOSIS WATER, CRYSTALLINE FRUCTOSE, CANE SUGAR, LESS THAN 0.5% OF: VITAMIN C (ASCORBIC ACID), CITRIC ACID, NATURAL FLAVORS, DRAGONFRUIT EXTRACT, VEGETABLE JUICE (COLOR), MAGNESIUM LACTATE AND CALCIUM LACTATE AND POTASSIUM PHOSPHATE (ELECTROLYTE SOURCES), TAURINE, VITAMIN B5 (CALCIUM PANTOTHENATE).</p>
+                      </div>
+                      <div class="flavor_list">
+                        <h3>FLAVOR </h3>
+                        <ul>
+                          <li>power-c</li>
+                          <li>energy</li>
+                          <li>refresh</li>
+                          <li>revive</li>
+                          <li>xxx</li>
+                          <li>essential</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="table_wrap">
+                      <h5 class="tbl_tit">NUTRITION TABLE</h5>
+                      <img src="http://simjuhye.com/img/pp_img/vit_img.png" alt="" class="full_img">
+                    </div>
+                    <a href="#" class="close_btn"><img src="http://simjuhye.com/img/pp_img/close.png" alt="팝업 닫기" class="full_img"></a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            
+            <div class="empty on">
+              <label class="empty_txt">
+                <div class="txt_inner">
+                  <b>Drag</b></br>
+                  <span>your</span> favorite</br>
+                  <b>here!</b>
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section02">
+        <img src="http://simjuhye.com/img/pp_img/OWFImage.png" alt="" class="full_img">
+        <div class="sec02_info">
+          <h3>The World is Changing. So Are We.</h3>
+          <h4>By: The Coca-Cola Company Nov 20 2017</h4>
+          <p>For years, we’ve given you the drinks you want and love. And as times change, we want to grow and change with you.<br>
+          That’s why we are listening carefully and doing more. We are putting you at the center of all we do. Your tastes and needs come first.<br>
+          We call this Our Way Forward.</p>
+          <h4>How we’re changing</h4>
+          <h5>Reducing sugar</h5>
+          <p>While sugar in moderation is fine, too much sugar isn’t good for anyone. That’s why we’re rethinking many of our recipes. <span>Coca-Cola Life</span>,<br>for example, is sweetened with a blend of cane sugar and <span>Stevia leaf extract</span>. It has 35% fewer calories and less sugar than <span>Coca-Cola</span>. </p>
+       </div>
+      </div>
+      <div class="footer">
+        <div class="inner">
+          <div class="footer_sns">
+            <h4>CONNECT WITH US</h4>
+            <ul class="sns_list">
+              <li><a href="https://ko-kr.facebook.com/Coca-Cola/" target="_blank"><img src="http://simjuhye.com/img/pp_img/f_logo.png" alt="" class="full_img"></a></li>
+              <li><a href="https://www.instagram.com/coke.style/?hl=ko" target="_blank"><img src="http://simjuhye.com/img/pp_img/i_logo.png" alt="" class="full_img"></a></li>
+              <li><a href="https://www.youtube.com/channel/UCzCxSb_RYZuaiaP3u9QNR_A" target="_blank"><img src="http://simjuhye.com/img/pp_img/y_logo.png" alt="" class="full_img"></a></li>
+              <li><a href="https://twitter.com/cocacola_korea" target="_blank"><img src="http://simjuhye.com/img/pp_img/t_logo.png" alt="" class="full_img"></a></li>
+            </ul>
+            <h2 class="footer_logo"><img src="http://simjuhye.com/img/pp_img/ft_logo.png" alt="" class="full_img" ></h2>
+          </div>
+          <ul class="footer_list type01">
+            <li>EXPLORE</li>
+            <li>COCA-COLA</li>
+            <li>COKE ZERO SUGAR</li>
+            <li>COKE LIFE</li>
+            <li>DIET COKE</li>
+            <li>REWARDS</li>
+            <li>SIP &amp; SCAN FAQS</li>
+          </ul>
+          <ul class="footer_list type01">
+            <li>COKE IN THE USA</li>
+            <li>COCA-COLA JOURNEY</li>
+            <li>SHARE A COKE</li>
+            <li>WORLD OF COCA-COLA</li>
+            <li>COCA-COLA STORE</li>
+            <li>COCA-COLA APP</li>
+          </ul>
+          <ul class="footer_list type01">
+            <li>RESOURCES</li>
+            <li>CAREERS</li>
+            <li>COMPANY INFORMATION</li>
+            <li>PARTICIPATING BRANDS</li>
+          </ul>
+        </div>
+        <p class="copyright">&#169; 2022 SIMJUHYE-Portfolio. ALL RIGHTS RESERVED</p>
+        <ul class="footer_list type02">
+          <li>CONTACT US</li>
+          <li>FAQS</li>
+          <li>TERMS OF USE</li>
+          <li>RULES</li>
+          <li>PRIVACY</li>
+          <li>MOBILE TERMS &amp; CONDITHIONS</li>
+          <li>ABOUT OUR ADS</li>
+          <li>SITEMAE</li>
+        </ul>
+      </div>
+    </div>
+    <script src="./js/common.js"></script>
+    <script src="./js/family.js"></script>
+</body>
+</html>

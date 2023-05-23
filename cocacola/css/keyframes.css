@@ -1,0 +1,162 @@
+
+/* main visaul slide */
+@keyframes slide_info {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        top: 50px;
+    }
+}
+@keyframes slide_h4 {
+    0% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 1;
+        top: 100px;
+    }
+    100% {
+        opacity: 1;
+        top: 150px;
+    }
+}
+
+@keyframes slide01_img {
+    0% {
+        left: 400px;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes slide02_img {
+    0% {
+        left: 400px;
+    }
+    100% {
+        left: 50px;
+    }
+}
+/* //main visaul slide */
+
+
+/* main list bg [common] */
+@keyframes ani_bg {
+    0% {
+        background-size: 35%;
+    }
+    25% {
+        background-size: 120%;
+    }
+    50% {
+        background-size: 80%;
+    }
+    75% {
+        background-size: 90%;
+    }
+    100% {
+        background-size: 85%;
+    }
+}
+
+/* main list bottle */
+@keyframes ani_bottle {
+   0% {
+       top: 26%;
+       transform: rotate(0deg);
+   }
+   12.5% {
+       top: 22%;
+       transform: rotate(-8deg);
+   }
+   25% {
+       top: 22%;
+       transform: rotate(8deg);
+   }
+   37.5% {
+       top: 16%;
+       transform: rotate(-8deg);
+   }
+   50% {
+       top: 16%;
+       transform: rotate(8deg);
+   } 
+   62.5% {
+       top: 12%;
+       transform: rotate(-8deg);
+
+   }
+   80% {
+       top: 12%;
+       transform: rotate(0deg);
+   }
+   97% {
+    top: 26%;
+       transform: rotate(0deg);
+   }
+   100% {
+    top: 26%;
+       transform: rotate(0deg);
+   }
+}
+
+
+/* family circle */
+@keyframes btnExpand {
+    0% {
+        top: 50%;
+        transform: rotate(0);
+    }
+    25% {
+        top: 42%;
+    }
+    50% {
+        top: 50%;
+    }
+    75% {
+        top: 44%;
+    }
+    100% {
+        top: 50%;
+        transform: rotate(360deg);
+    }
+  }
+
+/* family fade motion */
+@keyframes btnExpand02 {
+    0%{
+        display: block;
+    }  
+    15% {
+        color: transparent;
+        width: 240px;
+    }
+    35% {
+        width: 60px;
+        height: 60px;
+        border-radius: 9999px;
+        margin: 0;
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        color: transparent;
+    }
+}
+
+/* history page_down btn */
+@keyframes down {
+    0%{
+        bottom: -120px;
+    }
+    50%{
+        bottom: -140px;
+    }
+    100%{
+        bottom: -120px;
+    }  
+}

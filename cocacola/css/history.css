@@ -1,0 +1,53 @@
+.section { position: relative; width: 100%; min-width: 1520px; position: relative; color: #fff; text-align: center; background-size: cover !important; overflow: hidden; font-family: 'Exo 2', sans-serif;}
+.section #header {font-family: 'GmarketSansMedium';}
+.sec_info.right { width: 33%; position: absolute; right: 8%; top: 37%; font-family: 'Exo 2', sans-serif; text-align: left;}
+.sec_info.left { width: 33%; position: absolute; left: 5%; top: 37%; font-family: 'Exo 2', sans-serif; text-align: right;}    
+.sec_info h3 { display: inline-block; min-width: 181px; padding: 12px 28px; margin-bottom: 20px; font-size: 25px; background: transparent url(../img/h3_box.png) center no-repeat; background-size: cover; text-align: center; box-sizing: border-box;}
+.sec_info h2 { font-size: 2.5vw; font-family: 'Exo 2', sans-serif; margin-bottom: 4%;}
+.sec_info p { font-size: 1.1vw; font-family: 'Nunito Sans', sans-serif;}
+
+/*  section01 */
+.section01 { background: url(http://simjuhye.com/img/pp_img/page2_sec1.png) center no-repeat;}
+.sec01_cnt { position: absolute; top: 23%; left: 0; width: 100%; text-align: center; font-family: 'Exo 2', sans-serif;}
+.sec01_logo { width: 300px;}
+.sec01_cnt .sec01_logo { display: inline-block; width: 300px; height: 98px;}
+.sec01_cnt .text .title { margin-top: 40px; font-size: 54px; font-weight: 700;}
+.sec01_cnt .text .des { margin-top: 30px; font-size: 20px; font-weight: 600; font-family: 'Nunito Sans', sans-serif; letter-spacing: 1px;}
+.sec01_cnt .text .sub_text { margin-top: 30px; font-size: 30px; margin-bottom: 30px;}
+.section .page_btn { position: absolute; bottom: -3%; left: 50%; transform: translateX(-50%); animation: down infinite 1.8s;}
+
+.section02 { background: url(http://simjuhye.com/img/pp_img/line1.png) center no-repeat;}
+.sec02_img { width: 15.6%; position: absolute; left: 0px; top: 50%; opacity: 0; transition: all 750ms ease; transform: translateY(-50%);}
+.section03 { background: url(http://simjuhye.com/img/pp_img/line2.png) center no-repeat;}
+.sec03_img.off { width: 15%; position: absolute; right: 23%; top: 21%; cursor: pointer;}
+.sec03_img.on { display: none; width: 10.5%; position: absolute; right: 25.4%; top: 25%;}
+.sec03_click { right: 26%;}
+.sec04_click { left: 30%;}
+.click { width: 2.5%; opacity: 0.8; position: absolute; bottom: 22%; z-index: 2;}
+.click .click_on { width: 100%; position: absolute; top: 0; left: 0; opacity: 0;}
+.click .click_off { width: 100%; position: absolute; top: 0; left: 0;}
+.section04 { background: url(http://simjuhye.com/img/pp_img/line3.png) center no-repeat;}
+.sec04_img.off { width: 15%; position: absolute; left: 20%; top: 21%; cursor: pointer;}
+.sec04_img.on { display: none; width: 13%; position: absolute; left: 21%; top: 27%;}
+.sec04_click { width: 2.5%; opacity: 0.8; position: absolute; left: 26%; bottom: 22%; z-index: 2;}
+.section05 { background: url(http://simjuhye.com/img/pp_img/line4.png) center no-repeat; position: relative;}
+.sec05_video_wrap { width: 26%; position: absolute; top: 36%; left: 13%;}
+.video_box { background-color: #000; width: 65%; padding-bottom: 60%; position: absolute; top: 0; left: 8%; margin-top: 3%; overflow: hidden;}
+.video { width: 132%; position: absolute; top: 0; left: -7%; margin-top: 8%;}
+.sec05_img { position: absolute; top: 0; left: 0; width: 100%;}
+.section06 { background: url(http://simjuhye.com/img/pp_img/line5.png) center no-repeat;}
+.sec06_img { width: 27.6%; position: absolute; top: 37%; left: 000px; opacity: 0; transition: all 500ms ease;}
+.section07 { background: url(http://simjuhye.com/img/pp_img/line6.png) center no-repeat;}
+.sec07_img { width: 27.6%; position: absolute; top: 27%; left: 3%; opacity: 0; transition: all 450ms ease;}
+.section08 { background: url(http://simjuhye.com/img/pp_img/line7.png) center no-repeat;}
+.sec08_img { width: 39%; position: absolute; top: 23%; right: 5%;}
+
+.section09 { position: relative; background: url(http://simjuhye.com/img/pp_img/line8.png) center no-repeat;}
+.sec09_img01 { position: absolute; bottom: -100%; left: 8.8%; width: 7.8%; transform: rotate(15deg); z-index: 19; transition: all 400ms ease;}
+.sec09_img02 { position: absolute; bottom: -100%; left: 21.8%; width: 6.8%; z-index: 18; transition: all 500ms ease;}
+.sec09_img03 { position: absolute; bottom: -100%; left: 33.8%; width: 7.8%; transform: rotate(-10deg); transition: all 600ms ease;}
+.ice01 { width: 100%; position: absolute; bottom: -4%; left: 0;}
+.ice02 { position: absolute; width: 100%; bottom: -4%; left: 0; z-index: 20;}
+.ice03 { position: absolute; width: 100%; bottom: -4%; left: 0; z-index: 21;}
+.ice04 { position: absolute; width: 100%; bottom: -4%; left: 0; z-index: 11;}
+.top_btn { cursor: pointer; width: 5.2%; position: absolute; top: 7%; left: 50%; margin-left: -2.7%;}
