@@ -9,16 +9,25 @@
    }
  }, 1000);
 
+ function loadItem(){
+  return fetch("./js/store.json")
+  .then((res) => res.json())
+  .then((json => json.products))
+}
 
+loadItem().then((data) => {
+  productList(data)
+})
 
- window.onload = function(){
+function productList(data){
+
 //  json data get
   var cartPrd = []
   var prdList = document.querySelector('.product__list')
-  $.get('./js/store.json').done((data) => {
 
-    var products = data.products
-    let prCount = data.products.length;
+
+    var products = data
+    let prCount = data.length;
 
     document.querySelector('.product__total > .num').innerText = prCount;
     products.forEach(item => {
@@ -253,7 +262,8 @@
           })
         }
 
-      })
 
-  }
 
+
+
+}
