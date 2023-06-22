@@ -104,17 +104,8 @@ function mousewheelE() {
       if (event.originalEvent.detail < 0 || event.originalEvent.wheelDelta > 0) {
         product_swiper02_pc.mousewheel.disable()
         $('html').stop().animate({ scrollTop: $('.product01_sec').offset().top + 2 }, 600);
-      } else {
-        product_swiper02_pc.mousewheel.enable()
-      }
-    })
-    $('.sec02_02').on('mousewheel DOMMouseScroll', function (event) {
-      if (event.originalEvent.detail < 0 || event.originalEvent.wheelDelta > 0) {
-        product_swiper02_pc.mousewheel.enable()
-
-      } else {
+      } else if((event.originalEvent.detail > 0 || event.originalEvent.wheelDelta < 0)) {
         $('html').stop().animate({ scrollTop: $('.product03_sec').offset().top + 2 }, 600);
-        product_swiper02_pc.slideTo(0, 500, false)
         product_swiper02_pc.mousewheel.disable()
       }
     })
