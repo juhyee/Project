@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+.footer {position:relative; background-color:#4E4F51;}
+.footer .inner {width:1280px; margin:0 auto; padding:71px 0 135px; color:
+rgba(255, 255, 255, 0.8);}
+.footer h3 {font-size:22px; font-weight:600; color:#fff;}
+.footer .footer_info {margin-top:16px; font-size:14px; font-weight:600;}
+.footer .footer_info dl {display:flex; align-items: center; line-height:28px;}
+.footer .footer_info dl dt {width:406px;}
+.footer .footer_info dl dd a {font-size:14px; font-weight:600; color:
+rgba(255, 255, 255, 0.8);}
+.footer .footer_info dl dd a:last-child {border-bottom:1px solid rgba(255, 255, 255, 0.8);}
+.footer .footer_info .copyright {margin-top:37px;}

@@ -1,0 +1,137 @@
+@charset "utf-8";
+
+/* ff [0] */
+@font-face {
+  font-family: 'DNVDisplay';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../font/DNVDisplay-Light-Web.woff2) format('woff2'),
+       url(../font/DNVDisplay-Light-Web.woff) format('woff'),
+       url(../font/DNVDisplay-Light.ttf) format('ttf');
+}
+
+/* ff [1] */
+@font-face {
+  font-family: 'DNVDisplay';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(../font/DNVDisplay-Medium-Web.woff2) format('woff2'),
+       url(../font/DNVDisplay-Medium-Web.woff) format('woff'),
+       url(../font/DNVDisplay-Medium.ttf) format('ttf');
+}
+
+/* ff [2] */
+@font-face {
+  font-family: 'DNVDisplay';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(../font/DNVDisplay-Regular-Web.woff2) format('woff2'),
+       url(../font/DNVDisplay-Regular-Web.woff) format('woff'),
+       url(../font/DNVDisplay-Regular.ttf) format('ttf');
+}
+
+
+/* 웹접근성을 위한 텍스트 숨김 처리 */
+.blind {
+  display: block;
+  overflow: hidden;
+  position: absolute !important;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px;
+}
+/* 웹접근성을 위한 텍스트 숨김 처리 */
+
+
+/* //reset css */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-style: normal;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section{
+  display: block;
+}
+
+body, html {
+  position:relative;width:100%;max-width:1920px;min-width:1290px;margin:0 auto;
+}
+
+body {
+  font-family: "DNVDisplay", sans-serif;
+  line-height: 1;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:not([href]) {
+  text-decoration: none;
+}
+
+a:not([href]):hover {
+  text-decoration: none;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input, textarea {
+  outline: none;
+  font-family: "DNVDisplay", sans-serif;
+}
+/* //reset css */
+
+
