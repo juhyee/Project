@@ -1,4 +1,19 @@
+@charset "utf-8";
+
 @import url(../css/common.css);
 @import url(../css/header.css);
 @import url(../css/footer.css);
+@import url(../css/aside.css);
 /* @import url(/); */
+
+.swiper_visual {width:100%; height:1080px; background-color:#000;}
+.swiper_visual .swiper-slide {position:relative; width:100%; height:100%;}
+.swiper_visual .swiper-slide .slide_info {position:absolute; top: 222px; left:390px; color:#fff;}
+.swiper_visual .swiper-slide .slide_info h3 {font-size:66px; font-weight:600;}
+.swiper_visual .swiper-slide .slide_info p {margin-top:19px; font-size:26px; line-height:36px; font-weight:600;}
+.sec_visual .swiper-pagination {position:absolute !important; top: 444px !important; left:390px !important; width:auto !important; height:30px;}
+.sec_visual .swiper-pagination .swiper-pagination-bullet {width:11px; height:11px; margin: 0 15px !important; border-radius:11px; background-color:rgba(255, 255, 255, 0.5); opacity:1; transition: all 0.3s;}
+.sec_visual .swiper-pagination .swiper-pagination-bullet-active {position:relative; width:29px; background-color:#fff;}
+.sec_visual .swiper-pagination .swiper-pagination-bullet-active::after {
+ content: ''; position:absolute; top: 50%; left:50%; width:41px; height:21px; border:1px solid #fff; border-radius:11px; transform: translate(-50%, -50%);
+}

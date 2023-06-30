@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+.aside {position:absolute; top: 100px; right:70px; border:1px solid #ECECEC; border-radius:20px; box-shadow: 15px 15px 40px 0px rgba(0, 0, 0, 0.1);
+}
+
+.aside .inner {padding:10px 15px 20px;}
+.aside .aside_content dl {padding:15px 0; border-top: 1px solid rgba(0, 0, 0, 0.1)}
+.aside .aside_content dl:first-child {border-top:0 none;}
+.aside .aside_content dl dt {font-size:11px; font-weight:600; color:#7C7D80;}
+.aside .aside_content dl dd ul li {margin-top:15px;}
+.aside .aside_content dl dd ul li .thumb {overflow:hidden; width:190px; height:103px; border-radius:12px;}
+.aside .aside_content dl dd ul li p {position:relative; padding-left:9px; font-size:12px; color:#171718; font-weight:600;}
+.aside .aside_content dl dd ul li .thumb + p {margin-top:11px;}
+.aside .aside_content dl dd ul li p::after {content: ''; position:absolute; top: 50%; left:0; width:4px; height:4px; border-radius:50%; background-color:#BBBBBB; transform: translateY(-50%);}
+.aside .aside_content dl dd ul li span {display:inline-block; margin-top:7px;  padding-left:9px; font-size:11px; color:#969696;}
+.aside .btn_aside {display:flex; justify-content:center; margin-top:7px;}

@@ -83,8 +83,15 @@ footer, header, hgroup, menu, nav, section{
 }
 
 body, html {
-  position:relative;width:100%;max-width:1920px;min-width:1290px;margin:0 auto;
+  position:relative;width:100%;max-width:1920px;min-width:1920px;margin:0 auto;
 }
+
+/* @media (min-width: 1910px) {
+  body, html {
+    overflow-y: scroll;
+  }
+}
+ */
 
 body {
   font-family: "DNVDisplay", sans-serif;

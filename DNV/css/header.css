@@ -1,28 +1,28 @@
 @charset "utf-8";
 
-.header {position:fixed; top: 0; left:0; width:100%; height:100px;}
-.header::after {content: ''; position:absolute; top: 100px; left:320px; width:calc(100vw - 321px); height:1px; background-color:rgba(0, 0, 0, 0.2);}
-.header::before {content: ''; position:absolute; top: 0; left:320px; width:1px; height:1080px; background-color:rgba(0, 0, 0, 0.2);}
+.header {z-index:1001; position:fixed; top: 0; left:0; width:100%; height:100px;}
+.header::after {content: ''; position:absolute; top: 100px; left:320px; width:calc(100vw - 321px); height:1px; background-color:rgba(255, 255, 255, 0.2);}
+.header::before {content: ''; position:absolute; top: 0; left:320px; width:1px; height:1080px; background-color:rgba(255, 255, 255, 0.2);}
 .header .inner {position:relative; display:flex; align-items: center; justify-content:space-between; width:1280px; height:100%; margin:0 auto;}
 
-.header .logo {width:128px; height:64px; background-color:#171718; /* background: url(../images/logo.svg) no-repeat 0 0; background-size:100%; */ }
+.header .logo {width:128px; height:64px; background-color:#fff; /* background: url(../images/logo.svg) no-repeat 0 0; background-size:100%; */ }
 .header nav {display:flex;}
 .header .gnb_list {display:flex;}
 .header .gnb_list li {margin-left:50px;}
 .header .gnb_list li:first-child {margin-left:0;}
 
-.header .gnb_list li a {font-size:16px; font-weight:600; color:#171718;}
+.header .gnb_list li a {font-size:16px; font-weight:600; color:#fff;}
 .header .gnb_list li a::after {content: ""; display: block; width: 100%; height: 2px; background-color: #171718; position: relative; top: 0; border-radius: 1px; transition: transform 0.4s cubic-bezier(0.45, 0.46, 0.05, 0.96); transform: scaleX(0); transform-origin: 100% 0;}
 .header .gnb_list li:hover a::after {transform: scaleX(100%); transform-origin: 0 0;}
 
 .header .btn_sitemap {position:relative; width:21px; height:14px; margin-left:60px;}
 .header .btn_sitemap::after,
-.header .btn_sitemap::before {content: ''; position: absolute; left:0; top: 0; width: 17px; height:2px; border-radius:2px; background-color:#171718;}
+.header .btn_sitemap::before {content: ''; position: absolute; left:0; top: 0; width: 17px; height:2px; border-radius:2px; background-color:#fff;}
 .header .btn_sitemap::after {top: auto; bottom: 0;}
-.header .btn_sitemap span {position: absolute; right:0; top: 50%; width: 17px; height:2px; border-radius:2px; background-color:#171718; transform: translateY(-50%);}
+.header .btn_sitemap span {position: absolute; right:0; top: 50%; width: 17px; height:2px; border-radius:2px; background-color:#fff; transform: translateY(-50%);}
 
 .header .util {position: absolute; top: 13px; right: 80px; }
-.header .util a {font-size:13px; font-weight:600; color:#171718;}
+.header .util a {font-size:13px; font-weight:600; color:#fff;}
 .header .util .logout {position:relative; padding-right:18px; line-height:1;}
 .header .util .logout::after {content: ''; position:absolute; top: 50%; right:0;  width:13px; height:12px; background:url(../images/icon_logout.png) 0 0 no-repeat; transform: translateY(-50%);}
 .header .util .login {display:none;}
