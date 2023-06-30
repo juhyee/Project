@@ -6,8 +6,8 @@
 /* @import url(/); */
 
 .swiper_visual {position:relative; width:100%; height:1080px; background-color:#000;}
-.header::after {content: ''; position:absolute; top: 100px; left:320px; width:calc(100vw - 321px); height:1px; background-color:rgba(255, 255, 255, 0.2);}
-.header::before {content: ''; position:absolute; top: 0; left:320px; width:1px; height:1080px; background-color:rgba(255, 255, 255, 0.2);}
+.swiper_visual::after {content: ''; position:absolute; top: 100px; left:320px; width:calc(100vw - 321px); height:1px; background-color:rgba(255, 255, 255, 0.2);}
+.swiper_visual::before {content: ''; position:absolute; top: 0; left:320px; width:1px; height:1080px; background-color:rgba(255, 255, 255, 0.2);}
 .swiper_visual .swiper-slide {position:relative; width:100%; height:100%;}
 .swiper_visual .swiper-slide .slide_info {position:absolute; top: 222px; left:390px; color:#fff;}
 .swiper_visual .swiper-slide .slide_info h3 {font-size:66px; font-weight:600;}
