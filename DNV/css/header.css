@@ -20,7 +20,9 @@
 .header .btn_sitemap span {position: absolute; right:0; top: 50%; width: 17px; height:2px; border-radius:2px; background-color:#fff; transform: translateY(-50%);}
 
 .header .util {position: absolute; top: 13px; right: 80px; }
-.header .util a {font-size:13px; font-weight:600; color: rgba(255, 255, 255, 0.7);}
-.header .util .logout {position:relative; padding-right:18px; line-height:1;}
-.header .util .logout::after {content: ''; position:absolute; top: 50%; right:0;  width:13px; height:12px; background:url(../images/icon_logout_w.png) 0 0 no-repeat; transform: translateY(-50%);}
-.header .util .login {display:none;}
+.header .util a {position:relative; font-size:13px; font-weight:600; color: rgba(255, 255, 255, 0.7);}
+.header .util a::after {content: ''; position:absolute; top: 50%; transform: translateY(-50%);}
+.header .util .logout {display:none; padding-right:18px;}
+.header .util .logout::after {right:0;  width:13px; height:12px; background:url(../images/icon_logout_w.png) 0 0 no-repeat;}
+.header .util .login {display:block; padding-left:14px;}
+.header .util .login::after {left:0; width:11px; height:14px; background:url(../images/icon_login_w.png) 0 0 no-repeat;}
