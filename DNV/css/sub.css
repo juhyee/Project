@@ -3,4 +3,70 @@
 @import url(../css/common.css);
 @import url(../css/header.css);
 @import url(../css/footer.css);
+@import url(../css/card.css);
 @import url(../css/aside.css);
+
+
+.secSubVisual {overflow: hidden; width: 100%; height: 547px;}
+.secSubVisual .visualInfo {position: absolute; top: 200px; left: 320px; color: #fff; font-weight: 700;}
+.secSubVisual .visualInfo .subject {font-size: 20px;}
+.secSubVisual .visualInfo .title {margin-top: 10px; font-size: 66px;}
+.secSubVisual .visualInfo .desc {margin-top: 20px; font-size: 26px; line-height: 36px;}
+
+
+.secLocation {width: 100%; border-bottom: 1px solid rgba(0, 0, 0, 0.08);}
+.secLocation .inner {width: 1280px; height: 62px; margin: 0 auto;}
+.secLocation .locationNav {display: flex; align-items: center;  height: 62px;  margin-left: -18px;}
+.secLocation .locationNav li {line-height: 10px; padding: 0 18px; border-left: 1px solid rgba(23, 23, 24, 0.2); font-size: 12px; font-weight: 700; color: #4E4F51;}
+.secLocation .locationNav li:first-child {border-left: 0 none;}
+.secLocation .locationNav li span {letter-spacing: 0;}
+.secLocation .locationNav .btn_home {display: inline-block; width: 16px; height: 17px; background: url(../images/sub/icon_home.png) 0 0 no-repeat;}
+
+
+.secDetail .inner {width: 1280px; margin: 0 auto; padding: 100px 0;}
+.secDetail .detailTop {display: flex; justify-content: space-between;}
+.secDetail .detailTop .detailText {position: relative; width: calc(100% - 434px); padding-top: 113px;}
+.secDetail .detailTop .detailText::after {content: ''; position: absolute; top: 0; left: 0; width: 115px; height: 13px; background-color: #005BAA;}
+.secDetail .detailTop .detailText strong {display: block; font-size: 92px; color: #005BAA;}
+.secDetail .detailTop .detailText p {margin-top: 26px; font-size: 32px; line-height: 52px; font-weight: bold; color: #171718; letter-spacing: -3px;}
+.secDetail .detailTop .detailImg {overflow: hidden; width: 434px; height: 541px; border: 1px solid rgba(224, 224, 224, 1); border-radius: 24px;}
+
+.secDetail .detailBottom .desc {display: flex; margin-top: 107px;}
+.secDetail .detailBottom .descImg {overflow: hidden; width: 434px; height: 541px; border-radius: 24px;}
+.secDetail .detailBottom .descImg + .descInfo {width: calc(100% - 484px); margin-left: 50px;}
+
+.secDetail .detailBottom .descTitle p {margin: 17px 0 55px !important; font-size: 32px !important; line-height: 46px !important; color: #000 !important;}
+.secDetail .detailBottom .descTitle strong {font-size: 42px; line-height: 1; color: #005BAA;}
+.secDetail .detailBottom .descInfo p {margin-top: 34px; font-size: 20px; font-weight: 700; line-height: 36px; color: #4E4F51; letter-spacing: -1px; word-break: keep-all;}
+.secDetail .detailBottom .descInfo p:first-child {margin-top: 0;}
+
+.secDetail .detailBottom .descBox {width: 100%; margin-top: 50px; padding: 42px 65px; border: 1px solid #E0E0E0; border-radius: 11px; background-color: #F9F9F9;}
+.secDetail .detailBottom .descBox ul li {position: relative; font-size: 26px; line-height: 42px; font-weight: 700; color: #61BC4D;}
+.secDetail .detailBottom .descBox ul li::after {content: ''; position: absolute; top: 50%; left: -15px; width: 8px; height: 8px; border-radius: 50%; background-color: #61BC4D; transform: translateY(-50%);}
+
+.secDetail .detailInfo {display: inline-block; margin-top: 60px; padding: 30px 44px 30px 34px; border: 1px solid #E0E0E0; border-radius: 11px; background-color: #F9F9F9;}
+.secDetail .detailInfo ul li {position: relative; line-height: 26px; color: #4E4F51;}
+.secDetail .detailInfo ul li::after {content: ''; position: absolute; top: 50%; left: -9px; width: 4px; height: 4px; border-radius: 50%; background-color: #BDBDBD; transform: translateY(-50%);}
+.secDetail .detailInfo a {letter-spacing: 0 !important;}
+.secDetail .detailInfo .email a {color: #005BAA; letter-spacing: 0 !important;}
+
+
+.secBottom {position: relative;}
+.secBottom::before {content: ''; z-index: -1; position: absolute; top: 0; left: 0; width: 100%; height: 898px; background-color: #F9F9F9;}
+.secBottom .inner {width: 1280px; margin: 0 auto; padding: 120px 0 30px;}
+.secBottom .secTitle {margin-bottom: 44px;}
+.secBottom .secTitle span {display: block; font-size: 16px; color: #005BAA; font-weight: 700;}
+.secBottom .secTitle strong {display: inline-block; margin-top: 12px; font-size: 38px; color: #0F204B;}
+.secBottom .contSubject {display: inline-block; margin-top: 30px; padding-left: 30px; font-size: 16px; font-weight: 700; color: #4E4F51;}
+.secBottom .cardWrap {margin-top: 20px;}
+.secBottom .cardWrap .cardItem {margin-bottom: 20px;}
+
+
+.secBanner .inner {width: 1280px; margin: 0 auto; padding-bottom: 150px;}
+.secBanner .bannerWrap {position: relative; width: 100%; height: 204px; padding: 49px 32px 24px 43px; border-radius: 26px; background-color: #61BC4D;}
+.secBanner .bannerWrap .bannerText {color: #fff; font-weight: 700;}
+.secBanner .bannerWrap .bannerText h4 {font-size: 26px; text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.4);}
+.secBanner .bannerWrap .bannerText p {margin-top: 10px; font-size: 13px; text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.4);}
+.secBanner .bannerWrap .btn-down {position: absolute; bottom: 24px; left: 43px; width: 120px; height: 33px; padding-left: 40px; border: 1px solid #fff; line-height: 33px; color: #fff; border-radius: 33px; font-size: 11px; font-weight: 700;}
+.secBanner .bannerWrap .btn-down::after {content: ''; position: absolute; top: 50%; left: 16px; width: 16px; height: 16px; background: url(../images/sub/icon_down.png) 0 0 no-repeat; transform: translateY(-50%);}
+.secBanner .bannerWrap .bannerObj {position: absolute; right: 32px; top: 50%; transform: translateY(-50%);}

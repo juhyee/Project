@@ -2,35 +2,29 @@
 
 /* ff [0] */
 @font-face {
-  font-family: 'DNVDisplay';
+  font-family: 'DNV Display';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   font-display: swap;
-  src: url(../font/DNVDisplay-Light-Web.woff2) format('woff2'),
-       url(../font/DNVDisplay-Light-Web.woff) format('woff'),
-       url(../font/DNVDisplay-Light.ttf) format('ttf');
+  src: url(../font/DNVDisplay-Light-Web.woff) format('woff');
 }
 
 /* ff [1] */
 @font-face {
-  font-family: 'DNVDisplay';
+  font-family: 'DNV Display';
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   font-display: swap;
-  src: url(../font/DNVDisplay-Medium-Web.woff2) format('woff2'),
-       url(../font/DNVDisplay-Medium-Web.woff) format('woff'),
-       url(../font/DNVDisplay-Medium.ttf) format('ttf');
+  src: url(../font/DNVDisplay-Medium-Web.woff) format('woff');
 }
 
 /* ff [2] */
 @font-face {
-  font-family: 'DNVDisplay';
+  font-family: 'DNV Display';
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   font-display: swap;
-  src: url(../font/DNVDisplay-Regular-Web.woff2) format('woff2'),
-       url(../font/DNVDisplay-Regular-Web.woff) format('woff'),
-       url(../font/DNVDisplay-Regular.ttf) format('ttf');
+  src: url(../font/DNVDisplay-Regular-Web.woff) format('woff');
 }
 
 
@@ -83,16 +77,16 @@ footer, header, hgroup, menu, nav, section{
 }
 
 body, html {
-  position:relative;width:100%;max-width:1920px;min-width:1900px;margin:0 auto;
+  position:relative;width:100%;max-width:1920px;min-width:1900px;margin:0 auto;letter-spacing: -1px;
 }
 
 body {
-  font-family: "DNVDisplay", sans-serif;
+  font-family: 'DNV Display', sans-serif;
   line-height: 1;
 }
 
 a {
-  color: #000000;
+  color: inherit;
   text-decoration: none;
   background-color: transparent;
 }
