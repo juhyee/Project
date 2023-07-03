@@ -1,3 +1,3 @@
 $(window).scroll(function() {
-  $('#header').css({left: $(window).scrollLeft()});
+  $('#header').css({left: - $(window).scrollLeft()});
 });
