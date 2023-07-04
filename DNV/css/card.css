@@ -37,10 +37,10 @@
 
 /*swiperGallery type*/
 .cardItem.swiperGallery .itemInfo {height: 330px; max-height: 330px; margin-top: 21px; padding: 20px; border-radius: 26px;}
-.cardItem.swiperGallery .swiperTumd {overflow: hidden; width: 322px; height: 183px; border-radius: 18px;}
-.cardItem.swiperGallery .swiperTumd .swiper-pagination-bullets {bottom: 12px !important;}
-.cardItem.swiperGallery .swiperTumd .swiper-pagination-bullet {width: 7px !important; height: 7px !important; opacity: 1 !important; background-color: rgba(15, 32, 75, 0.5);}
-.cardItem.swiperGallery .swiperTumd .swiper-pagination-bullet-active {background-color: #fff;}
+.cardItem.swiperGallery .itemTumd {overflow: hidden; width: 322px; height: 183px; border-radius: 18px;}
+.cardItem.swiperGallery .itemInfo .swiper-pagination-bullets {top: 164px; bottom: auto !important;}
+.cardItem.swiperGallery .itemInfo .swiper-pagination-bullet {width: 7px !important; height: 7px !important; opacity: 1 !important; background-color: rgba(15, 32, 75, 0.5);}
+.cardItem.swiperGallery .itemInfo .swiper-pagination-bullet-active {background-color: #fff;}
 .cardItem.swiperGallery:hover .swiper-slide-active img { transition: all 0.3s;}
 .cardItem.swiperGallery:hover .swiper-slide-active img {-webkit-transform: scale(1.1) rotate(0.002deg); -moz-transform: scale(1.1) rotate(0.002deg); -ms-transform: scale(1.1) rotate(0.002deg); -o-transform: scale(1.1) rotate(0.002deg); transform: scale(1.1) rotate(0.002deg);}
 .cardItem.swiperGallery .itemInfo .desc {position: relative; margin-top: 20px; font-size: 18px; font-weight: bold;line-height: 23px; white-space: nowrap; text-overflow: ellipsis;}
