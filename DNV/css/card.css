@@ -28,10 +28,10 @@
 /*list type*/
 .cardItem.list .itemInfo {height: 330px; max-height: 330px; padding: 30px 30px 20px; border-radius: 26px;}
 .cardItem.list .itemInfo li {margin-top: 20px;}
-.cardItem.list .itemInfo li .desc {font-size: 18px;}
+.cardItem.list .itemInfo li .desc {display:flex; font-size: 18px;}
 .cardItem.list .itemInfo li .desc {position: relative; font-size: 18px; font-weight: 600;}
-.cardItem.list .itemInfo li .desc p {overflow: hidden; line-height: 23px; white-space: nowrap; text-overflow: ellipsis;}
-.cardItem .itemInfo .desc .receipt {position: absolute; top: 0; right: 0; min-width: 54px; height: 23px; font-size: 11px; color: #fff; border-radius: 28px; background-color: #61BC4D; text-align: center; line-height: 23px; vertical-align: top;}
+.cardItem.list .itemInfo li .desc p {overflow: hidden; display:inline-block;  line-height: 23px; white-space: nowrap; text-overflow: ellipsis;}
+.cardItem .itemInfo .desc .receipt {display:inline-block; min-width: 54px; height: 23px; margin-left:10px; font-size: 11px; color: #fff; border-radius: 28px; background-color: #61BC4D; text-align: center; line-height: 23px; vertical-align: top;}
 .cardItem .itemInfo .desc .receipt + p {display: inline-block; max-width: calc(100% - 54px);}
 .cardItem.list .itemInfo li .date {display: inline-block; margin-top: 8px; font-size: 14px; font-weight: 300; letter-spacing: 0 !important;}
 
@@ -43,7 +43,8 @@
 .cardItem.swiperGallery .itemInfo .swiper-pagination-bullet-active {background-color: #fff;}
 .cardItem.swiperGallery:hover .swiper-slide-active img { transition: all 0.3s;}
 .cardItem.swiperGallery:hover .swiper-slide-active img {-webkit-transform: scale(1.1) rotate(0.002deg); -moz-transform: scale(1.1) rotate(0.002deg); -ms-transform: scale(1.1) rotate(0.002deg); -o-transform: scale(1.1) rotate(0.002deg); transform: scale(1.1) rotate(0.002deg);}
-.cardItem.swiperGallery .itemInfo .desc {position: relative; margin-top: 20px; font-size: 18px; font-weight: bold;line-height: 23px; white-space: nowrap; text-overflow: ellipsis;}
+.cardItem.swiperGallery .itemInfo .desc {position: relative; display:flex; margin-top: 20px; font-size: 18px; font-weight: bold;line-height: 23px; white-space: nowrap; text-overflow: ellipsis;}
+.cardItem.swiperGallery .itemInfo .desc p {overflow: hidden; display:inline-block;  line-height: 23px; white-space: nowrap; text-overflow: ellipsis;}
 .cardItem.swiperGallery .itemInfo .date {display: inline-block; margin-top: 7px; font-size: 14px; color:rgba(23, 23, 24, 0.7);}
 
 /*gallery type*/
@@ -63,7 +64,7 @@
 .card-sm.gallery .itemTumd {width: 265px; height: 156px; border-radius: 14px;}
 .card-sm.gallery .itemInfo {height: auto; padding: 20px 0 0 0; border: 0 none; }
 .card-sm.gallery .itemInfo .subject {font-size: 13px; color: #939395;}
-.card-sm.gallery .itemInfo .title {margin-top: 8px; font-size: 16px; line-height: 20px;}
+.card-sm.gallery .itemInfo .title {margin-top: 8px; font-size: 16px; line-height: 20px; word-break:keep-all;}
 
 /* listItem */
 .listItem {margin-top: 55px;}
