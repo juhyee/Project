@@ -8,7 +8,7 @@ $(function() {
       var visaulH = $('.secSubVisual').height();
       var conH = $('.container').height();
       var asideH = $('.aside').height();
-      var footerH = $('.footer').height();
+
       if(visaulH  > scT){
         $(".aside").stop().animate({'top':asidePos + "px"},400);
         // header.removeClass('isScroll')
@@ -27,7 +27,7 @@ $(function() {
 });
 
 
-var swiperPagination = new Swiper(".swiper_visual", {
+var swiperPagination = new Swiper(".swiper-visual", {
   loop: true,
   autoplay: {
     delay: 5000,
@@ -39,7 +39,7 @@ var swiperPagination = new Swiper(".swiper_visual", {
   },
 });
 
-var swiperPagination = new Swiper(".swiperTumd", {
+var swiperPagination = new Swiper(".swiper-gallery", {
   loop: true,
   autoplay: {
     delay: 3000,

@@ -15,8 +15,8 @@
 .cardItem .btn {position: absolute; bottom: 20px; left: 20px;  height: 33px; border-radius: 33px; font-size: 11px; font-weight: 600;}
 .cardItem .btn::after {content: ''; position: absolute; top: 50%; transform: translateY(-50%);}
 
-.cardItem .btn_view {padding: 11px 45px 11px 20px; border: 1px solid #61BC4D;  background-color: #fff; color: #61BC4D;}
-.cardItem .btn_view::after {right: 14px; width: 4px; height: 6px; background: url(../images/card_icon.png) 0 0 no-repeat;}
+.cardItem .btn-view {padding: 11px 45px 11px 20px; border: 1px solid #61BC4D;  background-color: #fff; color: #61BC4D;}
+.cardItem .btn-view::after {right: 14px; width: 4px; height: 6px; background: url(../images/card_icon.png) 0 0 no-repeat;}
 
 .cardItem .btn-down {width: 120px; padding-left: 40px; line-height: 33px; background-color: #005BAA; color: #fff;}
 .cardItem .btn-down::after {left: 16px; width: 16px; height: 16px; background: url(../images/sub/icon_down.png) 0 0 no-repeat;}

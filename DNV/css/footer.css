@@ -4,9 +4,9 @@
 .footer .inner {width:1280px; margin:0 auto; padding:71px 0 135px; color:
 rgba(255, 255, 255, 0.8);}
 .footer h3 {font-size:22px; font-weight:600; color:#fff;  letter-spacing: 0 !important;}
-.footer .footer_info {margin-top:16px; font-size:14px; font-weight:600;}
-.footer .footer_info dl {display:flex; align-items: center; line-height:28px;}
-.footer .footer_info dl dt {width:406px;  letter-spacing: 0 !important;}
-.footer .footer_info dl dd a {font-size:14px; font-weight:600; color:rgba(255, 255, 255, 0.8); letter-spacing: 0 !important;}
-.footer .footer_info dl dd a:last-child {border-bottom:1px solid rgba(255, 255, 255, 0.8);}
-.footer .footer_info .copyright {margin-top:37px;  letter-spacing: 0 !important;}
+.footer .footerInfo {margin-top:16px; font-size:14px; font-weight:600;}
+.footer .footerInfo dl {display:flex; align-items: center; line-height:28px;}
+.footer .footerInfo dl dt {width:406px;  letter-spacing: 0 !important;}
+.footer .footerInfo dl dd a {font-size:14px; font-weight:600; color:rgba(255, 255, 255, 0.8); letter-spacing: 0 !important;}
+.footer .footerInfo dl dd a:last-child {border-bottom:1px solid rgba(255, 255, 255, 0.8);}
+.footer .footerInfo .copyright {margin-top:37px;  letter-spacing: 0 !important;}
