@@ -21,7 +21,6 @@ function scrollCheck() {
     return;
   }
   if (currentScrollTop > scrollPosition && currentScrollTop > headerH) {
-    header.classList.remove('fixed');
     header.classList.remove('scroll');
   } else if (currentScrollTop <= headerH) {
     header.classList.remove('fixed');
@@ -33,6 +32,54 @@ function scrollCheck() {
   }
   scrollPosition = currentScrollTop;
 }
+
+
+
+  const links = document.querySelectorAll('.gnb li a'); 
+  
+  links.forEach(function(link) {
+    link.addEventListener("click", function(event) {
+      if (link.hash !== "") {
+        event.preventDefault();
+
+        var hash = link.hash;
+        var targetElement = document.querySelector(hash);
+
+        if (targetElement) {
+          var startPosition = window.pageYOffset;
+          var targetPosition = targetElement.offsetTop;
+          var distance = targetPosition - startPosition;
+          var duration = 800;
+          var startTime = null;
+
+          function animate(currentTime) {
+            if (startTime === null) {
+              startTime = currentTime;
+            }
+
+            var elapsedTime = currentTime - startTime;
+            var scrollPosition = easeInOutCubic(elapsedTime, startPosition, distance, duration);
+            window.scrollTo(0, scrollPosition);
+
+            if (elapsedTime < duration) {
+              requestAnimationFrame(animate);
+            } else {
+              window.location.hash = hash;
+            }
+          }
+
+          function easeInOutCubic(t, b, c, d) {
+            t /= d / 2;
+            if (t < 1) return c / 2 * t * t * t + b;
+            t -= 2;
+            return c / 2 * (t * t * t + 2) + b;
+          }
+
+          requestAnimationFrame(animate);
+        }
+      }
+    });
+  });
 
 
 //aos script

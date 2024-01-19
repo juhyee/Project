@@ -6,6 +6,16 @@
     url(Pretendard-Thin.woff) format("woff"),
     url(Pretendard-Thin.otf) format("opentype");
 }
+
+@font-face {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 200;
+  src: url(Pretendard-ExtraLight.woff2) format("woff2"),
+    url(Pretendard-ExtraLight.woff) format("woff"),
+    url(Pretendard-ExtraLight.otf) format("opentype");
+}
+
 @font-face {
   font-family: "Pretendard";
   font-style: normal;
@@ -14,6 +24,7 @@
     url(Pretendard-Light.woff) format("woff"),
     url(Pretendard-Light.otf) format("opentype");
 }
+
 @font-face {
   font-family: "Pretendard";
   font-style: normal;
@@ -22,6 +33,7 @@
     url(Pretendard-Regular.woff) format("woff"),
     url(Pretendard-Regular.otf) format("opentype");
 }
+
 @font-face {
   font-family: "Pretendard";
   font-style: normal;
@@ -30,14 +42,34 @@
     url(Pretendard-Medium.woff) format("woff"),
     url(Pretendard-Medium.otf) format("opentype");
 }
+
 @font-face {
   font-family: "Pretendard";
   font-style: normal;
   font-weight: 600;
+  src: url(Pretendard-SemiBold.woff2) format("woff2"),
+    url(Pretendard-SemiBold.woff) format("woff"),
+    url(Pretendard-SemiBold.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 700;
   src: url(Pretendard-Bold.woff2) format("woff2"),
     url(Pretendard-Bold.woff) format("woff"),
     url(Pretendard-Bold.otf) format("opentype");
 }
+
+@font-face {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 800;
+  src: url(Pretendard-ExtraBold.woff2) format("woff2"),
+    url(Pretendard-ExtraBold.woff) format("woff"),
+    url(Pretendard-ExtraBold.otf) format("opentype");
+}
+
 @font-face {
   font-family: "Pretendard";
   font-style: normal;
