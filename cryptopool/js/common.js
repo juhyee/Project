@@ -1,96 +1,39 @@
-$(document).ready(function () {
-  modal();
-  menuE();
-  headerE()
-});
-// mo version menu event
-function menuE() {
-  $(".sitemap_btn").on("click", function () {
-    $("#mo_gnb").addClass("on");
-    $('html, body').addClass('not_scroll');
-    $(".mo_menu").animate({ right: "0" })
-  });
-    $(".close_btn").on("click", function () {
-      $("#mo_gnb").removeClass("on");
-      $('html, body').removeClass('not_scroll');
-      $(".mo_menu").animate({ right: "-100%" })
-    });
-}
+let isScroll; //스크롤 상태 체크
+let scrollPosition = 0; //스크롤 위치
+const delta = 5; // 스크롤 감지 시작 위치
+const header = document.querySelector('.header') // scroll element
+const headerH = header.offsetHeight;
 
+window.onscroll = function () {
+  isScroll = true;
+};
 
-function modal() {
-  $("a.contact").on("click", function (e) {
-    $(".contact_modal").addClass('show')
-    $('html, body').addClass('not_scroll');
-    e.preventDefault();
-  });
-  $('.contact_modal').on('click', function (e) {
-    if (e.target.className == 'filter' || e.target.className == 'modal_btn') {
-      $(".contact_modal").removeClass('show')
-      $('html, body').removeClass('not_scroll');
+setInterval(function () {
+  if (isScroll) {
+    scrollCheck();
+    isScroll = false;
+  }
+}, 250);
+
+function scrollCheck() {
+  var currentScrollTop = window.scrollY;
+  if (Math.abs(scrollPosition - currentScrollTop) <= delta) {
+    return;
+  }
+  if (currentScrollTop > scrollPosition && currentScrollTop > headerH) {
+    header.classList.remove('fixed');
+    header.classList.remove('scroll');
+  } else if (currentScrollTop <= headerH) {
+    header.classList.remove('fixed');
+  } else {
+    if (currentScrollTop + window.innerHeight < document.body.offsetHeight) {
+      header.classList.add('scroll');
+      header.classList.add('fixed');
     }
-    if(e.target.className == 'close'){
-      $(".contact_modal").removeClass('show')
-      $('html, body').removeClass('not_scroll');
-    }
-    e.preventDefault();
-  })
-
+  }
+  scrollPosition = currentScrollTop;
 }
-
-// function headerE() {
-//   var header = $('#header')
-  // $(window).on('wheel DOMMouseScroll', function (event) {
-  //   let scroll = $(window).scrollTop();
-  //   if (scroll > 0) {
-  //     header.addClass('fixed')
-  //     if (event.originalEvent.wheelDelta >= 0) {
-  //       header.addClass('scroll')
-  //     } else {
-  //       header.removeClass('scroll')
-  //     }
-  //   } else {
-  //     header.removeClass('scroll')
-  //     header.removeClass('fixed')
-  //   }
-  // });
-
-  // $(window).on('scroll', function (event) {
-  //   let scroll = $(window).scrollTop();
-  //   if (scroll > 0) {
-  //     header.addClass('fixed scroll')
-
-  //   } else {
-  //     header.removeClass('scroll')
-  //     header.removeClass('fixed')
-  //   }
-  // });
-
-
-  // $(document).on('touchstart', function (e){
-  //   ts = e.originalEvent.touches[0].clientY;
-  // });
-
-  // $(document).on('touchend', function (e){
-  //   var scroll = $(window).scrollTop();
-  //   var te = e.originalEvent.changedTouches[0].clientY;
-
-  //   if (scroll > 0){
-  //     header.addClass('fixed')
-  //     if(ts > te+5){
-  //       header.removeClass('scroll')
-  //     }else if(ts < te-5){
-  //       header.addClass('scroll')
-  //     }
-  //   } else {
-  //     header.removeClass('scroll')
-  //     header.removeClass('fixed')
-  //   }
-  // });
-// }
-
-
-//aos script
-AOS.init({
-  duration: 1300,
-});
+// //aos script
+// AOS.init({
+//   duration: 1300,
+// });
