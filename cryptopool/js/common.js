@@ -33,7 +33,9 @@ function scrollCheck() {
   }
   scrollPosition = currentScrollTop;
 }
-// //aos script
-// AOS.init({
-//   duration: 1300,
-// });
+
+
+//aos script
+AOS.init({
+  duration: 1300,
+});
