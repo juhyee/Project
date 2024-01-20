@@ -3,7 +3,7 @@
 /* #wrap {background: url(./../img/bg_01.png) 0 0 no-repeat; background-size: cover;} */
 
 /* --------------------------------- header css --------------------------------- */
-.header {z-index: 1000; position: absolute;top: 0; left: 0; width: 100%; max-width: 1920px; min-width: 1280px; height: 129px; transition: all 0.3s;}
+.header {z-index: 1000; position: absolute;top: 0; left: 0; width: 100%; height: 129px; transition: all 0.3s;}
 .header.fixed {position: fixed; background-color: rgba(0, 0, 0, 0.2); animation:scrollU 0.5s ease both; backdrop-filter: blur(5px);}
 .header.fixed:not(.scroll) {animation:scrollD 0.5s ease both;}
 
@@ -116,7 +116,7 @@
 
 
 /* --------------------------------- strategy common css --------------------------------- */
-.section#strategy {height: 1417px; background-image: url(./../img/section_bg05.png);}
+.section#strategy {height: 1416px; background-image: url(./../img/section_bg05.png);}
 .section#strategy .sub_txt + .sub_txt {margin-top: 78px;}
 
 .section#strategy .card_wrap {margin-top: 153px;}
