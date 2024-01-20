@@ -65,7 +65,7 @@
 
 .section#overview .card_wrap {margin-top: 35px;}
 .section#overview .card_wrap .card_list {column-gap: 31px;counter-reset: var-count;}
-.section#overview .card_list .card_item {overflow: hidden; position: relative; flex: 0 0 calc(33.333% - 21px); height: 236px; padding: 35px 34px 23px 36px;border: 1px solid rgba(255, 255, 255, 0.10);background: rgba(255, 255, 255, 0.10); border-radius: 17px;}
+.section#overview .card_list .card_item {overflow: hidden; position: relative; flex: 0 0 calc(33.333% - 21px); height: 236px; padding: 35px 26px 36px;border: 1px solid rgba(255, 255, 255, 0.10);background: rgba(255, 255, 255, 0.10); border-radius: 17px;}
 .section#overview .card_list .card_item::after {counter-increment: var-count; content: "0"counter(var-count); position: absolute; right: 36px; bottom: 36px; font-size: 24px; font-weight: 600; color: rgba(255, 255, 255, 0.3); letter-spacing: -0.72px;}
 /* --------------------------------- overview common css --------------------------------- */
 
