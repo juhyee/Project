@@ -220,7 +220,7 @@
 .section#partner .section_inner {padding-bottom: 850px;}
 .section#partner .sub_txt {margin-top: 130px;}
 
-.section#partner .partner_list {display: flex; column-gap: 32px; margin-top: 87px;}
+.section#partner .partner_list {display: flex; flex-wrap: wrap; gap: 10px 32px; margin-top: 87px;}
 .section#partner .partner_list li {display: flex; align-items: center; justify-content: center; width: 232px; height: 100px;}
 /* --------------------------------- partner common css --------------------------------- */
 
@@ -237,7 +237,7 @@
 
 .footer .copyright {font-size: 20px; font-weight: 500; color: #fff;}
 
-.footer .social_list {display: flex; column-gap: 10px; margin-left: 50px;}
+.footer .social_list {display: flex; gap: 10px; margin-left: 50px;}
 /* --------------------------------- footer css --------------------------------- */
 
 

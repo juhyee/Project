@@ -35,7 +35,7 @@ function scrollCheck() {
 
 
 
-  const links = document.querySelectorAll('.gnb li a'); 
+  const links = document.querySelectorAll('#header .header_inner a'); 
   
   links.forEach(function(link) {
     link.addEventListener("click", function(event) {
