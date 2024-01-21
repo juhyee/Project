@@ -242,6 +242,24 @@
 
 
 
+/* --------------------------------- modal popup css --------------------------------- */
+.modal {z-index: 1060;position: relative;z-index: 99999;position: fixed;top: 0;right: 0;bottom: 0;left: 0;visibility: hidden;opacity: 0;transition: all 0.3s;}
+.modal_wrap {z-index: 99999;position: fixed;top: 50%;left: 50%;border-radius: 16px;border-radius: 41px;border: 1px solid #2F3038;background-color:#060A2E;box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.30);transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%);}
+.modal_contents {overflow: hidden;position: relative;width: 612px;padding: 68px 40px 94px; text-align: center;}
+
+.modal_contents h3 {padding-top: 130px; background: url(./../img/ico_popup.png) center top no-repeat; font-size: 50px; font-weight: 300; color: #fff;}
+.modal_contents h3 b {font-weight: 700;}
+.modal_contents p {margin-top: 41px; font-size: 16px; font-weight: 500; line-height: 1.333; letter-spacing: -0.32px; color: rgba(255, 255, 255, 0.7);}
+
+.modal_contents .close_btn {z-index: 2;position: absolute;right: 28px; top: 25px; width: 38px; height: 38px; background: url(./../img/ico_close.png) 0 0 no-repeat;}
+
+.filter {position: fixed;left: 0;top: 0;width: 100%;height: 100%;background: rgba(6, 10, 46, 0.5);}
+
+.modal.show-modal {visibility: visible;opacity: 1;}
+.modal.show-modal .modal_wrap {transition: transform 0.3s ease-out;transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%);}
+/* --------------------------------- modal popup css --------------------------------- */
+
+
 @keyframes scrollD {
     0% {transform: translateY(0);}
     100% {transform:  translateY(-100%);}

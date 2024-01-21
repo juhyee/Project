@@ -1,46 +1,53 @@
-let isScroll; //스크롤 상태 체크
-let scrollPosition = 0; //스크롤 위치
-const delta = 5; // 스크롤 감지 시작 위치
-const header = document.querySelector('.header') // scroll element
-const headerH = header.offsetHeight;
+document.addEventListener("DOMContentLoaded", function(){
+  scorllHeader();
+  ancEvt();
+  modalEvt();
+});
 
-window.onscroll = function () {
-  isScroll = true;
-};
-
-setInterval(function () {
-  if (isScroll) {
-    scrollCheck();
-    isScroll = false;
-  }
-}, 250);
-
-function scrollCheck() {
-  var currentScrollTop = window.scrollY;
-  if (Math.abs(scrollPosition - currentScrollTop) <= delta) {
-    return;
-  }
-  if (currentScrollTop > scrollPosition && currentScrollTop > headerH) {
-    header.classList.remove('scroll');
-  } else if (currentScrollTop <= headerH) {
-    header.classList.remove('fixed');
-  } else {
-    if (currentScrollTop + window.innerHeight < document.body.offsetHeight) {
-      header.classList.add('scroll');
-      header.classList.add('fixed');
+function scorllHeader(){
+  let isScroll; //스크롤 상태 체크
+  let scrollPosition = 0; //스크롤 위치
+  const delta = 5; // 스크롤 감지 시작 위치
+  const header = document.querySelector('.header') // scroll element
+  const headerH = header.offsetHeight;
+  
+  window.onscroll = function () {
+    isScroll = true;
+  };
+  
+  setInterval(function () {
+    if (isScroll) {
+      scrollCheck();
+      isScroll = false;
     }
+  }, 250);
+  
+  function scrollCheck() {
+    var currentScrollTop = window.scrollY;
+    if (Math.abs(scrollPosition - currentScrollTop) <= delta) {
+      return;
+    }
+    if (currentScrollTop > scrollPosition && currentScrollTop > headerH) {
+      header.classList.remove('scroll');
+    } else if (currentScrollTop <= headerH) {
+      header.classList.remove('fixed');
+    } else {
+      if (currentScrollTop + window.innerHeight < document.body.offsetHeight) {
+        header.classList.add('scroll');
+        header.classList.add('fixed');
+      }
+    }
+    scrollPosition = currentScrollTop;
   }
-  scrollPosition = currentScrollTop;
 }
 
-
-
+function ancEvt(){
   const links = document.querySelectorAll('#header .header_inner a'); 
   
   links.forEach(function(link) {
-    link.addEventListener("click", function(event) {
+    link.addEventListener("click", function(e) {
       if (link.hash !== "") {
-        event.preventDefault();
+        e.preventDefault();
 
         var hash = link.hash;
         var targetElement = document.querySelector(hash);
@@ -80,6 +87,36 @@ function scrollCheck() {
       }
     });
   });
+}
+
+
+function modalEvt(){
+  const langBtn = document.querySelector('.language a'); 
+  const modal = document.querySelector('.modal')
+  const modalFilter = modal.querySelector('.modal .filter')
+  const modalClose = modal.querySelector('.close_btn');
+
+  // console.log(modalCont)
+
+  langBtn.addEventListener('click', function(e){
+    e.preventDefault();
+    modal.classList.add('show-modal');
+    document.body.style.overflow = "hidden";
+  })
+
+  modalClose.addEventListener('click', function(e){
+    e.preventDefault();
+    modal.classList.remove('show-modal');
+    document.body.style.overflow = "auto";
+  })
+
+  modalFilter.addEventListener('click', function(e){
+    e.preventDefault();
+    modal.classList.remove('show-modal');
+    document.body.style.overflow = "auto";
+  })
+
+}
 
 
 //aos script
