@@ -96,8 +96,6 @@ function modalEvt(){
   const modalFilter = modal.querySelector('.modal .filter')
   const modalClose = modal.querySelector('.close_btn');
 
-  // console.log(modalCont)
-
   langBtn.addEventListener('click', function(e){
     e.preventDefault();
     modal.classList.add('show-modal');

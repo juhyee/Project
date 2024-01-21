@@ -244,7 +244,7 @@
 
 /* --------------------------------- modal popup css --------------------------------- */
 .modal {z-index: 1060;position: relative;z-index: 99999;position: fixed;top: 0;right: 0;bottom: 0;left: 0;visibility: hidden;opacity: 0;transition: all 0.3s;}
-.modal_wrap {z-index: 99999;position: fixed;top: 50%;left: 50%;border-radius: 16px;border-radius: 41px;border: 1px solid #2F3038;background-color:#060A2E;box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.30);transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%);}
+.modal_wrap {z-index: 99999;position: fixed;top: 50%;left: 50%;border-radius: 16px;border-radius: 41px;border: 1px solid #2F3038;background-color:#2E2F36;box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.30);transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%);}
 .modal_contents {overflow: hidden;position: relative;width: 612px;padding: 68px 40px 94px; text-align: center;}
 
 .modal_contents h3 {padding-top: 130px; background: url(./../img/ico_popup.png) center top no-repeat; font-size: 50px; font-weight: 300; color: #fff;}
