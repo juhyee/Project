@@ -220,7 +220,7 @@
 .section#partner .section_inner {padding-bottom: 850px;}
 .section#partner .sub_txt {margin-top: 130px;}
 
-.section#partner .partner_list {display: flex; flex-wrap: wrap; gap: 10px 32px; margin-top: 87px;}
+.section#partner .partner_list {max-width: 1280px; display: flex; flex-wrap: wrap; gap: 10px 32px; margin-top: 87px;}
 .section#partner .partner_list li {display: flex; align-items: center; justify-content: center; width: 232px; height: 100px;}
 /* --------------------------------- partner common css --------------------------------- */
 
