@@ -102,9 +102,18 @@
 
 .section#function .card_wrap {margin-top: 143px; padding-top: 100px;}
 .section#function .card_wrap .card_list {gap:45px 30px;}
-.section#function .card_list .card_item {position: relative; flex: 0 0 calc(50% - 15px); height: 275px;padding: 54px 27px 0 54px; background: url(./../img/functionL_bg.svg) 0 0 no-repeat;}
-.section#function .card_list .card_item:nth-child(even) {margin-top: -100px; background: url(./../img/functionR_bg.svg) 0 0 no-repeat;}
-.section#function .card_list .card_item:last-child {margin:-100px 0 0 auto; background: url(./../img/functionR_bg.svg) 0 0 no-repeat;}
+.section#function .card_wrap .card_list li {position: relative; flex: 0 0 calc(50% - 15px);height: 275px;}
+.section#function .card_list .card_item {position: relative; width: 100%; height: 100%; padding: 54px 27px 0 54px; background: url(./../img/functionL_bg.svg) 0 0 no-repeat;}
+.section#function .card_list li:nth-child(even) {margin-top: -100px;}
+.section#function .card_list li:last-child {margin: -100px 0 0 auto;}
+
+.section#function .card_list li .blur {z-index:-1; position: absolute; background-color: rgba(6, 10, 46, 0.3); backdrop-filter: blur(2px);}
+.section#function .card_list li .blur01 {top: 1px; left: 1px; width: 100%; height: 220px; border-radius: 46px 46px 0 0;}
+.section#function .card_list li .blur02 {bottom: 26px;right: 1px;width: 57px;height: 61px;transform: skew(-180deg, -44deg);}
+.section#function .card_list li:nth-child(odd) .blur02 {left: 0; right: auto;transform: skew(-180deg, -135deg);}
+
+.section#function .card_list li:nth-child(even) .card_item {background: url(./../img/functionR_bg.svg) 0 0 no-repeat;}
+.section#function .card_list li:last-child .card_item { background: url(./../img/functionR_bg.svg) 0 0 no-repeat;}
 
 .section#function .card_item p {position: relative; display: inline-block; padding-right: 54px; line-height: 1;}
 .section#function .card_item p::after {content: ''; position: absolute; right: 0; top: -3px; width: 33px; height: 28px; background: url(./../img/function_ico.png) 0 0 no-repeat;}
@@ -244,7 +253,7 @@
 
 /* --------------------------------- modal popup css --------------------------------- */
 .modal {z-index: 1060;position: relative;z-index: 99999;position: fixed;top: 0;right: 0;bottom: 0;left: 0;visibility: hidden;opacity: 0;transition: all 0.3s;}
-.modal_wrap {z-index: 99999;position: fixed;top: 50%;left: 50%;border-radius: 16px;border-radius: 41px;border: 1px solid #2F3038;background-color:#2E2F36;box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.30);transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%);}
+.modal_wrap {z-index: 99999;position: fixed;top: 50%;left: 50%;border-radius: 16px;border-radius: 41px;border: 1px solid #2E2F36;background-color:#060A2E;box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.30);transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%);}
 .modal_contents {overflow: hidden;position: relative;width: 612px;padding: 68px 40px 94px; text-align: center;}
 
 .modal_contents h3 {padding-top: 130px; background: url(./../img/ico_popup.png) center top no-repeat; font-size: 50px; font-weight: 300; color: #fff;}
