@@ -117,7 +117,7 @@
 
 .section#function .card_item p {position: relative; display: inline-block; padding-right: 54px; line-height: 1;}
 .section#function .card_item p::after {content: ''; position: absolute; right: 0; top: -3px; width: 33px; height: 28px; background: url(./../img/function_ico.png) 0 0 no-repeat;}
-.section#function .card_item span {margin-top: 20px;}
+.section#function .card_item span {margin-top: 20px; line-height: 1.5;}
 
 .section .section_figure {position: relative;}
 /* --------------------------------- function common css --------------------------------- */
