@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <link rel="stylesheet" href="./common/css/default.css">
-  <link rel="stylesheet" href="./common/css/layout.css">
+  <link rel="stylesheet" href="./common/css/layout__02.css">
   <link rel="stylesheet" href="./common/css/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
   <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
@@ -55,47 +55,12 @@
                 <ul>
                   <li><a href="#intro" class="anchorLinks">동아리 소개</a></li>
                   <li><a href="#activities" class="anchorLinks">모집 분야</a></li>
-                  <li><a href="#">캘린더</a></li>
-                  <li><a href="./page/board-portfolio.html">게시판</a></li>
+                  <li><a href="" class="popupBtn">캘린더</a></li>
+                  <li><a href="./page/board-notice.html">게시판</a></li>
                   <li><a href="#contact" class="anchorLinks">지원하기</a></li>
                 </ul>
               </div>
     
-              <!-- [D] :: 확인할 메시지가 있을 경우 class on 추가 / 없을 경우 on 제거 -->
-              <div class="alert on">
-                <a href="#" class="alertBtn">
-                  <span class="alertIcon icon">
-                    <i class="fa-solid fa-bell"></i>
-                  </span>
-                </a>
-    
-                <div class="alertPopup">
-                  <div class="alertItem notRead">
-                    <a href="#">
-                      <span class="alert-title">읽지 않은 메세지 예시 UI입니다.</span>
-                      <p class="alert-desc">메세지 내용 메세지 내용 메세지 내용 메세지 내용</p>
-                    </a>
-                  </div>
-                  <div class="alertItem">
-                    <a href="">
-                      <span class="alert-title">읽은 메세지 예시 UI입니다.</span>
-                      <p class="alert-desc">메세지 내용 메세지 내용 메세지 내용 메세지 내용</p>
-                    </a>
-                  </div>
-                  <div class="alertItem">
-                    <a href="">
-                      <span class="alert-title">읽은 메세지 예시 UI입니다.</span>
-                      <p class="alert-desc">메세지 내용 메세지 내용 메세지 내용 메세지 내용</p>
-                    </a>
-                  </div>
-                  <div class="alertItem">
-                    <a href="">
-                      <span class="alert-title">읽은 메세지 예시 UI입니다.</span>
-                      <p class="alert-desc">메세지 내용 메세지 내용 메세지 내용 메세지 내용</p>
-                    </a>
-                  </div>
-                </div>
-              </div>
             </div>
             <div class="gnb-dimmed"></div>
           </div>
@@ -271,13 +236,28 @@
       </div>
   </footer>
   <!-- //footer [E] -->
+
+  <!-- modal popup [S] -->
+  <div class="modal">
+    <div class="modal_wrap">
+      <div class="modal_contents">
+        <a href="#" class="close_btn"><i class="fa-solid fa-xmark closeIcon"></i></a>
+        <h3><b>로그인 권한</b>이 필요합니다.</h3>
+        <p>이용에 불편을 드려 죄송합니다.<br>
+          보다 나은 서비스 제공을 위하여 페이지 준비중에 있습니다.<br>
+          빠른 시일내에 준비하여 찾아뵙겠습니다.</p>
+      </div>
+    </div>
+    <div class="filter"></div>
+  </div>
+  <!-- modal popup [E] -->
   </div>
   <!-- //wrap -->
 
  
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="./common/js/aos.js"></script>
-  <script src="./common/js/ui.js"></script>
+  <script src="./common/js/ui__02.js"></script>
 </body>
 
 
