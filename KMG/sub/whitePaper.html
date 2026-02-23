@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+  <link rel="stylesheet" href="./../css/reset.css">
+  <link rel="stylesheet" href="./../css/common.css">
+  <link rel="stylesheet" href="./../css/style.css">
+  <link rel="stylesheet" href="./../fonts/font.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+  <!-- <script src="./../js/common.js" defer></script> -->
+  <script src="./../js/sub.js" defer></script>
+  <title>KMG | K - MISSION</title>
+</head>
+
+<body>
+  <!-- wrap -->
+  <div id="wrap" class="sub white">
+    <!-- header [S] -->
+    <header id="header" class="header">
+      <div class="header_inner">
+        <h1 class="logo"><a href="./../index.html"><span class="blind">KMG | K - MISSION</span></a></h1>
+        <!-- gnb - PC -->
+        <div id="gnb" class="gnb only_pc">
+          <ul>
+            <li class="gnb_dep1">
+              <a href="./../sub/kmgTv.html">KMG TV</a>
+              <ul class="gnb_dep2">
+                <li><a href="./../sub/kmgTv.html#introduce">KMG 소개</a></li>
+                <li><a href="./../sub/kmgTv.html#summary">KMG TV</a></li>
+                <li><a href="./../sub/kmgTv.html#differentiation">KMG TV 차별성</a></li>
+                <li><a href="./../sub/kmgTv.html#more">선교 맞춤형 OTT 방송</a></li>
+                <li><a href="./../sub/kmgTv.html#process">운영 프로세스</a></li>
+              </ul>
+            </li>
+            <li class="gnb_dep1">
+              <a href="./../sub/missionStudy.html">MISSION DAO</a>
+              <ul class="gnb_dep2">
+
+                <li><a href="./../sub/missionStudy.html#introduce">MISSION DAO 소개</a></li>
+                <li><a href="./../sub/missionStudy.html#summary">MISSION DAO 개요</a></li>
+                <li><a href="./../sub/missionStudy.html#activity">우리의 활동</a></li>
+                <li><a href="./../sub/missionStudy.html#ourPosition">시스템 구조</a></li>
+              </ul>
+            </li>
+            <li class="gnb_dep1">
+              <a href="./../sub/kmgCoin.html">KMG CHAIN</a>
+              <ul class="gnb_dep2">
+                <li><a href="./../sub/kmgCoin.html#introduce">KMG 블록체인</a></li>
+                <li><a href="./../sub/kmgCoin.html#story">K-후원 개요</a></li>
+                <li><a href="./../sub/kmgCoin.html#rwa">K-후원 세부</a></li>
+                <li><a href="./../sub/kmgCoin.html#project">K-후원 실증사업</a></li>
+                <li><a href="./../sub/kmgCoin.html#management">KMG 자산운용</a></li>
+              </ul>
+            </li>
+            <li class="gnb_dep1">
+              <a href="./../sub/whitePaper.html">BUSINESS AREA</a>
+              <ul class="gnb_dep2">
+                <li><a href="./../sub/whitePaper.html#introduce">Business Area 소개</a></li>
+                <li><a href="./../sub/whitePaper.html#introduction">사단법인</a></li>
+                <li><a href="./../sub/whitePaper.html#overview">디지털자산 교육·자격인증</a></li>
+                <li><a href="./../sub/whitePaper.html#down">WHITE PAPER DOWNLOAD</a></li>
+              </ul>
+            </li>
+          </ul>
+          <!-- gnb - PC -->
+          <!-- widget -->
+          <div class="widget">
+            <div class="widget_lang">
+              <a href="#" class="widget_btn">
+                <i class="icon icon_lang"><span class="blind">언어</span></i>
+              </a>
+              <ul class="lang_list">
+                <li class="lang_item kr"><a href="#"><span>한국어</span></a></li>
+                <li class="lang_item en"><a href="#" class="preparing_modal_btn"><span>영어</span></a></li>
+                <li class="lang_item es"><a href="#" class="preparing_modal_btn"><span>스페인어</span></a></li>
+                <li class="lang_item pt"><a href="#" class="preparing_modal_btn"><span>포루투갈어</span></a></li>
+                <li class="lang_item vi"><a href="#" class="preparing_modal_btn"><span>베트남어</span></a></li>
+                <li class="lang_item ms"><a href="#" class="preparing_modal_btn"><span>말레시아어</span></a></li>
+              </ul>
+            </div>
+            <a href="#" class="widget_btn siteMap only_pc">
+              <i class="icon icon_map"><span class="blind">사이트 맵</span></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- gnb - MO -->
+        <div id="gnb_mo" class="gnb_mo only_mo">
+          <div class="gnb_list">
+            <a href="#" class="close_btn"><span class="blind">메뉴 닫기</span></a>
+            <ul>
+              <li class="gnb_dep1">
+                <a href="./../sub/kmgTv.html">KMG TV</a>
+                <ul class="gnb_dep2">
+                  <li><a href="./../sub/kmgTv.html#introduce">KMG 소개</a></li>
+                  <li><a href="./../sub/kmgTv.html#summary">KMG TV</a></li>
+                  <li><a href="./../sub/kmgTv.html#differentiation">KMG TV 차별성</a></li>
+                  <li><a href="./../sub/kmgTv.html#more">선교 맞춤형 OTT 방송</a></li>
+                  <li><a href="./../sub/kmgTv.html#process">운영 프로세스</a></li>
+                </ul>
+              </li>
+              <li class="gnb_dep1">
+                <a href="./../sub/missionStudy.html">MISSION DAO</a>
+                <ul class="gnb_dep2">
+
+                  <li><a href="./../sub/missionStudy.html#introduce">MISSION DAO 소개</a></li>
+                  <li><a href="./../sub/missionStudy.html#summary">MISSION DAO 개요</a></li>
+                  <li><a href="./../sub/missionStudy.html#activity">우리의 활동</a></li>
+                  <li><a href="./../sub/missionStudy.html#ourPosition">시스템 구조</a></li>
+                </ul>
+              </li>
+              <li class="gnb_dep1">
+                <a href="./../sub/kmgCoin.html">KMG CHAIN</a>
+                <ul class="gnb_dep2">
+                  <li><a href="./../sub/kmgCoin.html#introduce">KMG 블록체인</a></li>
+                  <li><a href="./../sub/kmgCoin.html#story">K-후원 개요</a></li>
+                  <li><a href="./../sub/kmgCoin.html#rwa">K-후원 세부</a></li>
+                  <li><a href="./../sub/kmgCoin.html#project">K-후원 실증사업</a></li>
+                  <li><a href="./../sub/kmgCoin.html#management">KMG 자산운용</a></li>
+                </ul>
+              </li>
+              <li class="gnb_dep1">
+                <a href="./../sub/whitePaper.html">BUSINESS AREA</a>
+                <ul class="gnb_dep2">
+                  <li><a href="./../sub/whitePaper.html#introduce">Business Area 소개</a></li>
+                  <li><a href="./../sub/whitePaper.html#introduction">디지털자산 교육·자격인증</a></li>
+                  <li><a href="./../sub/whitePaper.html#overview">사단법인</a></li>
+                  <li><a href="./../sub/whitePaper.html#down">WHITE PAPER DOWNLOAD</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div class="widget">
+            <div class="widget_lang">
+              <a href="#" class="widget_btn lang">
+                <i class="icon icon_lang"><span class="blind">언어</span></i>
+              </a>
+            </div>
+            <a href="#" class="widget_btn siteMap">
+              <i class="icon icon_map"><span class="blind">사이트 맵</span></i>
+            </a>
+          </div>
+        </div>
+        <!-- gnb - MO -->
+
+      </div>
+    </header>
+    <!-- header [E] -->
+
+    <!-- contants [S] -->
+    <main id="container" class="container">
+
+      <nav class="topMenu only_pc">
+        <div class="topMenu_inner inner">
+          <ul class="topMenu_list">
+            <li class="topMenu_item home"><a href="./../index.html"><i><span class="blind">홈으로</span></i></a></li>
+            <li class="topMenu_item"><a href="#introduce">BUSINESSS AREA 소개</a></li>
+            <li class="topMenu_item"><a href="#introduction">사단법인</a></li>
+            <li class="topMenu_item"><a href="#overview">디지털자산 교육·자격인증</a></li>
+            <li class="topMenu_item"><a href="#down">WHITE PAPER 다운로드</a></li>
+          </ul>
+        </div>
+      </nav>
+
+
+      <section class="section sec_visual" id="introduce">
+        <div class="inner visual_inner">
+          <div class="visual_txt">
+            <p class="sub_txt">BUSINESS AREA 소개</p>
+            <h4 class="line line-right line-top only_pc">Explore&nbsp;KMG’s&nbsp;Vision&nbsp;and&nbsp;Its</h4>
+            <h4 class="line line-left line-bottom only_pc">Mission-Driven&nbsp;Ecosystem</h4>
+            <h4 class="line line-right line-top only_mo">Discover&nbsp;the&nbsp;Future</h4>
+            <h4 class="line line-left line-bottom only_mo">Discover&nbsp;the&nbsp;KMG</h4>
+            <p class="desc_txt">KMG의 비전과 선교 철학, 그리고 신앙 기반 블록체인 <br class="only_mo"/>생태계의 방향성을 백서를 통해 만나보세요.</p>
+          </div>
+        </div>
+        <video src="./../img/sub/white_visual.mp4" autoplay muted playsinline loop class="visual_video"></video>
+      </section>
+
+      <section class="section sec_01 dark-section" id="introduction">
+        <div class="inner">
+          <div class="sec_title">
+            <span class="sub_title" data-aos="fade-up">introduction</span>
+            <h4 class="title" data-aos="fade-up">완전 독립된 구조의 <br class="only_mo"/>선교 기부금 관리 <br class="only_pc"/>사단법인 <br class="only_mo" />케이엠지선교회</h4>
+            
+            <p class="desc" data-aos="fade-up">
+              KKMG 플랫폼은 전 세계 선교 활동을 투명하고 정직하게 <br class="only_mo"/>지원하기 위해, 선교 기부금과 관련된 모든 재정을 완전히 독립된<br />
+              구조로 관리하고 있습니다. 이를 위해 사단법인 케이엠지선교회 <br class="only_mo" />
+              (고유번호증 : 594-80-03765)를 설립하여, 플랫폼 내에서 <br />
+              모금·후원되는 모든 자금이 공정한 절차를 거쳐 운영되도록 체계화 <br class="only_mo" />
+              했습니다.
+            </p>
+            <!-- <a href="#" class="btn type02 preparing_modal_btn" data-aos="fade-up">White Paper Download</a> -->
+          </div>
+          <div class="sec_content">
+            <p class="cont_text" data-aos="fade-up">
+              케이엠지선교회는 KMG 플랫폼의 핵심 가치인 정직, 투명성, <br class="only_mo" />책임성을 실천하기 위한 <br class="only_pc"/>법적·제도적 장치로서, 후원자 여러분이 <br class="only_mo" />믿고 참여할 수 있는 안정적 선교 재정 시스템을 <br class="only_pc"/>
+              제공합니다.
+            </p>
+            <p class="cont_text" data-aos="fade-up">
+              모든 기부금은 관련 법령과 회계 기준에 따라 엄격히 관리되며, <br class="only_mo" />사용 내역은 선교사와 후원<br class="only_pc"/>자가 언제든지 확인할 수 있도록 투명<br class="only_mo" />하게 공개됩니다.
+            </p>
+            <p class="cont_text" data-aos="fade-up">
+              앞으로도 KMG 플랫폼은 케이엠지선교회를 중심으로, <br class="only_mo" />후원금이 선교 현장에 정확하게 전달<br class="only_pc"/>
+              되고 선교사들의 실제 필요에 <br class="only_mo" />
+              맞게 사용될 수 있도록 지속적인 oversight와 관리 체계를<br class="only_pc"/>
+              강화해 <br class="only_mo" />나가겠습니다.
+            </p>
+            <div class="cont_img"  data-aos="fade-up"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section sec_02 dark-section" id="overview">
+        <div class="inner">
+          <div class="sec_title">
+            <span class="sub_title" data-aos="fade-up">Overview</span>
+            <h4 class="title" data-aos="fade-up">디지털 자산 선교 <br class="only_mo"/>지원을 위한 미래 인재 양성<br />
+            한국디지털자산관리사협회</h4>
+            <p class="desc" data-aos="fade-up">
+              KMG 플랫폼은 디지털 자산 기반의 글로벌 선교 기부 생태계를 <br class="only_mo" />이끌 미래 인재를 체계적으로 양성하기 위해, 디지털 자산 관리사 <br />자격증을 부여하는 한국디지털자산관리사협회 <br class="only_mo" />(고유번호증 : 536-80-03250)를 설립하여 운영하고 있습니다.
+            </p>
+            <!-- <a href="#" class="btn type02 preparing_modal_btn" data-aos="fade-up">White Paper Download</a> -->
+          </div>
+          <div class="sec_content">
+            <p class="cont_text" data-aos="fade-up">
+              급속도로 변화하는 디지털 금융 환경 속에서 선교 기부 재원을 <br class="only_mo" />전문적으로 관리하고, 글로벌<br class="only_pc"/>
+              선교 활동에 실질적인 기여를 할 수 <br class="only_mo" />있는 전문가를 배출하는 것을 목표로 합니다.
+
+            </p>
+            <p class="cont_text" data-aos="fade-up">
+              KMG 플랫폼은 협회를 통해 검증된 교육과 자격 제도를 제공함<br class="only_mo" />
+              으로써, 자격증을 취득한<br class="only_pc"/>
+              인재들이 디지털 자산 운영과 선교 기부 <br class="only_mo" />구조를 이해하고 글로벌 선교 현장에서 중요한 역할을<br class="only_pc"/>
+              담당할 수 <br class="only_mo" />있도록 지원하고 있습니다.
+            </p>
+            <p class="cont_text" data-aos="fade-up">
+              앞으로도 KMG는 전문성과 신뢰성을 갖춘 디지털 자산 전문가 <br class="only_mo" />양성에 힘써, 글로벌 선교 기부<br class="only_pc"/>
+              생태계가 더욱 건강하고 지속가능 <br class="only_mo" />하게 성장할 수 있는 기반을 만들어 나가겠습니다.
+            </p>
+            <div class="cont_img"  data-aos="fade-up"></div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="section sec_03 dark-section" id="down">
+        <div class="inner">
+          <div class="sec_title only_pc">
+            <span class="sub_title" data-aos="fade-up">Introduction</span>
+            <h4 class="title" data-aos="fade-up">K-ENA White Paper</h4>
+            <p class="desc" data-aos="fade-up">
+              K-ENA는 선교와 나눔의 가치를 디지털 자산으로 확장하는 글로벌 미션 플랫폼입니다. <br />
+              백서에는 신앙 기반 생태계 구축을 위한 기술 구조, 토큰 이코노미, 선교 보상 시스템의 운영 원리와 향후 비전이 담겨 있습니다.<br />
+              K-ENA는 투명한 블록체인 기술을 통해 믿음의 연결과 선한 영향력을 세계로 확장해 나갑니다.
+            </p>
+            <a href="./../pdf/whitePaper/whitePaper_20250828.pdf" class="btn type02" data-aos="fade-up">White Paper Download</a>
+          </div>
+          <div class="sec_title only_mo">
+            <span class="sub_title" data-aos="fade-up">Introduction</span>
+            <h4 class="title" data-aos="fade-up">K-ENA White Paper</h4>
+            <p class="desc" data-aos="fade-up">
+              K-ENA는 선교와 나눔의 가치를 디지털 자산으로 확장하는 <br />글로벌 미션 플랫폼입니다.
+            </p>
+            <a href="./../pdf/whitePaper/whitePaper_20250828.pdf" class="btn type02" data-aos="fade-up">White Paper Download</a>
+          </div>
+          <div class="sec_content">
+            <p class="cont_text only_mo" data-aos="fade-up">
+              백서에는 신앙 기반 생태계 구축을 위한 기술구조, 서비스 <br />
+              프로세스, 선교 보상 시스템의 운영 원리와 향후 비전이 담겨 <br />
+              있습니다. K-ENA는 투명한 블록체인 기술을 통해 믿음의 연결과 <br />
+              선한 영향력을 세계로 확장해 나갑니다.
+            </p>
+            <div class="cont_img"  data-aos="fade-up"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- contants [E]-->
+
+    <!-- footer [S] -->
+    <footer id="footer" class="footer">
+      <div class="footer_inner">
+        <h6 class="footer_sub sub_title">Contact Us</h6>
+        <div class="footer_content">
+          <div class="footer_text">
+            <h4 data-aos="fade-up">
+              가장 높은 곳에 오르는 여정,<br />
+              케이엠지미션이 당신과 함께 합니다.
+            </h4>
+          </div>
+          <ul class="partner_list">
+            <li class="partner_item" data-aos="fade-up"><a href="./../sub/kmgTv.html">KMG TV</a></li>
+            <li class="partner_item" data-aos="fade-up" data-aos-delay="100"><a href="./../sub/missionStudy.html">MISSION
+                DAO</a></li>
+            <li class="partner_item" data-aos="fade-up" data-aos-delay="200"><a href="./../sub/kmgCoin.html">KMG CHIN</a>
+            </li>
+            <li class="partner_item" data-aos="fade-up" data-aos-delay="300"><a href="./../sub/whitePaper.html">BUSINESS
+                AREA</a></li>
+          </ul>
+
+          <div class="footer_info">
+            <ul class="info_list">
+              <li>주식회사 케이엠지미션</li>
+              <li>대표자. 서정식</li>
+              <li>사업자등록번호. 794-87-03990</li>
+              <li>주소. 서울특별시 강남구 선릉로112길 87, 3층(삼성동, 명인빌딩)</li>
+              <li>TEL. 02) 546-1885</li>
+              <li>FAX. 02) 546-1885</li>
+            </ul>
+
+            <div class="footer_social">
+              <p class="copyright">Copyright&copy; 2025 KMG. All rights reserved</p>
+
+              <ul class="social_list">
+                <li class="social_item"><a href="#" class="preparing_modal_btn"><img src="./../img/social_x.png"
+                      alt="x"><span class="blind">x</span></a></li>
+                <li class="social_item"><a href="#" class="preparing_modal_btn"><img src="./../img/social_tiktok.png"
+                      alt="tiktok"><span class="blind">tiktok</span></a></li>
+                <li class="social_item"><a href="#" class="preparing_modal_btn"><img src="./../img/social_youtube.png"
+                      alt="youtube"><span class="blind">youtube</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="top_btn"><span class="blind">상단으로 이동</span></a>
+      </div>
+    </footer>
+    <!-- footer [E] -->
+
+    <!-- modal popup [S] -->
+    <div class="modal lang_modal">
+      <div class="modal_wrap">
+        <div class="modal_contents">
+          <div class="modal_header">
+            <h3>언어선택</h3>
+            <a href="#" class="close_btn"><span class="blind">팝업 닫기</span></a>
+          </div>
+
+          <div class="modal_body">
+            <ul class="lang_list">
+              <li class="lang_item kr"><a href="#"><span>한국어</span></a></li>
+              <li class="lang_item en"><a href="#" class="preparing_modal_btn"><span>영어</span></a></li>
+              <li class="lang_item es"><a href="#" class="preparing_modal_btn"><span>스페인어</span></a></li>
+              <li class="lang_item pt"><a href="#" class="preparing_modal_btn"><span>포루투갈어</span></a></li>
+              <li class="lang_item vi"><a href="#" class="preparing_modal_btn"><span>베트남어</span></a></li>
+              <li class="lang_item ms"><a href="#" class="preparing_modal_btn"><span>말레시아어</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="filter"></div>
+    </div>
+    <!-- modal popup [E] -->
+
+    <!-- modal popup [S] -->
+    <div class="modal siteMap_modal">
+      <div class="modal_wrap">
+        <div class="modal_contents">
+          <div class="modal_header">
+            <h1 class="logo"><a href="./../index.html"><span class="blind">KMG | K - MISSION</span></a></h1>
+            <a href="#" class="close_btn"><span class="blind">팝업 닫기</span></a>
+          </div>
+          <div class="modal_body">
+            <ul class="siteMap_list">
+              <li>
+                <a href="./../sub/kmgTv.html">KMG TV</a>
+                <ul class="siteMap_dep2">
+                  <li><a href="./../sub/kmgTv.html#introduce">KMG 소개</a></li>
+                  <li><a href="./../sub/kmgTv.html#summary">KMG TV</a></li>
+                  <li><a href="./../sub/kmgTv.html#differentiation">KMG TV 차별성</a></li>
+                  <li><a href="./../sub/kmgTv.html#more">선교 맞춤형 OTT 방송</a></li>
+                  <li><a href="./../sub/kmgTv.html#process">운영프로세스</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="./../sub/missionStudy.html">MISSION DAO</a>
+                <ul class="siteMap_dep2">
+                  <li><a href="./../sub/missionStudy.html#introduce">MISSION DAO 소개</a></li>
+                  <li><a href="./../sub/missionStudy.html#summary">MISSION DAO 개요</a></li>
+                  <li><a href="./../sub/missionStudy.html#activity">우리의 활동</a></li>
+                  <li><a href="./../sub/missionStudy.html#ourPosition">시스템 구조</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="./../sub/kmgCoin.html">KMG CHAIN</a>
+                <ul class="siteMap_dep2">
+                  <li><a href="./../sub/kmgCoin.html#introduce">KMG 블록체인</a></li>
+                  <li><a href="./../sub/kmgCoin.html#story">K-후원 개요</a></li>
+                  <li><a href="./../sub/kmgCoin.html#rwa">K-후원 세부</a></li>
+                  <li><a href="./../sub/kmgCoin.html#project">K-후원 실증사업</a></li>
+                  <li><a href="./../sub/kmgCoin.html#management">KMG 자산운용</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="./../sub/whitePaper.html">BUSINESS AREA</a>
+                <ul class="siteMap_dep2">
+                  <li><a href="./../sub/whitePaper.html#introduce">Business Area 소개</a></li>
+                  <li><a href="./../sub/whitePaper.html#introduction">사단법인</a></li>
+                  <li><a href="./../sub/whitePaper.html#overview">디지털자산 교육·자격인증</a></li>
+                  <li><a href="./../sub/whitePaper.html#down">WHITE PAPER DOWNLOAD</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="filter"></div>
+    </div>
+    <!-- modal popup [E] -->
+
+    <!-- modal popup [S] -->
+    <div class="modal preparing_modal">
+      <div class="modal_wrap">
+        <div class="modal_contents">
+          <a href="#" class="close_btn"><span class="blind">팝업 닫기</span></a>
+          <div class="modal_body">
+            <div class="preparing_content">
+              <div class="preparing_img"></div>
+              <div class="preparing_txt">
+                <h4>페이지 <b>준비중</b>입니다.</h4>
+                <p>보다 나은 서비스 제공을 위하여 페이지 준비중에 있습니다.<br>
+                  빠른 시일 내에 준비하여 찾아뵙겠습니다.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="filter"></div>
+    </div>
+    <!-- modal popup [E] -->
+  </div>
+  <!-- //wrap -->
+
+</body>
+
+</html>

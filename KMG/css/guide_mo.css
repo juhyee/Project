@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+.only_mo, .ONLY_MO {display: block;}
+.only_pc, .ONLY_PC {display: none;}
+
+.header .header_inner {justify-content: end;}
+.header .widget {padding: 3.05vw 0;}
+
+.sec_guide {min-height: 100dvh;
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    box-sizing: border-box;}
+
+.guide_modal .modal_wrap {background-color: #11b5a4;}
+.guide_modal .modal_contents {position: relative; padding: 12.173vw 5.09vw 4.33vw;}
+.guide_modal .modal_contents .modal_header {position: relative; width: 100%;}
+.guide_modal .modal_header .modal_title {color: #fff;}
+.guide_modal .modal_header .modal_title h4 {font-size: 8.14vw; font-weight: 700;}
+.guide_modal .modal_header .modal_title p {margin-top: 1.02vw; font-size: 3.77vw; line-height: 140%; font-weight: 400; color: #fff;}
+.guide_modal .modal_header .link_btn {position: absolute; top:-6.870vw; right: 0; width: 8.91vw; height: 8.91vw; border-radius: 2.29vw; border: 1px solid rgba(255, 255, 255, 0.5); background: url(../img/icon_close03.svg) no-repeat 50% 50%/3.31vw 3.31vw;}
+.guide_modal .modal_body {margin-top: 5.09vw;}
+
+.guide_modal .map_list {counter-reset: number; display: block; column-count: 2; gap: 2.29vw;}
+.guide_modal .map_list .map_btn {break-inside: avoid; margin-bottom: 2.54vw; display: flex; align-items: center; position: relative; height: 13.74vw;  padding-left: 11.96vw; font-size: 3.5vw; font-weight: 600; border-radius: 2.54vw; border: 0.25vw solid rgba(255, 255, 255, 0.5); line-height: 120%;}
+.guide_modal .map_list .map_btn_3 {letter-spacing: -1px;}
+.guide_modal .map_list .map_btn::after {content: counter(number);counter-increment: number; position: absolute; top:50%; left: 2.54vw; width: 7.63vw; height: 7.63vw; background-color: #fff; border: 0.25vw solid #000000; border-radius: 50%; text-align: center; font-size: 3.31vw; color: #000; line-height: 7.33vw; transform: translateY(-50%);}
+
+.sec_guide {background-color: #141414;}
+/* .sec_guide .inner {} */
+.sec_guide .guide_title {padding: 29.77vw 0 0 5.09vw;color: #fff;}
+.sec_guide .guide_title .sub {padding: 1.27vw; background-color: #11b5a4; font-size: 3.05vw; line-height: 4.58vw;}
+.sec_guide .guide_title .title {margin-top: 1.53vw; font-size: 6.62vw; font-weight: 700;}
+.sec_guide .guide_title .desc {margin-top: 6.87vw; font-size: 3.31vw; line-height: 160%; font-weight: 400;}
+.sec_guide .guide_title .desc b {display: inline-block; margin-bottom: 3.82vw; font-size: 4.07vw; line-height: 100%; font-weight: 600;}
+.sec_guide .guide_list {margin-top: 10.18vw;}
+.sec_guide .guide_list img {width: 100%; margin-top: 1.27vw; vertical-align: top; }
+.sec_guide .guide_btn {position: fixed; bottom: 10.18vw; right: 5.09vw; display: flex; align-items: center; justify-content: center; width: 17.30vw; height: 17.30vw; border-radius: 50%; background-color: #11b5a4; font-size: 4.07vw; color: #fff;} 

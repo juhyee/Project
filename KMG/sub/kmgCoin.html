@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+  <link rel="stylesheet" href="./../css/reset.css">
+  <link rel="stylesheet" href="./../css/common.css">
+  <link rel="stylesheet" href="./../css/style.css">
+  <link rel="stylesheet" href="./../fonts/font.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+  <!-- <script src="./../js/common.js" defer></script> -->
+  <script src="./../js/sub.js" defer></script>
+  <title>KMG | K - MISSION</title>
+</head>
+
+<body>
+  <!-- wrap -->
+  <div id="wrap" class="sub coin">
+    <!-- header [S] -->
+    <header id="header" class="header">
+      <div class="header_inner">
+        <h1 class="logo">
+          <a class="only_pc" href="./index.html"><span class="blind">KMG | K - MISSION</span></a>
+          <a class="only_mo" href="./index.html"><span class="blind">KMG | K - MISSION</span></a>
+        </h1>
+        <!-- gnb - PC -->
+        <div id="gnb" class="gnb only_pc">
+          <ul>
+            <li class="gnb_dep1">
+              <a href="./../sub/kmgTv.html">KMG TV</a>
+              <ul class="gnb_dep2">
+                <li><a href="./../sub/kmgTv.html#introduce">KMG 소개</a></li>
+                <li><a href="./../sub/kmgTv.html#summary">KMG TV</a></li>
+                <li><a href="./../sub/kmgTv.html#differentiation">KMG TV 차별성</a></li>
+                <li><a href="./../sub/kmgTv.html#more">선교 맞춤형 OTT 방송</a></li>
+                <li><a href="./../sub/kmgTv.html#process">운영 프로세스</a></li>
+              </ul>
+            </li>
+            <li class="gnb_dep1">
+              <a href="./../sub/missionStudy.html">MISSION DAO</a>
+              <ul class="gnb_dep2">
+    
+                <li><a href="./../sub/missionStudy.html#introduce">MISSION DAO 소개</a></li>
+                <li><a href="./../sub/missionStudy.html#summary">MISSION DAO 개요</a></li>
+                <li><a href="./../sub/missionStudy.html#activity">우리의 활동</a></li>
+                <li><a href="./../sub/missionStudy.html#ourPosition">시스템 구조</a></li>
+              </ul>
+            </li>
+            <li class="gnb_dep1">
+              <a href="./../sub/kmgCoin.html">KMG CHAIN</a>
+              <ul class="gnb_dep2">
+                <li><a href="./../sub/kmgCoin.html#introduce">KMG 블록체인</a></li>
+                <li><a href="./../sub/kmgCoin.html#story">K-후원 개요</a></li>
+                <li><a href="./../sub/kmgCoin.html#rwa">K-후원 세부</a></li>
+                <li><a href="./../sub/kmgCoin.html#project">K-후원 실증사업</a></li>
+                <li><a href="./../sub/kmgCoin.html#management">KMG 자산운용</a></li>
+              </ul>
+            </li>
+            <li class="gnb_dep1">
+              <a href="./../sub/whitePaper.html">BUSINESS AREA</a>
+              <ul class="gnb_dep2">
+                <li><a href="./../sub/whitePaper.html#introduce">Business Area 소개</a></li>
+                <li><a href="./../sub/whitePaper.html#introduction">사단법인</a></li>
+                <li><a href="./../sub/whitePaper.html#overview">디지털자산 교육·자격인증</a></li>
+                <li><a href="./../sub/whitePaper.html#down">WHITE PAPER DOWNLOAD</a></li>
+              </ul>
+            </li>
+          </ul>
+          <!-- gnb - PC -->
+          <!-- widget -->
+          <div class="widget">
+            <div class="widget_lang">
+              <a href="#" class="widget_btn">
+                <i class="icon icon_lang"><span class="blind">언어</span></i>
+              </a>
+              <ul class="lang_list">
+                <li class="lang_item kr"><a href="#"><span>한국어</span></a></li>
+                <li class="lang_item en"><a href="#" class="preparing_modal_btn"><span>영어</span></a></li>
+                <li class="lang_item es"><a href="#" class="preparing_modal_btn"><span>스페인어</span></a></li>
+                <li class="lang_item pt"><a href="#" class="preparing_modal_btn"><span>포루투갈어</span></a></li>
+                <li class="lang_item vi"><a href="#" class="preparing_modal_btn"><span>베트남어</span></a></li>
+                <li class="lang_item ms"><a href="#" class="preparing_modal_btn"><span>말레시아어</span></a></li>
+              </ul>
+            </div>
+            <a href="#" class="widget_btn siteMap only_pc">
+              <i class="icon icon_map"><span class="blind">사이트 맵</span></i>
+            </a>
+          </div>
+        </div>
+    
+        <!-- gnb - MO -->
+        <div id="gnb_mo" class="gnb_mo only_mo">
+          <div class="gnb_list">
+            <a href="#" class="close_btn"><span class="blind">메뉴 닫기</span></a>
+            <ul>
+              <li class="gnb_dep1">
+                <a href="./../sub/kmgTv.html">KMG TV</a>
+                <ul class="gnb_dep2">
+                  <li><a href="./../sub/kmgTv.html#introduce">KMG 소개</a></li>
+                  <li><a href="./../sub/kmgTv.html#summary">KMG TV</a></li>
+                  <li><a href="./../sub/kmgTv.html#differentiation">KMG TV 차별성</a></li>
+                  <li><a href="./../sub/kmgTv.html#more">선교 맞춤형 OTT 방송</a></li>
+                  <li><a href="./../sub/kmgTv.html#process">운영 프로세스</a></li>
+                </ul>
+              </li>
+              <li class="gnb_dep1">
+                <a href="./../sub/missionStudy.html">MISSION DAO</a>
+                <ul class="gnb_dep2">
+    
+                  <li><a href="./../sub/missionStudy.html#introduce">MISSION DAO 소개</a></li>
+                  <li><a href="./../sub/missionStudy.html#summary">MISSION DAO 개요</a></li>
+                  <li><a href="./../sub/missionStudy.html#activity">우리의 활동</a></li>
+                  <li><a href="./../sub/missionStudy.html#ourPosition">시스템 구조</a></li>
+                </ul>
+              </li>
+              <li class="gnb_dep1">
+                <a href="./../sub/kmgCoin.html">KMG CHAIN</a>
+                <ul class="gnb_dep2">
+                  <li><a href="./../sub/kmgCoin.html#introduce">KMG 블록체인</a></li>
+                  <li><a href="./../sub/kmgCoin.html#story">K-후원 개요</a></li>
+                  <li><a href="./../sub/kmgCoin.html#rwa">K-후원 세부</a></li>
+                  <li><a href="./../sub/kmgCoin.html#project">K-후원 실증사업</a></li>
+                  <li><a href="./../sub/kmgCoin.html#management">KMG 자산운용</a></li>
+                </ul>
+              </li>
+              <li class="gnb_dep1">
+                <a href="./../sub/whitePaper.html">BUSINESS AREA</a>
+                <ul class="gnb_dep2">
+                  <li><a href="./../sub/whitePaper.html#introduce">Business Area 소개</a></li>
+                  <li><a href="./../sub/whitePaper.html#introduction">디지털자산 교육·자격인증</a></li>
+                  <li><a href="./../sub/whitePaper.html#overview">사단법인</a></li>
+                  <li><a href="./../sub/whitePaper.html#down">WHITE PAPER DOWNLOAD</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+    
+          <div class="widget">
+            <div class="widget_lang">
+              <a href="#" class="widget_btn lang">
+                <i class="icon icon_lang"><span class="blind">언어</span></i>
+              </a>
+            </div>
+            <a href="#" class="widget_btn siteMap">
+              <i class="icon icon_map"><span class="blind">사이트 맵</span></i>
+            </a>
+          </div>
+        </div>
+        <!-- gnb - MO -->
+    
+      </div>
+    </header>
+    <!-- header [E] -->
+
+    <!-- contants [S] -->
+    <main id="container" class="container">
+
+      <nav class="topMenu only_pc">
+        <div class="topMenu_inner inner">
+          <ul class="topMenu_list">
+            <li class="topMenu_item home"><a href="./../index.html"><i><span class="blind">홈으로</span></i></a></li>
+            <li class="topMenu_item"><a href="#introduce">KMG CHAIN 소개</a></li>
+            <li class="topMenu_item"><a href="#story">KMG 블록체인</a></li>
+            <li class="topMenu_item"><a href="#rwa">K-후원 개요</a></li>
+            <li class="topMenu_item"><a href="#kmgr">K-후원 세부</a></li>
+            <li class="topMenu_item"><a href="#project">K-후원 실증사업</a></li>
+            <li class="topMenu_item"><a href="#management">KMG 자산운용</a></li>
+          </ul>
+        </div>
+      </nav>
+
+
+      <section class="section sec_visual" id="introduce">
+        <div class="inner visual_inner">
+          <div class="visual_txt">
+            <p class="sub_txt">KMG CHAIN 소개</p>
+            <h4 class="line line-right line-top">Faith-Powered&nbsp;Value</h4>
+            <h4 class="line line-left line-bottom">Mission-Driven&nbsp;Impact</h4>
+            <p class="desc_txt">KMG Chain은 전 세계 선교 네트워크를 연결하고 선교의 <br class="only_mo"/>새로운 가능성을 열어갑니다.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section sec_01 dark-section">
+        <div class="sec_content summary" id="story">
+          <div class="inner">
+            <div class="sec_title">
+              <span class="sub_title" data-aos="fade-up">Summary</span>
+              <h4 class="title" data-aos="fade-up">K-ENA 스토리</h4>
+              <p class="desc only_pc" data-aos="fade-up">
+                케이나(K-ENA)는 Korea와 Mecena의 합성어로, 한국적 감성과 국제 감각이 조화를 이룬 약자로서 K-Mission의 후원자를<br />
+                상징하는 의미를 내포한 명칭입니다.
+              </p>
+              <p class="desc only_mo" data-aos="fade-up">
+                케이나(K-ENA)는 Korea+Mecena의 합성어로<br />
+                한국적 감성과 국제 감각이 어울어진 약자로 K-Mision의<br />
+                후원자란 의미 내표
+              </p>
+            </div>
+
+            <div class="summary_content com_content">
+              <div class="summary_item01" data-aos="fade-up">
+                <h4>1,885,450,000의 의미?</h4>
+                <p class="only_pc">
+                  우리나라 조선시대에 최초로 기독교 복음을 가져온 미국의 “언더우드 선교사”가<br />
+                  인천 제물포항에 첫 발을 내디딘 날짜가 1885년 4월 5일이므로 그 날짜를<br />
+                  기념하여 1,885,450,000명의 자발적 생태계 참여자를 목표
+                </p>
+                <p class="only_mo">
+                  우리나라 조선시대에 최초로 기독교 복음을<br />
+                  가져온 미국의 “언더우드 선교사”가 인천<br />
+                  제물포항에 첫 발을 내디딘 날짜가 1885년<br />
+                  4월 5일이므로 그 날찌를 기념하여<br />
+                  1,885,450,000명의 자발적 생태계<br />
+                  참여자를 목표
+                </p>
+              </div>
+
+              <div class="summary_item02"  data-aos="fade-left"></div>
+              <!-- <img src="./../img/sub/coin_sec01_itme01.png" alt="" class="summary_item02"> -->
+
+              <div class="summary_item03" data-aos="fade-up">
+                <span>케이나(K-ENA)의 미션</span>
+                <p>1,885,450,000<span>참여자</span></p>
+                <p>
+                  &middot;18억명 이상의 선교 생태계 자발적 참여<br />
+                  &middot;글로벌 대표 선교 지원 생태계<br />
+                  &middot;공신력 있는 탈중앙화 선교 지원 플랫폼
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sec_content sponsor" id="sponsor">
+          <div class="inner">
+            <div class="sec_title">
+              <span class="sub_title" data-aos="fade-up">Sponsor</span>
+              <h4 class="title" data-aos="fade-up">투명한 후원 OTT 방송</h4>
+              <p class="desc" data-aos="fade-up">
+                글로벌 회원이 후원한 월정액은 KMG 플랫폼 정산 시 자동 기부로 할당되어 전 세계 선교사에게 후원금으로 전달되며,<br />
+                모든 흐름은 투명하게 기록되어 신뢰를 높입니다.
+              </p>
+            </div>
+
+            <div class="sponsor_content com_content">
+              <div class="sponsor_item01" data-aos="fade-up">
+                <p><b>케이나(K-ENA)</b><br />블록체인 기반 글로벌 선교 생태계 구축</p>
+                <!-- <img src="./../img/sub/coin_sec01_itme02.png" alt=""> -->
+              </div>
+              <div class="sponsor_item02 only_pc" data-aos="fade-up">
+                <p>선교 생태계에서는 후원자, 선교사, 운영자 모두 케이나로서<br />
+                  <b>활동하며 협력하고, 함께 성장하는 선교 구조를 만들어갑니다.</b>
+                </p>
+              </div>
+            
+              <div class="sponsor_item02 only_pc" data-aos="fade-up">
+                <p>모든 거래, 선교사 후원, 창작자 프로젝트 등은<br />
+                  <b>블록체인에 공개되어 누구나 투명하게 확인</b> 할 수 있습니다.
+                </p>
+              </div>
+
+              <div class="sponsor_item02 only_mo" data-aos="fade-up">
+                <p>
+                  선교 생태계에선 후원자, 선교사, 운영자<br />
+                  <b>모두 케이나로써 활동하고 협력함</b>
+                </p>
+              </div>
+              
+              <div class="sponsor_item02 only_mo" data-aos="fade-up">
+                <p>
+                  선교사 후원, 창작자 프로젝트 등은<br />
+                  <b>블록체인에 공개되어 누구나 투명하게 확인</b>
+                </p>
+              </div>
+
+              <ul class="sponsor_list">
+                <li class="list_item" data-aos="fade-up" data-aos-delay="100">
+                  <span>후원 참여</span>
+                  <p>KMG 플랫폼의 후원, 이벤트 참가, 굿즈 상품 구매 등의 <br class="only_mo"/>후원 참여 활동</p>
+                </li>
+                <li class="list_item" data-aos="fade-up" data-aos-delay="300">
+                  <span>활동 지원</span>
+                  <p>글로벌 선교사의 사역/선교 활동에 필요한 재원을 후원을 <br class="only_mo" />통해 지원</p>
+                </li>
+                <li class="list_item" data-aos="fade-up" data-aos-delay="400">
+                  <span>투표 참여</span>
+                  <p>선교 프로젝트 제안, 우수 선교사 지정 등의 투표에 <br class="only_mo" />참여할 수 있는 권한</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section sec_02" id="rwa">
+        <div class="inner">
+          <div class="sec_title" data-aos="fade-up">
+            <!-- <ul class="title_list">
+              <li class="on">KMGr RWA 코인</li>
+              <li><a href="#" class="preparing_modal_btn">KMGt 코인</a></li>
+              <li><a href="#" class="preparing_modal_btn">KMGx 코인</a></li>
+            </ul> -->
+            <span class="sub_title" data-aos="fade-up">Summary</span>
+            <h4 class="title" data-aos="fade-up">RWA 프로젝트</h4>
+            <p class="desc only_pc" data-aos="fade-up">
+              유무형 실물 자산 기반 RWA 프로젝트 : 실물 자산을 블록체인 기반으로 디지털화 하여 자발적 참여자 모두가 이익을 공유하는 생태계<br />
+              첫 실증 사업 글로벌 힐링 생태계 구축 : 실물 자산 RWA로 미래 성장 가능성이 높은 힐링 산업과 접목, 실물자산 + 디지털 자산 융합으로<br />
+              Soul Therapy 단지 구축 및 가상화를 진행하는 RWA 프로젝트
+            </p>
+            <p class="desc only_mo" data-aos="fade-up">
+              유무형 실물 자산 기반 RWA 프로젝트 : 실물 자산을 블록체인<br />
+              기반으로 디지털화 하여 자발적 참여자 모두가 이익을 공유하는<br />
+              생태계
+            </p>
+            <p class="desc only_mo" data-aos="fade-up">
+              첫 실증 사업 글로벌 힐링 생태계 구축 : 실물 자산 RWA로<br />
+              미래 성장 가능성이 높은 힐링 산업과 접목, 실물자산 + 디지털<br />
+              자산 융합으로 Soul Therapy 단지 구축 및 가상화를 진행하는<br />
+              RWA 프로젝트
+            </p>
+          </div>
+          <div class="rwa_content">
+            <ul class="rwa_list">
+              <li class="rwa_item" data-aos="fade-right">
+                <!-- <img src="./../img/sub/coin_sec02_item01.png" alt=""> -->
+              </li>
+              <li class="rwa_item" data-aos="fade-right" data-aos-delay="100">
+                <!-- <img src="./../img/sub/coin_sec02_item02.png" alt=""> -->
+              </li>
+              <li class="rwa_item" data-aos="fade-right" data-aos-delay="200">
+                <!-- <img src="./../img/sub/coin_sec02_item03.png" alt=""> -->
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section sec_03" id="kmgr">
+        <div class="inner">
+          <div class="kmgr_content com_content">
+            <div class="kmgr_item01" data-aos="fade-up">
+              <h4>RWA 개요</h4>
+              <p class="only_pc" >실물 기반 RWA(Real World Asset) 자산과 디지털 유틸리티를 융합하여, 자발적 참여자<br />
+              모두가 가치를 공유할 수 있는 구조 설계</p>
+              <p class="only_mo">
+                실물 기반 RWA(Real World Asset) 자산과 디지털<br />
+                유틸리티를 융합하여, 자발적 참여자 모두가 가치를 공유할 수<br />
+                있는 구조를 설계합니다.
+              </p>
+            </div>
+            <div class="kmgr_item02" data-aos="fade-up">
+              <p><b>RWA 프로젝트</b><br />블록체인 기반 유무형 가상 자산화 구축</p>
+              <!-- <img src="./../img/sub/coin_sec03_item01.png" alt=""> -->
+            </div>
+            <div class="kmgr_item03 only_pc" data-aos="fade-up">
+              <span>첫 실증 사업</span>
+              <p>힐링 메타버스 구축 및 가상 자산화</p>
+              <p>
+                &middot;플랫폼 : KMG 메타버스<br />
+                &middot;힐링 메타버스로 출발 다양한 분야로 확대
+              </p>
+            </div>
+            <div class="kmgr_item03 only_mo" data-aos="fade-up">
+              <span>첫 실증 사업 힐링 메타버스</span>
+              <p>구축 및 가장 자산화</p>
+              <p>
+                &middot;플랫폼 : KMG 메타버스<br />
+                &middot;힐링 메타버스로 출발 다양한 분야로 확대
+              </p>
+            </div>
+            
+            <ul class="kmgr_list">
+              <li class="list_item" data-aos="fade-up" data-aos-delay="100">
+                <span>온/오프라인 동시 구축</span>
+                <p>힐링 메타버스 구축으로 부동산 및 건물 시설 등을 <br class="only_mo" />온/오프라인에 동시에<br class="only_pc"/>
+                구축 프로젝트 성공에 따른 추가 <br class="only_mo" />선교 지원 경제 마련</p>
+              </li>
+              <li class="list_item" data-aos="fade-up" data-aos-delay="300">
+                <span>온/오프라인 메타버스 이용</span>
+                <p>
+                  참여자는 온/오프라인 어디서나 원하는 곳에서 숙박, <br class="only_mo" />체험등을 할 수 있으며<br class="only_pc"/>
+                  가상 자산을 구매할 수 있음
+                </p>
+              </li>
+              <li class="list_item" data-aos="fade-up" data-aos-delay="400">
+                <span>Mission DAO 거버넌스</span>
+                <p>투표 참여 : Mission DAO 거버넌스 참여, 정책 결정 <br class="only_mo" />투표 행사 참여</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section sec_04 dark-section">
+        <div class="sec_content project" id="project">
+          <div class="inner">
+            <div class="sec_title only_pc">
+              <span class="sub_title" data-aos="fade-up">Demonstration Project</span>
+              <h4 class="title" data-aos="fade-up">RWA 실증사업</h4>
+              <p class="desc" data-aos="fade-up">총 12만평 규모의 무주 힐링 허브 단지 조성 : 9만평 (숲속 테라피 존-명상·요가·치유) / 3만평(웰빙 푸드,문화·공연) /<br /> 자연 체험(다슬기·청정 물고기 체험)
+              </p>
+              <p class="desc" data-aos="fade-up">K-힐링과 결합된 관광 벨트 : 이동 거리 30분~1시간 내 주변 관광지와 연계 (금강 레프팅·산악 바이크, 무주 리조트, 무주
+                태권도원, 덕유산 온천 등)<br />
+                반디 마을 힐링 메타버스 : 글로벌 외국인 대상 온라인 K-힐링 체험 ( Metaverse-가상 힐링 체험, AI-개인 맞춤형 힐링, VR-온라인 숲속 명상 등 )
+              </p>
+            </div>
+            <div class="sec_title only_mo">
+              <span class="sub_title" data-aos="fade-up">Demonstration Project</span>
+              <h4 class="title" data-aos="fade-up">RWA 실증 사업</h4>
+              <p class="desc" data-aos="fade-up">
+                총 12만평 규모의 무주 힐링 허브 단지 조성 : 9만평<br />
+                (숲속 테라피 존-명상·요가·치유) / 3만평(웰빙 푸드,문화·공연) /<br />
+                자연 체험(다슬기·청정 물고기 체험)
+              </p>
+              <p class="desc" data-aos="fade-up">
+                K-힐링과 결합된 관광 벨트 : 이동 거리 30분~1시간 내 주변<br />
+                관광지와 연계 (금강 레프팅·산악 바이크, 무주 리조트, 무주<br />
+                태권도원, 덕유산 온천 등)
+              </p>
+              <p class="desc" data-aos="fade-up">
+                  반디 마을 힐링 메타버스 : 글로벌 외국인 대상 온라인 K-힐링<br />
+                  체험 ( Metaverse-가상 힐링 체험, AI-개인 맞춤형 힐링,<br />
+                  VR-온라인 숲속 명상 등 )
+              </p>
+            </div>
+
+
+            <div class="project_content">
+              <ul class="project_list">
+                <li class="project_item" data-aos="fade-up" data-aos-delay="100">
+                  <div class="item_top">
+                    <span>무주 힐링 허브 단지</span>
+                  </div>
+                  <div class="itme_txt">
+                    <p>무주 반디 마을</p>
+                    <div class="item_img"></div>
+                    <!-- <img src="./../img/sub/coin_sec04_item01.png" alt=""> -->
+                  </div>
+                </li>
+                <li class="project_item" data-aos="fade-up" data-aos-delay="300">
+                  <div class="item_top">
+                    <span>K-힐링 관광 벨트</span>
+                  </div>
+                  <div class="itme_txt">
+                    <p>무주 리조트</p>
+                    <div class="item_img"></div>
+                    <!-- <img src="./../img/sub/coin_sec04_item02.png" alt=""> -->
+                  </div>
+                </li>
+                <li class="project_item" data-aos="fade-up" data-aos-delay="400">
+                  <div class="item_top">
+                    <span>힐링 메타버스</span>
+                  </div>
+                  <div class="itme_txt">
+                    <p>숲속 힐링 VR</p>
+                    <div class="item_img"></div>
+                    <!-- <img src="./../img/sub/coin_sec04_item03.png" alt=""> -->
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="sec_content management" id="management">
+          <div class="inner">
+            <div class="sec_title only_pc">
+              <span class="sub_title" data-aos="fade-up">Crypto Asset Management</span>
+              <h4 class="title" data-aos="fade-up">KMG 글로벌 자산 운용</h4>
+              <p class="desc" data-aos="fade-up">
+                글로벌 디지털 자산 시장은 단순 디지털 자산 투기를 넘어, 안정적인 결제 수단과 실물 기반 자산의 RWA 융합으로 진화하고 있습니다.<br />
+                KMG 자산 운용을 차세대 금융 인프라를 구축하는 것을 목표로 향후 KMG STO(Security Token Offering)로 글로벌 자산 운용사를<br />
+                목표로 하고 있습니다
+              </p>
+            </div>
+
+            <div class="sec_title only_mo">
+              <span class="sub_title" data-aos="fade-up">Crypto Asset Management</span>
+              <h4 class="title" data-aos="fade-up">KMG<br />글로벌 자산 운용</h4>
+              <p class="desc" data-aos="fade-up">
+                글로벌 디지털 자산 시장은 단순 디지털 자산 투기를 넘어,<br />
+                안정적인 결제 수단과 실물 기반 자산의 RWA 융합으로 진화하고<br />
+                있습니다.
+              </p>
+              <p class="desc" data-aos="fade-up">
+                KMG 자산 운용을 차세대 금융 인프라를 구축하는 것을 목표로
+                향후 KMG STO(Security Token Offering)로 글로벌 자산
+                운용사를 목표로 하고 있습니다.
+              </p>
+            </div>
+            <div class="management_content">
+              <ul class="management_list">
+                <li class="management_item" data-aos="fade-up" data-aos-delay="100">
+                  <div class="item_top">
+                    <span>KMG Asset</span>
+                  </div>
+                  <div class="itme_txt">
+                    <div class="item_img"></div>
+                    <!-- <img src="./../img/sub/coin_sec04_item04.png" alt=""> -->
+                    <p class="only_pc">
+                      &middot; 실물과 가상 자산의 융합 체계 강화<br />
+                      &middot; 디지털 자산 + 법정 화폐 운용 모델 확대<br />
+                      &middot; 안전성 및 1:1 상환 보장 시스템 구축<br />
+                      &middot; 글로벌 결제, 송금, 정산 기능 고도화<br />
+                      &middot; 전자 금융 및 이용자 보호법 철저 준수
+                    </p>
+                    <p class="only_mo">
+                      &middot; 실물과 가상 자산의 융합<br />
+                      &middot; 디지털 자산 + 법정 화폐 운용<br />
+                      &middot; 안전성 및 1:1 상환 보장<br />
+                      &middot; 글로벌 결제, 송금, 정산<br />
+                      &middot; 투자성이 없으므로 전자 금융, 이용자 보호법<br />
+                      &nbsp;&nbsp;체계에 적합
+                    </p>
+                  </div>
+                </li>
+                <li class="management_item" data-aos="fade-up" data-aos-delay="300">
+                  <div class="item_top">
+                    <span>KMG<b>s</b> 자산운용<br />
+                    <span>STO(토큰증권발행)</span></span>
+                  </div>
+                  <div class="itme_txt">
+                    <div class="item_img"></div>
+                    <!-- <img src="./../img/sub/coin_sec04_item05.png" alt=""> -->
+                    <p class="only_pc">
+                      <b>KMG 자산 운용사 STO로 대규모 투자<br />
+                      회사로 성장</b><br />
+                      &middot; 디지털 자산 융합으로 법정 화폐 담보 + RWA 기반<br />
+                      &nbsp;&nbsp;담보를 동시에 운영<br />
+                      &middot; Mission DAO 중심의 자발적 참여자 및 사용자층 확보<br />
+                      &middot; KMG 자산 운용사의 STO 로 글로벌 사업 확대
+                    </p>
+                    <p class="only_mo">
+                      <b>KMG 자산 운용사 STO로 대규모 투자<br />
+                        회사로 성장</b><br />
+                      &middot; 디지털 자산 융합으로 법정 화폐 담보 + RWA<br />
+                      &nbsp;&nbsp;기반 담보를 동시에 운영<br />
+                      &middot; Mission DAO 중심의 자발적 참여자 및<br />
+                      &nbsp;&nbsp;사용자층 확보<br />
+                      &middot; KMG 자산 운용사의 STO 로 글로벌 사업 확대
+                    </p>
+                  </div>
+                </li>
+                <li class="management_item" data-aos="fade-up" data-aos-delay="400">
+                  <div class="item_top">
+                    <span>RWA</span>
+                  </div>
+                  <div class="itme_txt">
+                    <div class="item_img"></div>
+                    <!-- <img src="./../img/sub/coin_sec04_item06.png" alt=""> -->
+                    <p>
+                      &middot; 유무형 실물 자산 담보 기반 구조 확립<br />
+                      &middot; 국채/MMF + 힐링 테라피 프로젝트 연동<br />
+                      &middot; 준비금 운용 수익 + 실물 프로젝트 연계성 강화<br />
+                      &middot; 힐링 테라피 수익 일부 청구권 제공<br />
+                      &middot; 부산 디지털 자산 거래소 파일럿 상장 추진
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- contants [E]-->
+
+    <!-- footer [S] -->
+    <footer id="footer" class="footer">
+      <div class="footer_inner">
+        <h6 class="footer_sub sub_title">Contact Us</h6>
+        <div class="footer_content">
+          <div class="footer_text">
+            <h4 data-aos="fade-up">
+              가장 높은 곳에 오르는 여정,<br />
+              케이엠지미션이 당신과 함께 합니다.
+            </h4>
+          </div>
+          <ul class="partner_list">
+            <li class="partner_item" data-aos="fade-up"><a href="./../sub/kmgTv.html">KMG TV</a></li>
+            <li class="partner_item" data-aos="fade-up" data-aos-delay="100"><a href="./../sub/missionStudy.html">MISSION
+                DAO</a></li>
+            <li class="partner_item" data-aos="fade-up" data-aos-delay="200"><a href="./../sub/kmgCoin.html">KMG CHIN</a>
+            </li>
+            <li class="partner_item" data-aos="fade-up" data-aos-delay="300"><a href="./../sub/whitePaper.html">BUSINESS
+                AREA</a></li>
+          </ul>
+
+          <div class="footer_info">
+            <ul class="info_list">
+              <li>주식회사 케이엠지미션</li>
+              <li>대표자. 서정식</li>
+              <li>사업자등록번호. 794-87-03990</li>
+              <li>주소. 서울특별시 강남구 선릉로112길 87, 3층(삼성동, 명인빌딩)</li>
+              <li>TEL. 02) 546-1885</li>
+              <li>FAX. 02) 546-1885</li>
+            </ul>
+
+            <div class="footer_social">
+              <p class="copyright">Copyright&copy; 2025 KMG. All rights reserved</p>
+
+              <ul class="social_list">
+                <li class="social_item"><a href="#" class="preparing_modal_btn"><img src="./../img/social_x.png"
+                      alt="x"><span class="blind">x</span></a></li>
+                <li class="social_item"><a href="#" class="preparing_modal_btn"><img src="./../img/social_tiktok.png"
+                      alt="tiktok"><span class="blind">tiktok</span></a></li>
+                <li class="social_item"><a href="#" class="preparing_modal_btn"><img src="./../img/social_youtube.png"
+                      alt="youtube"><span class="blind">youtube</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="top_btn"><span class="blind">상단으로 이동</span></a>
+      </div>
+    </footer>
+    <!-- footer [E] -->
+
+    <!-- modal popup [S] -->
+    <div class="modal lang_modal">
+      <div class="modal_wrap">
+        <div class="modal_contents">
+          <div class="modal_header">
+            <h3>언어선택</h3>
+            <a href="#" class="close_btn"><span class="blind">팝업 닫기</span></a>
+          </div>
+
+          <div class="modal_body">
+            <ul class="lang_list">
+              <li class="lang_item kr"><a href="#"><span>한국어</span></a></li>
+              <li class="lang_item en"><a href="#" class="preparing_modal_btn"><span>영어</span></a></li>
+              <li class="lang_item es"><a href="#" class="preparing_modal_btn"><span>스페인어</span></a></li>
+              <li class="lang_item pt"><a href="#" class="preparing_modal_btn"><span>포루투갈어</span></a></li>
+              <li class="lang_item vi"><a href="#" class="preparing_modal_btn"><span>베트남어</span></a></li>
+              <li class="lang_item ms"><a href="#" class="preparing_modal_btn"><span>말레시아어</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="filter"></div>
+    </div>
+    <!-- modal popup [E] -->
+
+    <!-- modal popup [S] -->
+    <div class="modal siteMap_modal">
+      <div class="modal_wrap">
+        <div class="modal_contents">
+          <div class="modal_header">
+            <h1 class="logo"><a href="./../index.html"><span class="blind">KMG | K - MISSION</span></a></h1>
+            <a href="#" class="close_btn"><span class="blind">팝업 닫기</span></a>
+          </div>
+          <div class="modal_body">
+            <ul class="siteMap_list">
+              <li>
+                <a href="./../sub/kmgTv.html">KMG TV</a>
+                <ul class="siteMap_dep2">
+                  <li><a href="./../sub/kmgTv.html#introduce">KMG 소개</a></li>
+                  <li><a href="./../sub/kmgTv.html#summary">KMG TV</a></li>
+                  <li><a href="./../sub/kmgTv.html#differentiation">KMG TV 차별성</a></li>
+                  <li><a href="./../sub/kmgTv.html#more">선교 맞춤형 OTT 방송</a></li>
+                  <li><a href="./../sub/kmgTv.html#process">운영프로세스</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="./../sub/missionStudy.html">MISSION DAO</a>
+                <ul class="siteMap_dep2">
+                  <li><a href="./../sub/missionStudy.html#introduce">MISSION DAO 소개</a></li>
+                  <li><a href="./../sub/missionStudy.html#summary">MISSION DAO 개요</a></li>
+                  <li><a href="./../sub/missionStudy.html#activity">우리의 활동</a></li>
+                  <li><a href="./../sub/missionStudy.html#ourPosition">시스템 구조</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="./../sub/kmgCoin.html">KMG CHAIN</a>
+                <ul class="siteMap_dep2">
+                  <li><a href="./../sub/kmgCoin.html#introduce">KMG 블록체인</a></li>
+                  <li><a href="./../sub/kmgCoin.html#story">K-후원 개요</a></li>
+                  <li><a href="./../sub/kmgCoin.html#rwa">K-후원 세부</a></li>
+                  <li><a href="./../sub/kmgCoin.html#project">K-후원 실증사업</a></li>
+                  <li><a href="./../sub/kmgCoin.html#management">KMG 자산운용</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="./../sub/whitePaper.html">BUSINESS AREA</a>
+                <ul class="siteMap_dep2">
+                  <li><a href="./../sub/whitePaper.html#introduce">Business Area 소개</a></li>
+                  <li><a href="./../sub/whitePaper.html#introduction">사단법인</a></li>
+                  <li><a href="./../sub/whitePaper.html#overview">디지털자산 교육·자격인증</a></li>
+                  <li><a href="./../sub/whitePaper.html#down">WHITE PAPER DOWNLOAD</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="filter"></div>
+    </div>
+    <!-- modal popup [E] -->
+
+    <!-- modal popup [S] -->
+    <div class="modal preparing_modal">
+      <div class="modal_wrap">
+        <div class="modal_contents">
+          <a href="#" class="close_btn"><span class="blind">팝업 닫기</span></a>
+          <div class="modal_body">
+            <div class="preparing_content">
+              <div class="preparing_img"></div>
+              <div class="preparing_txt">
+                <h4>페이지 <b>준비중</b>입니다.</h4>
+                <p>보다 나은 서비스 제공을 위하여 페이지 준비중에 있습니다.<br>
+                  빠른 시일 내에 준비하여 찾아뵙겠습니다.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="filter"></div>
+    </div>
+    <!-- modal popup [E] -->
+  </div>
+  <!-- //wrap -->
+
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+@charset "utf-8";
+.only_mo, .ONLY_MO {display: none;}
+.only_pc, .ONLY_PC {display: block;}
+#wrap {width: 100vw; height: 100vh; overflow: hidden;}
+.header {z-index: 999; position: absolute; top: 4.815vh; left: 2.708vw; width: 100vw;}
+.header .logo {width: 7.772vw; height: 3.637vw;}
+.header .logo a {display: inline-block; width: 100%; height: 100%; background: url(../img/guide/logo.png) no-repeat 0 0/100%;}
+
+.map {position: relative; color: #fff; display: block;}
+.map.hide {display: none;}
+.map .map_content {z-index: 4;}
+.map.default .map_content {position: absolute; left: 2.708vw; bottom: 2.778vh;}
+.map.default .map_content h4 {font-size: 2.188vw; font-weight: 700;}
+.map.default .map_content p {margin-top: 0.463vh; font-size: 0.833vw;line-height: 140%; font-weight: 600;}
+.map.default .map_list {counter-reset: number; display: flex; flex-wrap: wrap; flex-direction: column; gap: 0.313vw 1.042vw; margin-top: 1.250vw; padding: 0.781vw; background: rgba(255, 255, 255, 0.2); border-radius: 0.677vw; width: 31.146vw; height: 6.979vw; box-shadow: 0.000vw 0.417vw 0.521vw 0.000vw rgba(0, 0, 0, 0.25); backdrop-filter: blur(0.104vw);}
+.map.default .map_list .map_btn {position: relative; width: 6.250vw; height: 0.833vw; padding-left: 1.042vw; font-size: 0.625vw; font-weight: 700; line-height: 0.833vw;}
+.map.default .map_list .map_btn::after {content: counter(number);counter-increment: number; position: absolute; top:0; left: 0; width: 0.833vw; height: 0.833vw; background-color: #fff; border: 0.026vw solid #000000; border-radius: 50%; text-align: center; font-size: 0.417vw; color: #000;}
+
+.map .map_num {position: relative; z-index: 3;}
+.map .map_bg {position: relative; z-index: 1; width: 100vw; height: 100vh;}
+.map.default .map_num .map_btn {position: absolute; width: 30px; height: 30px; font-size: 0; background-color: red; opacity: 0.4;}
+
+
+
+/* .map.default .map_num .map_btn_1 {left: 685px; top: 351px;}
+.map.default .map_num .map_btn_2 {left: 686px; top: 485px;}
+.map.default .map_num .map_btn_3 {left: 580px; top: 477px;}
+.map.default .map_num .map_btn_4 {left: 623px; top: 394px;}
+.map.default .map_num .map_btn_5 {left: 630px; top: 343px;}
+.map.default .map_num .map_btn_6 {left: 638px; top: 235px;}
+.map.default .map_num .map_btn_7 {left: 670px; top: 214px;}
+.map.default .map_num .map_btn_8 {left: 738px; top: 241px;}
+.map.default .map_num .map_btn_9 {left: 845px; top: 319px;}
+.map.default .map_num .map_btn_10 {left: 335px; top: 463px;}
+.map.default .map_num .map_btn_11 {left: 754px; top: 423px;}
+.map.default .map_num .map_btn_12 {left: 790px; top: 507px;}
+.map.default .map_num .map_btn_13 {left: 870px; top: 280px;}
+.map.default .map_num .map_btn_14 {left: 883px; top: 361px;}
+.map.default .map_num .map_btn_15 {left: 918px; top: 467px;}
+.map.default .map_num .map_btn_16 {left: 1030px; top: 515px;}
+.map.default .map_num .map_btn_17 {left: 930px; top: 533px;}
+.map.default .map_num .map_btn_18 {left: 830px; top: 563px;}
+.map.default .map_num .map_btn_19 {left: 956px; top: 617px;}
+.map.default .map_num .map_btn_20 {left: 726px; top: 361px;} */
+
+/* .map.default .map_num .map_btn_1 {left: 35.68%; top: 32.50%;}
+.map.default .map_num .map_btn_2 {left: 35.73%; top: 44.91%;}
+.map.default .map_num .map_btn_3 {left: 30.21%; top: 44.17%;}
+.map.default .map_num .map_btn_4 {left: 32.49%; top: 36.48%;}
+.map.default .map_num .map_btn_5 {left: 32.81%; top: 31.76%;}
+.map.default .map_num .map_btn_6 {left: 33.23%; top: 21.76%;}
+.map.default .map_num .map_btn_7 {left: 34.90%; top: 19.81%;}
+.map.default .map_num .map_btn_8 {left: 38.44%; top: 22.31%;}
+.map.default .map_num .map_btn_9 {left: 44.01%; top: 29.54%;}
+.map.default .map_num .map_btn_10 {left: 17.45%; top: 42.87%;}
+.map.default .map_num .map_btn_11 {left: 39.27%; top: 39.17%;}
+.map.default .map_num .map_btn_12 {left: 41.15%; top: 46.94%;}
+.map.default .map_num .map_btn_13 {left: 45.31%; top: 25.93%;}
+.map.default .map_num .map_btn_14 {left: 46.03%; top: 33.43%;}
+.map.default .map_num .map_btn_15 {left: 47.81%; top: 43.24%;}
+.map.default .map_num .map_btn_16 {left: 53.65%; top: 47.69%;}
+.map.default .map_num .map_btn_17 {left: 48.44%; top: 49.35%;}
+.map.default .map_num .map_btn_18 {left: 43.23%; top: 52.13%;}
+.map.default .map_num .map_btn_19 {left: 49.79%; top: 57.13%;}
+.map.default .map_num .map_btn_20 {left: 37.81%; top: 33.43%;} */
+
+.map.zoom .map_content {position: absolute; left: 2.708vw; top: 14.074vh;}
+.map.zoom .map_content h4 {font-size: 2.500vw; font-weight: 700;}
+.map.zoom .map_content p {margin-top:0.298vw; font-size: 0.952vw;line-height: 140%; font-weight: 600;}
+.map.zoom .map_list {counter-reset: number; display: flex; flex-wrap: wrap; gap: 0.313vw 1.042vw; margin-top: 1.250vw; padding: 0.781vw; background: rgba(255, 255, 255, 0.2); border-radius: 0.677vw; width: 31.146vw; height: 6.979vw; box-shadow: 0.000vw 0.417vw 0.521vw 0.000vw rgba(0, 0, 0, 0.25); backdrop-filter: blur(0.104vw);}
+.map.zoom .map_list .map_btn {position: relative; width: 6.250vw; height: 0.833vw; padding-left: 1.042vw; font-size: 0.625vw; font-weight: 700; line-height: 0.833vw;}
+.map.zoom .map_list .map_btn::after {content: counter(number);counter-increment: number; position: absolute; top:0; left: 0; width: 0.833vw; height: 0.833vw; background-color: #fff; border: 0.026vw solid #000000; border-radius: 50%; text-align: center; font-size: 0.417vw; color: #000;}
+
+/* .map.zoom .map_num .map_btn {position: absolute; width: 40px; height: 40px; font-size: 0; background-color: red; opacity: 0.4;} */
+
+/* .map.zoom .map_num .map_btn_1 {left: 979px; top: 436px;}
+.map.zoom .map_num .map_btn_2 {left: 998px; top: 795px;}
+.map.zoom .map_num .map_btn_3 {left: 774px; top: 689px;}
+.map.zoom .map_num .map_btn_4 {left: 857px; top: 521px;}
+.map.zoom .map_num .map_btn_5 {left: 873px; top: 417px;}
+.map.zoom .map_num .map_btn_6 {left: 887px; top: 207px;}
+.map.zoom .map_num .map_btn_7 {left: 954px; top: 158px;}
+.map.zoom .map_num .map_btn_8 {left: 1088px; top: 208px;}
+.map.zoom .map_num .map_btn_9 {left: 1317px; top: 371px;}
+.map.zoom .map_num .map_btn_10 {left: 272px; top: 664px;}
+.map.zoom .map_num .map_btn_11 {left: 1127px; top: 596px;}
+.map.zoom .map_num .map_btn_12 {left: 1200px; top: 741px;}
+.map.zoom .map_num .map_btn_13 {left: 1358px; top: 290px;}
+.map.zoom .map_num .map_btn_14 {left: 1395px; top: 458px;}
+.map.zoom .map_num .map_btn_15 {left: 1464px; top: 673px;}
+.map.zoom .map_num .map_btn_16 {left: 1707px; top: 763px;}
+.map.zoom .map_num .map_btn_17 {left: 1491px; top: 801px;}
+.map.zoom .map_num .map_btn_18 {left: 1286px; top: 866px;}
+.map.zoom .map_num .map_btn_19 {left: 1542px; top: 982px;}
+.map.zoom .map_num .map_btn_20 {left: 1080px; top: 484px;} */
+
+/* .map.zoom .map_num .map_btn_1 {left: 50.99%; top: 40.37%;}
+.map.zoom .map_num .map_btn_2 {left: 51.98%; top: 73.61%;}
+.map.zoom .map_num .map_btn_3 {left: 40.31%; top: 63.80%;}
+.map.zoom .map_num .map_btn_4 {left: 44.64%; top: 48.24%;}
+.map.zoom .map_num .map_btn_5 {left: 45.47%; top: 38.61%;}
+.map.zoom .map_num .map_btn_6 {left: 46.20%; top: 19.17%;}
+.map.zoom .map_num .map_btn_7 {left: 49.69%; top: 14.63%;}
+.map.zoom .map_num .map_btn_8 {left: 56.67%; top: 19.26%;}
+.map.zoom .map_num .map_btn_9 {left: 68.65%; top: 34.35%;}
+.map.zoom .map_num .map_btn_10 {left: 14.17%; top: 61.48%;}
+.map.zoom .map_num .map_btn_11 {left: 58.74%; top: 55.19%;}
+.map.zoom .map_num .map_btn_12 {left: 62.50%; top: 68.61%;}
+.map.zoom .map_num .map_btn_13 {left: 70.73%; top: 26.85%;}
+.map.zoom .map_num .map_btn_14 {left: 72.66%; top: 42.41%;}
+.map.zoom .map_num .map_btn_15 {left: 76.25%; top: 62.31%;}
+.map.zoom .map_num .map_btn_16 {left: 88.95%; top: 70.65%;}
+.map.zoom .map_num .map_btn_17 {left: 77.66%; top: 74.17%;}
+.map.zoom .map_num .map_btn_18 {left: 66.98%; top: 80.19%;}
+.map.zoom .map_num .map_btn_19 {left: 80.31%; top: 90.93%;}
+.map.zoom .map_num .map_btn_20 {left: 56.25%; top: 44.81%;} */
+
+/* .map_btn_zoom {position: absolute; top: 978px; left: 30px; display: flex; align-items: center; justify-content: center; width: 72px; height: 72px; background: rgba(221, 221, 221, 0.2); border-radius: 16px;box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.25), inset 0px -1px 10px 0px rgba(255, 255, 255, 0.25); backdrop-filter: blur(3px);}
+.map_btn_zoom .icon {width: 28px; height: 28px; background: url(./../img/guide/icon_zoom.svg) no-repeat 0 0/100%;}
+.map_btn_zoom.out .icon {background: url(./../img/guide/icon_out.svg) no-repeat 0 0/100%;} */
+
+.map_btn_zoom {z-index: 3; overflow: hidden;position: absolute;bottom:2.778vh;right: 1.56%;display: flex;align-items: center;justify-content: center;width: 3.750vw;height: 3.750vw;background: rgba(221, 221, 221, 0.2);border-radius: 14%;box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.25),  inset 0px -1px 10px 0px rgba(255, 255, 255, 0.25);backdrop-filter: blur(3px);}
+.map_btn_zoom .icon {width: 1.458vw;height: 1.458vw;background: url(./../img/guide/icon_zoom.svg) no-repeat 0 0/100%;}
+.map_btn_zoom.out .icon {background: url(./../img/guide/icon_out.svg) no-repeat 0 0/100%;}
+
+.mapSlide {position: absolute; z-index: 999; top: 0; left: 0; width: 100vw; height:100vh; overflow: hidden; display: block;}
+.mapSlide.hide {display: none;}
+.mapSlide .map_swiper {position: relative;width: 100vw; height:100vh;}
+.mapSlide .swiper-slide img {width: 100%; height: 100vh;}
+.mapSlide_swiper .swiper-btn {display: flex; align-items: center; position: absolute; bottom: 13.056vh; right: 6.354vw; width: 6.667vw; height: 2.813vw; gap: 0 1.042vw;}
+.mapSlide_swiper .swiper-button-next, .mapSlide_swiper .swiper-button-prev {position: static; top: 0 !important; left: 0 !important; width: 2.813vw; height: 2.813vw; margin: 0; background: url(./../img/guide/slide_btn.png) no-repeat 0 0/100% !important; transform: translate(0);}
+.mapSlide_swiper .swiper-button-prev {transform: rotate(180deg);}
+.swiper-button-next:after, .swiper-button-prev:after {content: ''; display: none;}
+.mapSlide_txt {position: absolute; bottom: 6.111vh; left: 2.708vw; z-index: 2; color: #fff; width:83.333vw;}
+.mapSlide_txt h4 {font-size: 3.125vw; font-weight: 800;}
+.mapSlide_txt>span {display: inline-block; padding: 0 0.260vw; height: 1.198vw; font-size: 0.833vw; font-weight: 700; line-height: 1.198vw; background-color: #000;}
+.mapSlide_txt p {padding-bottom: 2.031vw; border-bottom: 1px solid #fff; font-size: 1.563vw; font-size: 1.146vw; line-height: 140%; font-weight: 400;}
+.mapSlide_txt p b {display: inline-block; margin: 3.056vh 0 0.741vh; font-size: 1.563vw; line-height: 140%; font-weight: 700;}
+.mapSlide_txt .mapSlide_close {display: inline-block; margin-top: 1.563vw; padding:1.354vw 1.771vw; background: rgba(221, 221, 221, 0.2); border-radius: 0.833vw; box-shadow: 0px 0.208vw 0.313vw 0px rgba(0, 0, 0, 0.25), inset 0.000vw -0.052vw 0.521vw 0.000vw rgba(255, 255, 255, 0.25); backdrop-filter: blur(0.156vw); font-size: 1.042vw; line-height: 1;}
+.mapSlide_txt .mapSlide_close.black {color: #fff; background: rgba(4, 4, 4, 0.2);}
